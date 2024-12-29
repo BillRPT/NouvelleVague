@@ -18,7 +18,7 @@ class App extends BaseConfig
      */
 
     //Mettre à jour ici tout le temps pour les redirections 
-    public string $baseURL = 'http://nice/codeigniter4.4.3/public';
+    public string $baseURL = 'http://nouvellevague/NouvelleVague/public';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
