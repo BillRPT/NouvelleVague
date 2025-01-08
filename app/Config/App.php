@@ -17,7 +17,7 @@ class App extends BaseConfig
      *    http://example.com/
      */
 
-    //Mettre à jour ici tout le temps pour les redirections 
+    //Mettre à jour ici tout le temps pour les redirections (le changer quand on est en cours)
     public string $baseURL = 'http://nouvellevague/NouvelleVague/public';
 
     /**
