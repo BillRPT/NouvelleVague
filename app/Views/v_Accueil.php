@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez la ville de GetCet, ses événements, ses lieux incontournables et ses informations pratiques.">
     <title>Ville de GetCet</title>
+    <style>
+        /*Créer une class custom row pour modifier la taille de l'image*/
+        .custom-row {
+            width: 20%;
+        }
+
+        .zoom img {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .zoom:hover img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
@@ -48,7 +65,7 @@
                     'src'    => 'Image/aix.png',
                     'width'  => '400',
                     'height' => '400',
-                    'class'  => 'img-fluid rounded',
+                    'class'  => 'custom-image',
                 ];
 
                 //L'afficher avec la méthode img de code igniter
@@ -90,7 +107,15 @@
       <section id='evenements' class='container py-5' style='background-color: #e0f7fa; color: #006064;'>
         <h4 class='text-center'>Les Événements</h4>
         <h3 class="outlined-text display-1 text-center">QUI VONT VOUS PLAIRE !</h3>
-        <div class='row'>
+        <div class='row custom-row zoom'>
+            
+                <?php 
+                    $imageProperties = [
+                        'src' => "Image/foret.jpg",
+                    ];
+
+                    echo img($imageProperties);
+                ?>
             
         </div>
       </section>
