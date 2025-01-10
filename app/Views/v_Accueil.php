@@ -46,40 +46,54 @@
             text-align: center;
             margin-top: 10px;
         }
+
+        .btn-login {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="bg-primary text-white py-3">
-      <div class="container text-center">
+      <div class="container d-flex justify-content-between align-items-center">
         <h1>Bienvenue à GetCet</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#decouvrir">Découvrir</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#activites">Que faire</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#hebergement">Où dormir</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#agenda">Agenda</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <a href="#" class="btn-login">Connexion</a>
       </div>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#decouvrir">Découvrir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#activites">Que faire</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#hebergement">Où dormir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#evenements">Événements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <section id="decouvrir" class="container text-center py-5">
@@ -117,15 +131,48 @@
           <div class="col-md-4">
             <div class="card">
               <div class="card-body">
-                <h3>Nature</h3>
-                <p>Explorez la beauté naturelle de GetCet.</p>
+                <h3>Sport mécanique</h3>
+                <p>Initiation au quad ainsi qu'à la moto-cross dans nos beaux terrains dédiés pour cela.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='hebergement' class='container py-5' style='background-color: #f9f9f9; color: #333;'>
+        <h2 class="text-center">Où dormir ?</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h3>Hôtel Le Central</h3>
+                <p>Adresse : 12 rue des Lilas, GetCet<br> Téléphone : 01 23 45 67 89</p>
+                <?php 
+                  $imageProperties = ['src' => "Image/ImageHotelCentral.jpg"];
+                  echo img($imageProperties); 
+                ?>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h3>Chambres d'hôtes La Clé des Champs</h3>
+                <p>Adresse : 8 chemin des Vignes, GetCet<br> Téléphone : 01 98 76 54 32</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h3>Camping Le Ruisseau</h3>
+                <p>Adresse : Route de la Forêt, GetCet<br> Téléphone : 01 56 78 90 12</p>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section id='evenements' class='container py-5' style='background-color: #e0f7fa; color: #006064;'>
-        <h4 class='text-center'>Les Événements</h4>
+        <h4 class='text-center'>Nos activités phares</h4>
         <h3 class="outlined-text display-1 text-center">QUI VONT VOUS PLAIRE !</h3>
         <div class='custom-row'>
           <div class="zoom">
