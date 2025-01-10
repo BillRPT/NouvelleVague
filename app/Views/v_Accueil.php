@@ -8,10 +8,22 @@
     <style>
         /*Créer une class custom row pour modifier la taille de l'image*/
         .custom-row {
-            width: 20%;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+        }
+
+        h3 {
+            font-family: Geneva, Verdana, sans-serif;
+        }
+
+        .custom-row img {
+            width: 80%;
+            height: auto;
         }
 
         .zoom img {
+            border-radius: 10%;
             -webkit-transform: scale(1);
             transform: scale(1);
             -webkit-transition: .3s ease-in-out;
@@ -104,21 +116,34 @@
         </div>
       </section>
         <!--Section des événements-->
-      <section id='evenements' class='container py-5' style='background-color: #e0f7fa; color: #006064;'>
+        <section id='evenements' class='container py-5' style='background-color: #e0f7fa; color: #006064;'>
         <h4 class='text-center'>Les Événements</h4>
         <h3 class="outlined-text display-1 text-center">QUI VONT VOUS PLAIRE !</h3>
-        <div class='row custom-row zoom'>
-            
-                <?php 
-                    $imageProperties = [
-                        'src' => "Image/foret.jpg",
-                    ];
-
-                    echo img($imageProperties);
-                ?>
-            
+        <div class='custom-row'>
+          <div class="zoom">
+              <?php 
+                  $imageProperties = ['src' => "Image/foret.jpg"];
+                  echo img($imageProperties);
+              ?>
+              <h3>Immersion en fôret</h3>
+          </div>
+          <div class="zoom">
+              <?php 
+                  $imageProperties = ['src' => "Image/theatre.jpg"];
+                  echo img($imageProperties);
+              ?>
+              <h3>Cyrano de Bergerac</h3>
+          </div>
+          <div class="zoom">
+              <?php 
+                  $imageProperties = ['src' => "Image/moto.jpg"];
+                  echo img($imageProperties);
+              ?>
+              <h3>MXGP 2025</h3>
+          </div>
         </div>
       </section>
+
     </main>
     <footer class="bg-dark text-white text-center py-3">
       <p>&copy; 2025 Ville de GetCet. Tous droits réservés.</p>
