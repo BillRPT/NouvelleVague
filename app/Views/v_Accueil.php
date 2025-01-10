@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez la ville de GetCet, ses événements, ses lieux incontournables et ses informations pratiques.">
+    <meta name="description">
     <title>Ville de GetCet</title>
     <style>
         /*Créer une class custom row pour modifier la taille de l'image*/
@@ -13,15 +13,11 @@
           gap: 20px;
         }
 
-        h3 {
-            font-family: Geneva, Verdana, sans-serif;
-        }
-
         .custom-row img {
             width: 80%;
             height: auto;
         }
-
+        /*Effet de zoom*/
         .zoom img {
             border-radius: 10%;
             -webkit-transform: scale(1);
@@ -82,8 +78,6 @@
 
                 //L'afficher avec la méthode img de code igniter
                 echo img($imageProperties); 
-            
-            
             ?>
       </section>
       <section id="activites" class="container py-5">
