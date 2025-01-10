@@ -6,14 +6,13 @@
     <meta name="description" content="Découvrez la ville de GetCet, ses événements, ses lieux incontournables et ses informations pratiques.">
     <title>Ville de GetCet</title>
     <style>
-        /* Modifier la police globale */
+        /* Mettre la même police pour toute la page */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        /* Header correction pour aligner le titre au centre */
         .header-container {
             position: relative;
             text-align: center;
@@ -44,7 +43,7 @@
             background-color: #003d82;
         }
 
-        /* Nav correction */
+
         nav {
             background-color: #007bff;
         }
@@ -64,7 +63,7 @@
             text-decoration: underline;
         }
 
-        /* Customisation de la rangée d'images */
+
         .custom-row {
             display: flex;
             justify-content: space-around;
@@ -84,7 +83,7 @@
             object-fit: cover;
         }
 
-        /* Effet de zoom amélioré */
+        /* Effet de zoom  */
         .zoom img {
             border-radius: 10%;
             transform: scale(1);
@@ -106,7 +105,7 @@
   <body>
     <header class="header-container">
       <h1>Bienvenue à GetCet</h1>
-      <?php echo anchor('index.php?uc=connexion&action=demandeConnexion', 'Connexion', ['class' => 'btn-login']);?>
+      <?php echo anchor('/c_Connexion/afficherConnexion', 'Connexion', ['class' => 'btn-login']);?>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
