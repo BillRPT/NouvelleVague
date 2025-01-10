@@ -71,10 +71,10 @@
             align-items: center;
             gap: 30px;
             margin: 20px 0;
-        }
+        } 
 
         h3 {
-            font-family: 'Georgia', serif;
+            font-family: 'Arial', sans-serif;
         }
 
         /* Ajuster la taille et l'espacement des images */
@@ -186,8 +186,14 @@
                 <h3>Hôtel Le Central</h3>
                 <p>Adresse : 12 rue des Lilas, GetCet<br> Téléphone : 01 23 45 67 89</p>
                 <?php 
-                  $imageProperties = ['src' => "Image/ImageHotelCentral.jpg"];
-                  echo img($imageProperties); 
+                  $imageProperties2 = [
+                    'src'    => 'Image/ImageHotelCentral.jpg',
+                    'width'  => '370',
+                    'height' => '300',
+                    'class'  => 'custom-image',
+                ];
+
+                  echo img($imageProperties2); 
                 ?>
               </div>
             </div>
@@ -197,6 +203,16 @@
               <div class="card-body">
                 <h3>Chambres d'hôtes La Clé des Champs</h3>
                 <p>Adresse : 8 chemin des Vignes, GetCet<br> Téléphone : 01 98 76 54 32</p>
+                <?php 
+                  $imageProperties3 = [
+                    'src'    => 'Image/ImageHotelHote.jpg',
+                    'width'  => '370',
+                    'height' => '267',
+                    'class'  => 'custom-image',
+                ];
+
+                  echo img($imageProperties3); 
+                ?>
               </div>
             </div>
           </div>
@@ -205,6 +221,16 @@
               <div class="card-body">
                 <h3>Camping Le Ruisseau</h3>
                 <p>Adresse : Route de la Forêt, GetCet<br> Téléphone : 01 56 78 90 12</p>
+                <?php 
+                  $imageProperties4 = [
+                    'src'    => 'Image/ImageCamping.jpg',
+                    'width'  => '370',
+                    'height' => '300',
+                    'class'  => 'custom-image',
+                ];
+
+                  echo img($imageProperties4); 
+                ?>
               </div>
             </div>
           </div>
