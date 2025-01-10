@@ -9,15 +9,72 @@
         /* Modifier la police globale */
         body {
             font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header correction pour aligner le titre au centre */
+        .header-container {
+            position: relative;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-container h1 {
+            margin: 0;
+        }
+
+        .btn-login {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-login:hover {
+            background-color: #003d82;
+        }
+
+        /* Nav correction */
+        nav {
+            background-color: #007bff;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 8px 15px;
+            color: white;
+        }
+
+        .navbar-nav .nav-link:hover {
+            text-decoration: underline;
         }
 
         /* Customisation de la rangée d'images */
         .custom-row {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          gap: 30px;
-          margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        h3 {
+            font-family: 'Georgia', serif;
         }
 
         /* Ajuster la taille et l'espacement des images */
@@ -33,6 +90,7 @@
             transform: scale(1);
             transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
+
         .zoom:hover img {
             transform: scale(1.2);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -42,55 +100,40 @@
             text-align: center;
             margin-top: 10px;
         }
-
-        .btn-login {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .btn-login:hover {
-            background-color: #0056b3;
-        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <header class="bg-primary text-white py-3">
-      <div class="container d-flex justify-content-between align-items-center">
-        <h1>Bienvenue à GetCet</h1>
-        <a href="#" class="btn-login">Connexion</a>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#decouvrir">Découvrir</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#activites">Que faire</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#hebergement">Où dormir</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#evenements">Événements</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <header class="header-container">
+      <h1>Bienvenue à GetCet</h1>
+      <a href="#" class="btn-login">Connexion</a>
     </header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#decouvrir">Découvrir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#activites">Que faire</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hebergement">Où dormir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#evenements">Événements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
       <section id="decouvrir" class="container text-center py-5">
         <h2> Découvrez GetCet</h2>
