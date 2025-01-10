@@ -29,7 +29,7 @@
                         <?= form_close(); ?>
                         <p class="mt-3 text-center">
                             Pas encore inscrit ?
-                            <a href="#" class="text-decoration-none">Créez un compte</a>
+                            <?= anchor('https://www.google.com/', 'Créez un compte'); ?>
                         </p>
                     </div>
                 </div>

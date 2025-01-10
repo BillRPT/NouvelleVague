@@ -20,10 +20,6 @@
           margin: 20px 0;
         }
 
-        h3 {
-            font-family: 'Georgia', serif;
-        }
-
         /* Ajuster la taille et l'espacement des images */
         .custom-row img {
             width: 250px;
