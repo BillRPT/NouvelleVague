@@ -3,31 +3,48 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description">
+    <meta name="description" content="Découvrez la ville de GetCet, ses événements, ses lieux incontournables et ses informations pratiques.">
     <title>Ville de GetCet</title>
     <style>
-        /*Créer une class custom row pour modifier la taille de l'image*/
-        .custom-row {
-          display: flex;
-          justify-content: center;
-          gap: 20px;
+        /* Modifier la police globale */
+        body {
+            font-family: 'Arial', sans-serif;
         }
 
-        .custom-row img {
-            width: 80%;
-            height: auto;
+        /* Customisation de la rangée d'images */
+        .custom-row {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          gap: 30px;
+          margin: 20px 0;
         }
-        /*Effet de zoom*/
+
+        h3 {
+            font-family: 'Georgia', serif;
+        }
+
+        /* Ajuster la taille et l'espacement des images */
+        .custom-row img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* Effet de zoom amélioré */
         .zoom img {
             border-radius: 10%;
-            -webkit-transform: scale(1);
             transform: scale(1);
-            -webkit-transition: .3s ease-in-out;
-            transition: .3s ease-in-out;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
         .zoom:hover img {
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+            transform: scale(1.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .zoom h3 {
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +55,7 @@
         <h1>Bienvenue à GetCet</h1>
         <nav class="navbar navbar-expand-lg navbar-dark">
           <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,19 +83,17 @@
     </header>
     <main>
       <section id="decouvrir" class="container text-center py-5">
-        <h2>Découvrez GetCet</h2>
-        <p>Explorez le patrimoine culturel et naturel unique de GetCet.</p> <?php 
-                //Déclarer une variable et définir la taille ect
-                $imageProperties = [
-                    'src'    => 'Image/aix.png',
-                    'width'  => '400',
-                    'height' => '400',
-                    'class'  => 'custom-image',
-                ];
-
-                //L'afficher avec la méthode img de code igniter
-                echo img($imageProperties); 
-            ?>
+        <h2> Découvrez GetCet</h2>
+        <p>Explorez le patrimoine culturel et naturel unique de GetCet.</p>
+        <?php 
+            $imageProperties = [
+                'src'    => 'Image/aix.png',
+                'width'  => '400',
+                'height' => '400',
+                'class'  => 'custom-image',
+            ];
+            echo img($imageProperties); 
+        ?>
       </section>
       <section id="activites" class="container py-5">
         <h2 class="text-center">Que faire ?</h2>
@@ -109,35 +124,33 @@
           </div>
         </div>
       </section>
-        <!--Section des événements-->
-        <section id='evenements' class='container py-5' style='background-color: #e0f7fa; color: #006064;'>
+      <section id='evenements' class='container py-5' style='background-color: #e0f7fa; color: #006064;'>
         <h4 class='text-center'>Les Événements</h4>
         <h3 class="outlined-text display-1 text-center">QUI VONT VOUS PLAIRE !</h3>
         <div class='custom-row'>
           <div class="zoom">
               <?php 
                   $imageProperties = ['src' => "Image/foret.jpg"];
-                  echo img($imageProperties);
+                  echo anchor('https://www.google.com/',img($imageProperties)); 
               ?>
-              <h3>Immersion en fôret</h3>
+              <h3><strong>Immersion en forêt</strong></h3>
           </div>
           <div class="zoom">
               <?php 
                   $imageProperties = ['src' => "Image/theatre.jpg"];
-                  echo img($imageProperties);
+                  echo anchor('https://www.google.com/',img($imageProperties)); 
               ?>
-              <h3>Cyrano de Bergerac</h3>
+              <h3><strong>Cyrano de Bergerac</strong></h3>
           </div>
           <div class="zoom">
               <?php 
                   $imageProperties = ['src' => "Image/moto.jpg"];
-                  echo img($imageProperties);
+                  echo anchor('https://www.google.com/',img($imageProperties)); 
               ?>
-              <h3>MXGP 2025</h3>
+              <h3><strong>MXGP 2025</strong></h3>
           </div>
         </div>
       </section>
-
     </main>
     <footer class="bg-dark text-white text-center py-3">
       <p>&copy; 2025 Ville de GetCet. Tous droits réservés.</p>
