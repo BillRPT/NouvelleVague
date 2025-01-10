@@ -106,7 +106,7 @@
   <body>
     <header class="header-container">
       <h1>Bienvenue à GetCet</h1>
-      <a href="#" class="btn-login">Connexion</a>
+      <?php echo anchor('index.php?uc=connexion&action=demandeConnexion', 'Connexion', ['class' => 'btn-login']);?>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
