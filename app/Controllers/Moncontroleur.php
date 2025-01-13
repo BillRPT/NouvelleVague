@@ -4,8 +4,18 @@ namespace App\Controllers;
 class Moncontroleur extends BaseController{
 
     public function index() {
-        //Retourne la vue d'accueil dans le controleur
-       return view('v_Accueil.php');
+
+        //Mettre par défault uc a accueil
+        $uc = $this->request->getVar('uc') ?? 'accueil';
+
+        switch($uc) {
+            case 'accueil': {
+                return view('v_Accueil.php');
+            }
+            case 'connexion': {
+                return redirect()->to(base_url('c_Connexion/afficherConnexion'));
+            }
+        }
     }
 }
 
