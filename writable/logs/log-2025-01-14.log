@@ -1,0 +1,8 @@
+CRITICAL - 2025-01-14 12:49:44 --> Undefined property: stdClass::$id
+in APPPATH\Models\Monmodele.php on line 15.
+ 1 APPPATH\Models\Monmodele.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 15)
+ 2 APPPATH\Controllers\c_Connexion.php(25): App\Models\Monmodele->Connexion('sqdqs@gmail.com', 'cqsdqs')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->connexionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

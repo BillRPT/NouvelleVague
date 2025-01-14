@@ -1,0 +1,1 @@
+<?php echo '<center>Ulisateur ou mot de passe incorrecte !</center>'?>

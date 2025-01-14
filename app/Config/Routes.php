@@ -7,4 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 //Controleur principal
 $routes->get('/', 'Moncontroleur::index');
-$routes->get('c_Connexion/afficherConnexion', 'c_Connexion::afficherConnexion');
+$routes->get('connexion', 'c_Connexion::index');
+$routes->post('c_Connexion/connexionUtilisateur', 'c_Connexion::connexionUtilisateur');

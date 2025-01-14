@@ -105,7 +105,7 @@
   <body>
     <header class="header-container">
       <h1>Bienvenue à GetCet</h1>
-      <?php echo anchor('MonControleur?uc=connexion', 'Connexion', ['class' => 'btn-login']);?>
+      <?php echo anchor('connexion', 'Connexion', ['class' => 'btn-login']);?>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">

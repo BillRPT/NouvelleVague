@@ -14,7 +14,7 @@
                     <div class="card-body p-5">
                         <h1 class="text-primary text-center mb-4">Connexion</h1>
                         <?= validation_list_errors() ?>
-                        <?= form_open('/Moncontroleur/validerFormulaire', ['class' => 'needs-validation', 'novalidate' => '']); ?>
+                        <?= form_open('/c_Connexion/connexionUtilisateur', ['class' => 'needs-validation', 'novalidate' => '']); ?>
                             <div class="mb-3">
                                 <?= form_label('Adresse Email', 'email', ['class' => 'form-label']); ?>
                                 <?= form_input('email', set_value('email'), ['class' => 'form-control', 'id' => 'email', 'required' => '']); ?>
