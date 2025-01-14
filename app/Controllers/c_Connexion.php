@@ -14,15 +14,15 @@ class c_Connexion extends BaseController{
         $monModele = new \App\Models\Monmodele();
 
         //Récupérer les champs sasie par l'utilisateur
-        $user = $this->request->getPost('email');
-        $email = $this->request->getPost('password');
+        $email = $this->request->getPost('email');
+        $mdp = $this->request->getPost('password');
 
-        if (empty($user) || empty($email)) {
+        if (empty($email) || empty($mdp)) {
             return view('v_Connexion.php').view('v_ChampVide.php');
         }
         else {
-            //Appl la méthode Connexion du Modèle
-            $nb = $monModele->Connexion($user, $email);
+            //Appl la méthode Connexion du Modèle et hasher le mdp
+            $nb = $monModele->Connexion($email, md5($mdp));
 
             //Si nb est == 1 ca veux dire que la connexion a reussie
             if ($nb == 1) {
