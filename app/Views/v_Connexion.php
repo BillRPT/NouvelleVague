@@ -16,8 +16,8 @@
                         <?= validation_list_errors() ?>
                         <?= form_open('/c_Connexion/connexionUtilisateur', ['class' => 'needs-validation', 'novalidate' => '']); ?>
                             <div class="mb-3">
-                                <?= form_label('Adresse Email', 'email', ['class' => 'form-label']); ?>
-                                <?= form_input('email', set_value('email'), ['class' => 'form-control', 'id' => 'email', 'required' => '']); ?>
+                                <?= form_label('Login', 'login', ['class' => 'form-label']); ?>
+                                <?= form_input('login', set_value('email'), ['class' => 'form-control', 'id' => 'login', 'required' => '']); ?>
                             </div>
                             <div class="mb-3">
                                 <?= form_label('Mot de passe', 'password', ['class' => 'form-label']); ?>
@@ -29,7 +29,7 @@
                         <?= form_close(); ?>
                         <p class="mt-3 text-center">
                             Pas encore inscrit ?
-                            <?= anchor('https://www.google.com/', 'Créez un compte'); ?>
+                            <?= anchor('inscription', 'Créez un compte'); ?>
                         </p>
                     </div>
                 </div>

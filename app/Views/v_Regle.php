@@ -1,0 +1,1 @@
+<?php echo '<center>Vous ne respecter pas les règles !</center>';?>

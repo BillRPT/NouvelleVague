@@ -8,24 +8,54 @@
         $db = \Config\Database::connect();
         $builder = $db->table('utilisateur');
         $builder->selectCount('idUser');
-        $builder->where('emailUser', $login);
+        $builder->where('loginUser', $login);
         $builder->where('mdpUser', $mdp);
         $query = $builder->get();
         $result = $query->getResult();
         return $result[0]->idUser;
     }
 
-    public function inscription($nom, $prenom, $email, $motdePasse) {
+    //Fonction d'inscrption qui va insert
+    public function Inscription($nom, $prenom, $email, $motdePasse, $adresse, $login, $codeParrainage) {
         $db = \Config\Database::connect();
 
-        //Régles a respecter
-        $rules = [
-            'username' => 'required|max_length[30]',
-            'password' => 'required|max_length[255]|min_length[10]',
-            'email' => 'required|max_length[254]|valid_email',
+
+        $sql = "INSERT INTO utilisateur (nomUser, prenomUser, roleUser, emailUser, adresseUser, mdpUser, loginUser, codeParrainage)
+                VALUES (:nom, :prenom, 'arrivant', :email, :adresse, :motdePasse, :login, :codeParrainage)
+        ";
+
+        $builder = $db->table('utilisateur');
+
+        //Payload qu'on va inseret dans la bdd
+        $data = [
+            'nomUser' => $nom,
+            'prenomUser' => $prenom,
+            'emailUser' => $email,
+            'adresseUser' => $adresse,
+            'mdpUser' => $motdePasse,
+            'loginUser' => $login,
+            'roleUser' => 'arrivant',
+            'codeParrainage' => $codeParrainage
         ];
 
-        
+        $builder->insert($data);
 
+    }
+
+    public function utilisateurExistant($email, $login) {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('utilisateur');
+
+        $builder->selectCount('idUser');
+
+        $builder->groupStart()
+            ->where('emailUser', $email)
+            ->orWhere('loginUser', $login)
+        ->groupEnd();
+
+        $query = $builder->get();
+        $result = $query->getResult();
+        return $result[0]->idUser;
     }
 }

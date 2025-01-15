@@ -1,0 +1,79 @@
+CRITICAL - 2025-01-15 10:53:05 --> syntax error, unexpected end of file
+in APPPATH\Config\Routes.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(810): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 10:53:58 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(29): CodeIgniter\Model->__get('Fonction')
+ 4 APPPATH\Controllers\c_Inscription.php(28): App\Models\Monmodele->inscription('test', 'test', 'test@gmail.com', 'test', 'tets', 'test')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 10:54:36 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(29): CodeIgniter\Model->__get('Fonction')
+ 4 APPPATH\Controllers\c_Inscription.php(28): App\Models\Monmodele->inscription('test', 'dqsd', 'dsqd', 'qsdqs', 'qsdqs', 'dsq')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 11:01:29 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(29): CodeIgniter\Model->__get('Fonction')
+ 4 APPPATH\Controllers\c_Inscription.php(28): App\Models\Monmodele->inscription('dqs', 'ddsq', 'qsd', 'fbd3489e2c0a1abff35af8a9748c47d7', 'dqs', 'dqsdqs')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 11:07:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(29): CodeIgniter\Model->__get('Fonction')
+ 4 APPPATH\Controllers\c_Inscription.php(28): App\Models\Monmodele->Inscription('qSQ', 'sqSQ', 'dsqdsq', 'fe37defe4f8d4c738bbdda259ef79b19', 'sqSQ', 'dsqdqs')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 13:41:13 --> syntax error, unexpected token "}"
+in APPPATH\Models\Monmodele.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Monmodele')
+ 3 APPPATH\Controllers\c_Inscription.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Monmodele')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 13:41:28 --> Undefined variable $builder
+in APPPATH\Models\Monmodele.php on line 33.
+ 1 APPPATH\Models\Monmodele.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $builder', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 33)
+ 2 APPPATH\Controllers\c_Inscription.php(38): App\Models\Monmodele->utilisateurExistant('d', 'dqsdqs')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 13:41:58 --> Undefined variable $builder
+in APPPATH\Models\Monmodele.php on line 33.
+ 1 APPPATH\Models\Monmodele.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $builder', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 33)
+ 2 APPPATH\Controllers\c_Inscription.php(38): App\Models\Monmodele->utilisateurExistant('d', 'dqsdqs')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-15 13:42:13 --> Undefined variable $builder
+in APPPATH\Models\Monmodele.php on line 33.
+ 1 APPPATH\Models\Monmodele.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $builder', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 33)
+ 2 APPPATH\Controllers\c_Inscription.php(38): App\Models\Monmodele->utilisateurExistant('d', 'dqsdqs')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

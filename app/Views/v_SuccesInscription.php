@@ -1,0 +1,1 @@
+<?php echo '<center>Inscription reussie avec succes !</center>';?>

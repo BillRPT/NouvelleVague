@@ -1,0 +1,1 @@
+<?php echo '<center>Login ou email déjà existant</center>';?>

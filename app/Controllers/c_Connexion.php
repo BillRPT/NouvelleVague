@@ -14,7 +14,7 @@ class c_Connexion extends BaseController{
         $monModele = new \App\Models\Monmodele();
 
         //Récupérer les champs sasie par l'utilisateur
-        $email = $this->request->getPost('email');
+        $email = $this->request->getPost('login');
         $mdp = $this->request->getPost('password');
 
         if (empty($email) || empty($mdp)) {
