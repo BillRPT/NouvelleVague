@@ -1,0 +1,26 @@
+CRITICAL - 2025-01-16 13:53:08 --> Undefined variable $session
+in APPPATH\Controllers\c_Connexion.php on line 41.
+ 1 APPPATH\Controllers\c_Connexion.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Connexion.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 13:53:27 --> Call to a member function destroy() on string
+in APPPATH\Controllers\c_Connexion.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 13:54:00 --> Call to a member function destroy() on string
+in APPPATH\Controllers\c_Connexion.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-16 13:59:11 --> Undefined variable $session
+in APPPATH\Controllers\c_Connexion.php on line 48.
+ 1 APPPATH\Controllers\c_Connexion.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Connexion.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

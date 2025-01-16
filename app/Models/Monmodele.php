@@ -38,6 +38,7 @@
             'codeParrainage' => $codeParrainage
         ];
 
+        //Insert le payload dans la bdd
         $builder->insert($data);
 
     }
@@ -49,6 +50,7 @@
 
         $builder->selectCount('idUser');
 
+        //Si l'email correspond a l'email ou au login, alors renvoyer 1
         $builder->groupStart()
             ->where('emailUser', $email)
             ->orWhere('loginUser', $login)

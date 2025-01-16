@@ -105,7 +105,15 @@
   <body>
     <header class="header-container">
       <h1>Bienvenue à GetCet</h1>
-      <?php echo anchor('connexion', 'Connexion', ['class' => 'btn-login']);?>
+      <?php 
+        //Vérifier que si le user est co ou pas pour afficher le bon boutton
+        if (isset($_SESSION['user'])) {
+          echo anchor('deconnexion', 'Deconnexion', ['class' => 'btn-login']);
+        }
+        else {
+          echo anchor('connexion', 'Connexion', ['class' => 'btn-login']);
+        }
+      ?>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
