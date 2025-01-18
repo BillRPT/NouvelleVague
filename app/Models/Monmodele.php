@@ -60,4 +60,14 @@
         $result = $query->getResult();
         return $result[0]->idUser;
     }
+
+    public function getRole($login) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('utilisateur');
+        $builder->select('roleUser');
+        $builder->where('loginUser', $login);
+        $query = $builder->get();
+        $result = $query->getResult();
+        return $result[0]->roleUser;
+    }
 }

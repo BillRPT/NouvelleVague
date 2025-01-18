@@ -35,7 +35,15 @@ class c_Connexion extends BaseController{
 
                 //Ajt la user a la variable de session (pas de start)
                 $this->session->set($info);
-                return view('v_Accueil.php');
+
+                $getRole = $monModele->getRole($login);
+
+                if ($getRole == "maire" || $getRole == "secretaire") {
+                    return view('v_Header.php').view('v_BouttonDeconnexion.php').view('v_BouttonAdministration.php').view('v_Accueil.php');
+                }
+                else {
+                    return view('v_Header.php').view('v_BouttonDeconnexion.php').view('v_Accueil.php');
+                }
             }
             else {
                 return view('v_Connexion.php').view('v_ErreurConnexion.php');
