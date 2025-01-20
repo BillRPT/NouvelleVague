@@ -134,15 +134,15 @@
         <div class='custom-row'>
           <div class="zoom">
               <?php 
-                  $imageProperties = ['src' => "Image/foret.jpg"];
-                  echo anchor('https://www.google.com/',img($imageProperties)); 
+                   $imageProperties = ['src' => "Image/foret.jpg", 'alt' => "Immersion en forêt"];
+                   echo anchor('immersion-foret', img($imageProperties));
               ?>
               <h3><strong>Immersion en forêt</strong></h3>
           </div>
           <div class="zoom">
               <?php 
                   $imageProperties = ['src' => "Image/theatre.jpg"];
-                  echo anchor('https://www.google.com/',img($imageProperties)); 
+                  echo anchor('culture',img($imageProperties)); 
               ?>
               <h3><strong>Cyrano de Bergerac</strong></h3>
           </div>
