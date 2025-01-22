@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyrano de Bergerac</title>
+    <title>MXGP 2025 - Sport Mécanique</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -39,12 +39,12 @@
             margin-bottom: 1rem;
         }
 
-        /* Vidéo Section */
-        .video-container {
+        /* Image Section */
+        .image-container {
             margin: 2rem auto;
             text-align: center;
         }
-        .video-container video {
+        .image-container img {
             width: 100%;
             max-width: 800px;
             border-radius: 10px;
@@ -71,8 +71,8 @@
 <body>
 
 <header class="hero">
-    <?= anchor('index.php', img(['src' => base_url('Image/logo.png'), 'alt' => 'Logo Nouvelle Vague', 'class' => 'logo'])); ?>
-    <h1>Cyrano de Bergerac</h1>
+    <?= anchor('accueil', img(['src' => base_url('Image/logo.png'), 'alt' => 'Logo Nouvelle Vague', 'class' => 'logo'])); ?>
+    <h1>MXGP 2025</h1>
 </header>
 
 <main class="container">
@@ -80,33 +80,30 @@
     <section class="mt-5">
         <h2 class="text-center mb-4">Présentation</h2>
         <p class="text-center">
-            Découvrez l'épopée théâtrale de Cyrano de Bergerac, une pièce classique qui mêle amour, bravoure et poésie.
-            Assistez à une représentation moderne qui rend hommage à l'œuvre d'Edmond Rostand tout en lui apportant une touche contemporaine.
+            Découvrez l'univers palpitant du sport mécanique avec le MXGP 2025 ! Une compétition de motocross et quad
+            qui met à l'épreuve les meilleurs pilotes sur des circuits spectaculaires.
         </p>
     </section>
 
-    <!-- Vidéo Section -->
-    <section class="video-container">
-        <h2 class="text-center mb-4">Bande-annonce</h2>
-        <video controls>
-            <source src="<?= base_url('Image/bandeAnnonce.mp4'); ?>" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéo.
-        </video>
+    <!-- Image Section -->
+    <section class="image-container">
+        <h2 class="text-center mb-4">Aperçu</h2>
+        <img src="<?= base_url('Image/moto-cross.jpg'); ?>" alt="Moto-cross" class="img-fluid">
     </section>
 
     <!-- Informations pratiques -->
     <section class="text-center mt-5">
         <h2 class="mb-4">Informations pratiques</h2>
-        <p><strong>Date :</strong> 15 mars 2025</p>
-        <p><strong>Lieu :</strong> Théâtre de GetCet, 12 rue des Lilas</p>
-        <p><strong>Heure :</strong> 20h00</p>
-        <p><strong>Prix :</strong> 25€ par personne</p>
+        <p><strong>Date :</strong> 20 juin 2025</p>
+        <p><strong>Lieu :</strong> Circuit de GetCet, Route des Collines</p>
+        <p><strong>Heure :</strong> 14h00</p>
+        <p><strong>Prix :</strong> 50€ par personne</p>
         <?= anchor('#', 'Réserver vos places', ['class' => 'btn btn-primary']); ?>
     </section>
 </main>
 
 <footer class="text-center">
-    <p>&copy; 2025 Théâtre de GetCet. Tous droits réservés.</p>
+    <p>&copy; 2025 Circuit de GetCet. Tous droits réservés.</p>
     <div class="social-icons mt-3">
         <?= anchor('#', '<i class="fab fa-facebook"></i>'); ?>
         <?= anchor('#', '<i class="fab fa-twitter"></i>'); ?>

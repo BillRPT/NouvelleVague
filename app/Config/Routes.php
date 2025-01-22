@@ -15,4 +15,8 @@ $routes->post('c_Inscription/inscriptionUtilisateur', 'c_Inscription::inscriptio
 $routes->get('deconnexion', 'c_Connexion::deconnexionUtilisateur');
 $routes->get('immersion-foret', 'c_ImmersionForet::index');
 $routes->get('culture', 'c_Culture::index');
+$routes->get('sport-mecanique', 'c_SportMecanique::index');
+$routes->get('accueil', 'Accueil::index');
+
+
 

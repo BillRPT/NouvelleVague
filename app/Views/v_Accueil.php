@@ -1,4 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetCet - Activités</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chargement de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        footer .social-icons i {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+        footer .social-icons i:hover {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
@@ -149,7 +169,7 @@
           <div class="zoom">
               <?php 
                   $imageProperties = ['src' => "Image/moto.jpg"];
-                  echo anchor('https://www.google.com/',img($imageProperties)); 
+                  echo anchor('sport-mecanique',img($imageProperties)); 
               ?>
               <h3><strong>MXGP 2025</strong></h3>
           </div>
@@ -158,6 +178,11 @@
     </main>
     <footer class="bg-dark text-white text-center py-3">
       <p>&copy; 2025 Ville de GetCet. Tous droits réservés.</p>
+      <div class="social-icons">
+        <?= anchor('#', '<i class="fab fa-facebook"></i>'); ?>
+        <?= anchor('#', '<i class="fab fa-twitter"></i>'); ?>
+        <?= anchor('#', '<i class="fab fa-instagram"></i>'); ?>
+    </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
