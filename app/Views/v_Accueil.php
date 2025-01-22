@@ -8,6 +8,24 @@
     <!-- Chargement de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+
+.logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        
         footer .social-icons i {
             font-size: 1.5rem;
             margin: 0 10px;
@@ -20,6 +38,10 @@
     </style>
 </head>
     </header>
+    <div class="logo">
+            <!-- Voici la balise <img> explicite pour le logo -->
+            <img src="Image/logo.png" alt="Logo GetCet">
+        </div>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -176,14 +198,55 @@
         </div>
       </section>
     </main>
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; 2025 Ville de GetCet. Tous droits réservés.</p>
-      <div class="social-icons">
-        <?= anchor('#', '<i class="fab fa-facebook"></i>'); ?>
-        <?= anchor('#', '<i class="fab fa-twitter"></i>'); ?>
-        <?= anchor('#', '<i class="fab fa-instagram"></i>'); ?>
+    <footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Section Informations -->
+            <div class="col-md-4">
+                <h5>À propos</h5>
+                <p>
+                    GetCet est une destination incontournable pour découvrir des paysages magnifiques, des activités enrichissantes et un patrimoine culturel unique.
+                </p>
+            </div>
+
+            <!-- Section Navigation -->
+            <div class="col-md-4">
+                <h5>Navigation</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#decouvrir" class="text-white text-decoration-none">Découvrir</a></li>
+                    <li><a href="#activites" class="text-white text-decoration-none">Que faire ?</a></li>
+                    <li><a href="#hebergement" class="text-white text-decoration-none">Où dormir</a></li>
+                    <li><a href="#evenements" class="text-white text-decoration-none">Événements</a></li>
+                    <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section Contact -->
+            <div class="col-md-4">
+                <h5>Contact</h5>
+                <p>
+                    <strong>Adresse :</strong> 12 rue des Lilas, GetCet<br>
+                    <strong>Téléphone :</strong> 01 23 45 67 89<br>
+                    <strong>Email :</strong> <a href="mailto:info@getcet.com" class="text-white text-decoration-none">info@getcet.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Ligne de séparation -->
+        <hr class="my-4">
+
+        <!-- Section Réseaux Sociaux -->
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="mb-0">&copy; 2025 Ville de GetCet. Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </div>
-    </footer>
+</footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

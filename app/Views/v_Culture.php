@@ -12,7 +12,7 @@
             background: #004d40;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            height: 30vh;
+            height: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,32 +23,20 @@
             position: absolute;
             top: 1rem;
             left: 1rem;
-            margin: 10px;
         }
         .logo img {
-            width: 50px;
+            width: 120px;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
         .logo img:hover {
             transform: scale(1.1);
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-        }
-
-        /* Vidéo Section */
-        .video-container {
-            margin: 2rem auto;
             text-align: center;
-        }
-        .video-container video {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer */
@@ -66,13 +54,34 @@
         footer .social-icons i:hover {
             color: #80cbc4;
         }
+
+        .btn-connexion {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-connexion:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
 <header class="hero">
-    <?= anchor('index.php', img(['src' => base_url('Image/logo.png'), 'alt' => 'Logo Nouvelle Vague', 'class' => 'logo'])); ?>
+    <a href="<?= base_url('accueil'); ?>" class="logo">
+        <img src="<?= base_url('Image/logo.png'); ?>" alt="Logo Nouvelle Vague">
+    </a>
     <h1>Cyrano de Bergerac</h1>
+    <a href="<?= base_url('connexion'); ?>" class="btn-connexion">Connexion</a>
 </header>
 
 <main class="container">
@@ -107,7 +116,7 @@
 
 <footer class="text-center">
     <p>&copy; 2025 Théâtre de GetCet. Tous droits réservés.</p>
-    <div class="social-icons mt-3">
+    <div class="social-icons">
         <?= anchor('#', '<i class="fab fa-facebook"></i>'); ?>
         <?= anchor('#', '<i class="fab fa-twitter"></i>'); ?>
         <?= anchor('#', '<i class="fab fa-instagram"></i>'); ?>
