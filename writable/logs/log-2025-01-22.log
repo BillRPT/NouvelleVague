@@ -1,0 +1,50 @@
+CRITICAL - 2025-01-22 14:45:47 --> syntax error, unexpected token "switch"
+in APPPATH\Controllers\c_Administration.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-22 14:47:03 --> Undefined array key "role"
+in APPPATH\Controllers\c_Administration.php on line 9.
+ 1 APPPATH\Controllers\c_Administration.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 9)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-22 14:48:56 --> Undefined variable $session
+in APPPATH\Controllers\c_Administration.php on line 9.
+ 1 APPPATH\Controllers\c_Administration.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 9)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-22 14:52:11 --> syntax error, unexpected token "switch"
+in APPPATH\Controllers\c_Administration.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-22 15:00:03 --> syntax error, unexpected identifier "sur", expecting "," or ";"
+in APPPATH\Views\v_MairePanel.php on line 8.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_MairePanel.php', [], true)
+ 3 APPPATH\Controllers\c_Administration.php(17): view('v_MairePanel.php')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-01-22 15:41:19 --> syntax error, unexpected token "/"
+in APPPATH\Views\v_MairePanel.php on line 23.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_MairePanel.php', [], true)
+ 3 APPPATH\Controllers\c_Administration.php(17): view('v_MairePanel.php')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

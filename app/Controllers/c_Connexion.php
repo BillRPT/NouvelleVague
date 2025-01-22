@@ -28,15 +28,18 @@ class c_Connexion extends BaseController{
             if ($nb == 1) {
                 //Créer un tableau pour l'ajouter a la variable de session
 
+                //Récup le role de l'utilisateur
+                $getRole = $monModele->getRole($login);
+
+                //Mettre dans le payload
                 $info = [
                     'user'  => $login,
+                    'role' => $getRole,
                 ];
 
 
-                //Ajt la user a la variable de session (pas de start)
+                //Créer la variable de session et ajouter le payload a cette variable de session
                 $this->session->set($info);
-
-                $getRole = $monModele->getRole($login);
 
                 if ($getRole == "maire" || $getRole == "secretaire") {
                     return view('v_Header.php').view('v_BouttonDeconnexion.php').view('v_BouttonAdministration.php').view('v_Accueil.php');
