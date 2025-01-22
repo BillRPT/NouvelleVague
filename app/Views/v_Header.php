@@ -105,6 +105,32 @@
             text-align: center;
             margin-top: 10px;
         }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        
+        footer .social-icons i {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+        footer .social-icons i:hover {
+            color: rgb(255, 255, 255);
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>

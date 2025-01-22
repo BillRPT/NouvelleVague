@@ -1,47 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetCet - Activités</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Chargement de Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-
-.logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            display: block;
-        }
-        .logo img {
-            width: 100px;
-            height: auto;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-        .logo img:hover {
-            transform: scale(1.1);
-        }
-
-        
-        footer .social-icons i {
-            font-size: 1.5rem;
-            margin: 0 10px;
-            color: white;
-            transition: color 0.3s ease-in-out;
-        }
-        footer .social-icons i:hover {
-            color: rgb(255, 255, 255);
-        }
-    </style>
-</head>
-    </header>
+  </header>
     <div class="logo">
-            <!-- Voici la balise <img> explicite pour le logo -->
-            <img src="Image/logo.png" alt="Logo GetCet">
-        </div>
+    <?php
+      $imageProperties = [
+        'src'    => base_url('Image/logo.png'),
+      ];
+      echo img($imageProperties); 
+    ?>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +39,7 @@
         <p>Explorez le patrimoine culturel et naturel unique de GetCet.</p>
         <?php 
             $imageProperties = [
-                'src'    => 'Image/aix.png',
+                'src'    => base_url('Image/aix.png'),
                 'width'  => '400',
                 'height' => '400',
                 'class'  => 'custom-image',
