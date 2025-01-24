@@ -41,12 +41,8 @@ class c_Connexion extends BaseController{
                 //Créer la variable de session et ajouter le payload a cette variable de session
                 $this->session->set($info);
 
-                if ($getRole == "maire" || $getRole == "secretaire") {
-                    return view('v_Header.php').view('v_BouttonDeconnexion.php').view('v_BouttonAdministration.php').view('v_Accueil.php');
-                }
-                else {
-                    return view('v_Header.php').view('v_BouttonDeconnexion.php').view('v_Accueil.php');
-                }
+                //et rediriger vers le controleur principal qui est le controleur de l'accueil
+                return redirect()->to('/');
             }
             else {
                 return view('v_Connexion.php').view('v_ErreurConnexion.php');
