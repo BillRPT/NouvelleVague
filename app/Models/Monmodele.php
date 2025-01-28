@@ -71,7 +71,14 @@
         return $result[0]->roleUser;
     }
 
-    public function lesinscriptionEvenements() {
+    //Retourne le nb de evenements existant
+    public function nbEvenements() {
         $db = \Config\Database::connect();
+        $builder = $db->table('evenements');
+        $builder->select('COUNT(idGestion) AS nb');
+        $query = $builder->get();
+        $result = $query->getResult();
+        //retourne un int
+        return $result[0]->nb;
     }
 }

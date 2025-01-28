@@ -21,7 +21,17 @@ class c_Administration extends BaseController{
 
     //Fonction qui permet de retourner la vue pour voir les inscription au evenements
     public function inscriptionEvenement() {
-        return view('v_ConsultationInscriptionEvenement.php');
+
+        $monModele = new \App\Models\Monmodele();
+
+        $nb = $monModele->nbEvenements();
+
+        if ($nb == 0) {
+            return view('v_MairePanel.php').view('v_AucunEvenements.php').view('v_finFooter.php');
+        }
+        else {
+            return view('v_ConsultationInscriptionEvenement.php');
+        }
     }
 
 }
