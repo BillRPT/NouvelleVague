@@ -70,4 +70,8 @@
         $result = $query->getResult();
         return $result[0]->roleUser;
     }
+
+    public function lesinscriptionEvenements() {
+        $db = \Config\Database::connect();
+    }
 }

@@ -14,9 +14,14 @@ class c_Administration extends BaseController{
                 echo 'secretaire';
                 break;
             case 'maire':
-                return view('v_MairePanel.php');
+                return view('v_MairePanel.php').view('v_finFooter.php');
                 break;
         }
+    }
+
+    //Fonction qui permet de retourner la vue pour voir les inscription au evenements
+    public function inscriptionEvenement() {
+        return view('v_ConsultationInscriptionEvenement.php');
     }
 
 }

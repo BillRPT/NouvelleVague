@@ -18,4 +18,5 @@ $routes->get('culture', 'c_Culture::index');
 $routes->get('administration', 'c_Administration::index');
 $routes->get('sport-mecanique', 'c_SportMecanique::index');
 $routes->get('accueil', 'Accueil::index');
+$routes->get('consulterinscriptionEvenement', 'c_Administration::inscriptionEvenement');
 
