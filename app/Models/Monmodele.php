@@ -75,10 +75,23 @@
     public function nbEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
-        $builder->select('COUNT(idGestion) AS nb');
+        //On compte le nombre de évenements existant
+        $builder->selectCount('idGestion');
         $query = $builder->get();
         $result = $query->getResult();
         //retourne un int
-        return $result[0]->nb;
+        return $result[0]->idGestion;
     }
+
+    //Fonction qui va permettre de récupérer tout les évenements et de les mettres dans une ArrayList
+    public function recupererEvenements() {
+        $db = \Config\Database::connect();
+        $builder = $db->table('evenements');
+        $builder->select('idGestion, nomEvenement, dateEvenement, descrption, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
+        $query = $builder->get();
+        //return le résultat sous forme de tableau
+        return $query->getResultArray();
+    }
+
+
 }

@@ -46,6 +46,26 @@
             margin-top: 20px;
         }
 
+        ol {
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        ol li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        }
+
+        ol li span {
+            font-weight: bold;
+            color: #007bff;
+        }
+
     </style>
 </head>
 <body>

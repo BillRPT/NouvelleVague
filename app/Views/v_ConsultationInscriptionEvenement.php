@@ -1,3 +1,5 @@
+<br>
+<br>
 <?php
-    echo 'test';
+    echo $table;
 ?>
