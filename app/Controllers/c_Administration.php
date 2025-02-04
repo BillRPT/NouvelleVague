@@ -43,7 +43,7 @@ class c_Administration extends BaseController{
             foreach ($data['lesEvenements'] as $unEvent) {
 
                 //Créer un lien pour chaque évenements
-                $lien = anchor('inscription/liste/' . $unEvent['idGestion'], 'Voir les inscrits', ['class' => 'btn btn-primary']);
+                $lien = anchor('listeparticipantEvenement/' . $unEvent['idGestion'], 'Voir les inscrits', ['class' => 'btn btn-primary']);
 
                 //Ajouter les valeurs
                 $table->addRow(
@@ -62,7 +62,45 @@ class c_Administration extends BaseController{
             //Le générer 
             $data['table'] = $table->generate();
 
-            return view('v_MairePanel.php').view('v_ConsultationInscriptionEvenement.php', $data).view('v_finFooter.php');
+            return view('v_MairePanel.php').view('v_ConsultationEvenement.php', $data).view('v_finFooter.php');
+        }
+    }
+
+    public function listeparticipantEvenement($param = false) {
+        $monModele = new \App\Models\Monmodele();
+
+        //Pour créer un tableau
+        $table = new \CodeIgniter\View\Table();
+
+        $data['lesParticipants'] = $monModele->listedesparticipantEvenements($param);
+
+        if (count($data['lesParticipants']) == 0) {
+            return view('v_MairePanel.php').view('v_AucunParticipant.php').view('v_finFooter.php');
+        }
+        else {
+                //Les entetes du tableau
+            $table->setHeading('nomUser', 'prenomUser', 'emailUser', 'adresseUser', 'dateReservation', 'nbplaceTotale', 'statutReservation');
+        
+            //Ajouter l'event au tableau
+            foreach ($data['lesParticipants'] as $unParticipant) {
+
+                //Ajouter les valeurs
+                $table->addRow(
+                    $unParticipant['nomUser'],
+                    $unParticipant['prenomUser'],
+                    $unParticipant['emailUser'],
+                    $unParticipant['adresseUser'],
+                    $unParticipant['dateReservation'],
+                    $unParticipant['nbplaceTotale'],
+                    $unParticipant['statutReservation'],
+                );
+            }
+
+            //Le générer 
+            $data['table'] = $table->generate();
+
+
+            return view('v_MairePanel.php').view('v_ListeParticipantEvenement.php', $data).view('v_finFooter.php');
         }
     }
 

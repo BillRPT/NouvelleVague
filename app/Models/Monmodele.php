@@ -93,5 +93,21 @@
         return $query->getResultArray();
     }
 
+    public function listedesparticipantEvenements($idEvenement) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('utilisateur');
+        
+        $builder->join('resaevenements', 'utilisateur.idUser = resaevenements.idUser');
+        
+        $builder->select('nomUser, prenomUser, emailUser, adresseUser, dateReservation, nbplaceTotale, statutReservation');
+        $builder->where('idResa', $idEvenement);
+        $query = $builder->get();
+        
+        // Retourner le résultat sous forme de tableau
+        return $query->getResultArray();
+    }
+    
+    
+
 
 }

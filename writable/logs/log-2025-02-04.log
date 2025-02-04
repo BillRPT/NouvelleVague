@@ -1,0 +1,119 @@
+ERROR - 2025-02-04 15:53:41 --> mysqli_sql_exception: Champ 'statusUser' inconnu dans field list in C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `nomUser...', 0)
+#1 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomUser...')
+#2 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomUser...')
+#3 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `nomUser...', Array, false)
+#4 C:\Users\Dell\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(103): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Dell\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(72): App\Models\Monmodele->listedesparticipantEvenements('1')
+#6 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+#7 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Dell\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-04 15:53:41 --> Champ 'statusUser' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `nomUser`, `prenomUser`, `emailUser`, `adresseUser`, `dateReservation`, `nbplaceTotale`, `statusUser`
+FROM `utilisateur`, `resaevenements`
+WHERE `utilisateur`.`idUser` = :utilisateur.idUser:
+AND `idResa` = :idResa:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(103): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(72): App\Models\Monmodele->listedesparticipantEvenements('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-04 15:54:18 --> mysqli_sql_exception: Champ 'statusUser' inconnu dans field list in C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `nomUser...', 0)
+#1 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomUser...')
+#2 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomUser...')
+#3 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `nomUser...', Array, false)
+#4 C:\Users\Dell\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(103): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Dell\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(72): App\Models\Monmodele->listedesparticipantEvenements('1')
+#6 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+#7 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Dell\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-04 15:54:19 --> Champ 'statusUser' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `nomUser`, `prenomUser`, `emailUser`, `adresseUser`, `dateReservation`, `nbplaceTotale`, `statusUser`
+FROM `utilisateur`, `resaevenements`
+WHERE `utilisateur`.`idUser` = :utilisateur.idUser:
+AND `idResa` = :idResa:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(103): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(72): App\Models\Monmodele->listedesparticipantEvenements('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-04 15:54:30 --> Undefined variable $table
+in APPPATH\Controllers\c_Administration.php on line 75.
+ 1 APPPATH\Controllers\c_Administration.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $table', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-04 15:54:31 --> Undefined variable $table
+in APPPATH\Controllers\c_Administration.php on line 75.
+ 1 APPPATH\Controllers\c_Administration.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $table', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-04 15:55:47 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::and()
+in APPPATH\Models\Monmodele.php on line 102.
+ 1 APPPATH\Controllers\c_Administration.php(75): App\Models\Monmodele->listedesparticipantEvenements('1')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-04 16:11:51 --> mysqli_sql_exception: Champ 'statusUser' inconnu dans field list in C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `nomUser...', 0)
+#1 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nomUser...')
+#2 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nomUser...')
+#3 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `nomUser...', Array, false)
+#4 C:\Users\Dell\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(110): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Dell\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(75): App\Models\Monmodele->listedesparticipantEvenements('1')
+#6 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+#7 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\Dell\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Dell\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-04 16:11:51 --> Champ 'statusUser' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `nomUser`, `prenomUser`, `emailUser`, `adresseUser`, `dateReservation`, `nbplaceTotale`, `statusUser`
+FROM `utilisateur`
+JOIN `resaevenements` ON `utilisateur`.`idUser` = `resaevenements`.`idUser`
+WHERE `idResa` = :idResa:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(110): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(75): App\Models\Monmodele->listedesparticipantEvenements('1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-04 16:12:25 --> Undefined variable $unEvent
+in APPPATH\Controllers\c_Administration.php on line 89.
+ 1 APPPATH\Controllers\c_Administration.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unEvent', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-04 16:12:39 --> Undefined variable $unEvent
+in APPPATH\Controllers\c_Administration.php on line 89.
+ 1 APPPATH\Controllers\c_Administration.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unEvent', 'C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-04 16:16:12 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\c_Administration.php on line 79.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Dell\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
