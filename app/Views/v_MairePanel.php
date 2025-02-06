@@ -22,7 +22,6 @@
 
         a {
             text-decoration: none;
-            font-size: 1.0rem;
             color: #ffffff;
             background-color: #28a745;
             padding: 10px 20px;
@@ -58,7 +57,6 @@
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
         }
 
         ol li span {
@@ -66,11 +64,66 @@
             color: #007bff;
         }
 
+        /* Styling for the table */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 20px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0072ff;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr {
+            background-color: #e0e0e0;
+        }
+
+        td {
+            color: #333;
+        }
+
+        td a {
+            color: #0072ff;
+            text-decoration: none;
+        }
+
+        td a:hover {
+            color: #0056b3;
+        }
+
+                /* Ajuster la taille et l'apparence des boutons dans le tableau */
+        table .btn {
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        /* Appliquer un espacement entre les boutons pour ne pas qu'ils se chevauchent */
+        table td {
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
     <center><h1>Bienvenue <?php echo $_SESSION['user']; ?> sur le Panneau Administrateur Maire !</h1></center>
     <div class="link-container" style="text-align: center;">
-        <?php echo anchor('consulterinscriptionEvenement', 'Les inscriptions pour chaque événements'); echo anchor ('/c_Administration/consulterpopulariterEvenement', 'Les evenements populaire');?>
+        <?php echo anchor('consulterinscriptionEvenement', 'Les inscriptions pour chaque événements'); echo anchor ('/c_Administration/consulterpopulariterEvenement', 'Les evenements populaire'); ?>
     </div>
-
