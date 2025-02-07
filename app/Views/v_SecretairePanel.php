@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Panneau Administrateur Maire</title>
+    <title>Panneau Administrateur Secretaire</title>
     <style>
          body {
             background: linear-gradient(to right, #00c6ff, #0072ff); /* Blue gradient */
@@ -123,7 +123,7 @@
     </style>
 </head>
 <body>
-    <center><h1>Bienvenue <?php echo $_SESSION['user']; ?> sur le Panneau Administrateur Maire !</h1></center>
+    <center><h1>Bienvenue <?php echo $_SESSION['user']; ?> sur le Panneau Administrateur Secretaire !</h1></center>
     <div class="link-container" style="text-align: center;">
-        <?php echo anchor('consulterinscriptionEvenement', 'Les inscriptions pour chaque événements'); echo anchor ('consulterpopulariterEvenement', 'Les evenements populaire'); ?>
+        <?php echo anchor('creationevenement', 'Créer un nouvel événement');?>
     </div>

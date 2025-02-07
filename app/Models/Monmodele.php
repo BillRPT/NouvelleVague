@@ -87,12 +87,13 @@
     public function recupererEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
-        $builder->select('idGestion, nomEvenement, dateEvenement, descrption, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
+        $builder->select('idGestion, nomEvenement, dateEvenement, description, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
         $query = $builder->get();
         //return le résultat sous forme de tableau
         return $query->getResultArray();
     }
 
+    //Faire passer en para le id de l'évenements et récup tous les participants
     public function listedesparticipantEvenements($idEvenement) {
         $db = \Config\Database::connect();
         $builder = $db->table('utilisateur');
@@ -105,6 +106,24 @@
         
         // Retourner le résultat sous forme de tableau
         return $query->getResultArray();
+    }
+
+    public function evenementsPopulaire() {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('evenements');
+
+        $builder->join('resaevenements', 'evenements.idGestion = resaevenements.idGestion');
+
+        $builder->select('nomEvenement, dateEvenement, COUNT(idResa) AS nb_reservations, SUM(nbplaceTotale) AS nb_places_reservees, statutEvenement');
+
+        $builder->where('statutReservation', 'valider');
+        $builder->groupBy('evenements.idGestion');
+        $builder->orderBy('nb_places_reservees', 'DESC');
+
+        $query = $builder->get();
+        return $query->getResultArray();
+
     }
     
     
