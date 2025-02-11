@@ -125,6 +125,30 @@
         return $query->getResultArray();
 
     }
+
+    public function gettypeEvenement() {
+        $db = \Config\Database::connect();
+        $builder = $db->table('typeevenement');
+        $builder->select('nom');
+        $query = $builder->get();
+    
+        $result = $query->getResultArray();
+    
+        $lestypeEvenements = []; // Tableau indexé avec seulement les noms
+        foreach ($result as $Event) {
+            $lestypeEvenements[] = $Event['nom']; // Ajouter seulement le nom
+        }
+    
+        return $lestypeEvenements;
+    }
+    
+    
+
+    public function ajouterEvenement($nom, $date, $description, $nbPlace, $duree) {
+        $db = \Config\Database::connect();
+
+        $sql = "INSERT INTO evenements ("
+    }
     
     
 

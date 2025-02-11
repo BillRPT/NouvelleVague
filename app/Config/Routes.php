@@ -22,4 +22,6 @@ $routes->get('consulterinscriptionEvenement', 'c_Administration::inscriptionEven
 //Mettre any pour faire passer en para des paramètres
 $routes->get('listeparticipantEvenement/(:any)', 'c_Administration::listeparticipantEvenement/$1');
 $routes->get('consulterpopulariterEvenement', 'c_Administration::lesevenementsPopulaire');
+$routes->get('creerEvenements', 'c_Administration::creerEvenements');
+$routes->post('c_Administration/creerEvenements', 'c_Administration::creerEvenements');
 

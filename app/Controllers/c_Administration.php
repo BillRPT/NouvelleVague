@@ -137,4 +137,32 @@ class c_Administration extends BaseController{
         return view('v_MairePanel.php').view('v_EvenementPopulaire.php', $data).view('v_finFooter.php');
     }
 
+    public function creerEvenements() {
+
+        $monModele = new \App\Models\Monmodele();
+
+        //Récupérer les types d'event pour les mettres dans une liste déroulante
+
+        $typeEvent['lestypeEvenements'] = $monModele->gettypeEvenement();
+
+
+        //Si la req est en post alors cela signifie la validation du formulaire
+        if ($this->request->is('post')) {
+            $nom = $this->request->getPost('nom');
+            $date = $this->request->getPost('date');
+            $description = $this->request->getPost('description');
+            $nombrePlace = $this->request->getPost('nbPlace');
+            $duree = $this->request->getPost('duree');
+            if (empty($nom) || empty($date) || empty($description) || empty($nombrePlace) || empty($duree)) {
+                return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_ChampVide.php').view('v_finFooter.php');
+            }
+            else {
+                echo 'test';
+            }
+        }
+        else {
+            return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_finFooter.php');
+        }
+    }
+
 }
