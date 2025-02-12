@@ -1,0 +1,1 @@
+<center><p>Insertion effectuer avec succés</p></center>

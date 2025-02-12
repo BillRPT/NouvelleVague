@@ -39,7 +39,7 @@ class c_Inscription extends BaseController{
 
             if($this->validate($rules)){
                 if ($nb != 1) {
-                    //Appl la fonction generateCode pour obtenir une code
+                    //Appl la fonction generateCode pour obtenir un code
                     $codeParrainage = $fonction->generateCode();
                     $monModele->Inscription($nom, $prenom, $email, md5($password), $adresse, $login, $codeParrainage);
                     return view('v_Inscription.php').view('v_SuccesInscription.php');

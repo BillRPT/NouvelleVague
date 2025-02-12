@@ -6,9 +6,9 @@
 <?= form_label('Nom : '); ?>
 <?php echo form_input('nom', set_value('nom')); ?> <br /><br />
 <?= form_label('Type Evenement : '); ?>
-<?php echo form_dropdown('dropdown_name', $lestypeEvenements); ?>
+<?= form_dropdown('dropdown_name', $lestypeEvenements, set_value('dropdown_name')); ?>
 <?= form_label('Date : '); ?>
-<?php echo form_input('date', set_value('date')); ?> <br /><br />
+<?php echo form_input(['name' => 'date', 'type' => 'date', 'value' => set_value('date')]); ?> <br /> <br />
 <?= form_label('Description : '); ?>
 <?php echo form_input('description', set_value('description')); ?> <br /><br />
 <?= form_label('Nombre de Place : '); ?>

@@ -144,12 +144,39 @@
     
     
 
-    public function ajouterEvenement($nom, $date, $description, $nbPlace, $duree) {
+    public function ajouterEvenement($nom, $date, $description, $nbPlace, $duree, $idtypeEvenement) {
         $db = \Config\Database::connect();
 
-        $sql = "INSERT INTO evenements ("
+        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, description, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :description, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
+
+        $builder = $db->table('evenements');
+
+        //Payload qu'on va inseret dans la bdd
+        $data = [
+            'nomEvenement' => $nom,
+            'dateEvenement' => $date,
+            'description' => $description,
+            'nbplaceDispo' => $nbPlace,
+            'nbplaceMax' => $nbPlace,
+            'dureeEvenement' => $duree,
+            'idtypeEvenement' => $idtypeEvenement,
+            'statutEvenement' => 'actif',
+        ];
+
+        //Insert le payload dans la bdd
+        $builder->insert($data);
     }
     
+    public function getidTypeEvenement($event) {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('evenements');
+        $builder->select('idtypeEvenement');
+        $builder->where('idtypeEvenement', $login);
+        $query = $builder->get();
+        $result = $query->getResult();
+        return $result[0]->roleUser;
+    }
     
 
 

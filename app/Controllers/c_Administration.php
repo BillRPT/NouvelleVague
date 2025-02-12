@@ -115,6 +115,7 @@ class c_Administration extends BaseController{
         $data['lesevenements'] = $monModele->evenementsPopulaire();
 
 
+        //En tête du tableau
         $table->setHeading('nomEvenement', 'dateEvenement', 'Nombre de reservation', 'Nombre de place réservées', 'statutEvenement');
 
 
@@ -153,11 +154,20 @@ class c_Administration extends BaseController{
             $description = $this->request->getPost('description');
             $nombrePlace = $this->request->getPost('nbPlace');
             $duree = $this->request->getPost('duree');
+            $evenement = $this->request->getPost('evenement');
+            //Vérifier que aucun champ n'est vide
             if (empty($nom) || empty($date) || empty($description) || empty($nombrePlace) || empty($duree)) {
+                //Retourner la vue avec un message d'erreur
                 return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_ChampVide.php').view('v_finFooter.php');
             }
             else {
-                echo 'test';
+                //Récup l'id du evenement
+
+                $idEvent = $monModele->getidTypeEvenement($evenement);
+
+                //Insertion de l'evenement
+                $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $idEvent);
+                return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_MessageCreationEvenement.php').view('v_finFooter.php');
             }
         }
         else {
