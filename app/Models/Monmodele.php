@@ -144,10 +144,10 @@
     
     
 
-    public function ajouterEvenement($nom, $date, $description, $nbPlace, $duree, $idtypeEvenement) {
+    public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement) {
         $db = \Config\Database::connect();
 
-        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, description, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :description, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
+        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descrptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
 
         $builder = $db->table('evenements');
 
@@ -155,7 +155,7 @@
         $data = [
             'nomEvenement' => $nom,
             'dateEvenement' => $date,
-            'description' => $description,
+            'descrptionEvenement' => $descriptionEvent,
             'nbplaceDispo' => $nbPlace,
             'nbplaceMax' => $nbPlace,
             'dureeEvenement' => $duree,
@@ -168,15 +168,19 @@
     }
     
     public function getidTypeEvenement($event) {
-        $db = \Config\Database::connect();
-
-        $builder = $db->table('evenements');
+        /*$db = \Config\Database::connect();
+    
+        $builder = $db->table('typeevenement');
         $builder->select('idtypeEvenement');
-        $builder->where('idtypeEvenement', $login);
+        $builder->where('nom', $event);
         $query = $builder->get();
+        
         $result = $query->getResult();
-        return $result[0]->roleUser;
+        
+        return $result[0]->idtypeEvenement;*/
+        echo $event;
     }
+    
     
 
 

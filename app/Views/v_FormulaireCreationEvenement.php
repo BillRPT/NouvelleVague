@@ -6,7 +6,7 @@
 <?= form_label('Nom : '); ?>
 <?php echo form_input('nom', set_value('nom')); ?> <br /><br />
 <?= form_label('Type Evenement : '); ?>
-<?= form_dropdown('dropdown_name', $lestypeEvenements, set_value('dropdown_name')); ?>
+<?= form_dropdown('evenement', $lestypeEvenements, set_value('evenement')); ?>
 <?= form_label('Date : '); ?>
 <?php echo form_input(['name' => 'date', 'type' => 'date', 'value' => set_value('date')]); ?> <br /> <br />
 <?= form_label('Description : '); ?>

@@ -154,7 +154,9 @@ class c_Administration extends BaseController{
             $description = $this->request->getPost('description');
             $nombrePlace = $this->request->getPost('nbPlace');
             $duree = $this->request->getPost('duree');
-            $evenement = $this->request->getPost('evenement');
+            $typeEvenement = $this->request->getPost('evenement');
+            //l'incrementer de 1 pour avoir les bonnes valeurs
+            $typeEvenement = $typeEvenement + 1;
             //Vérifier que aucun champ n'est vide
             if (empty($nom) || empty($date) || empty($description) || empty($nombrePlace) || empty($duree)) {
                 //Retourner la vue avec un message d'erreur
@@ -163,10 +165,10 @@ class c_Administration extends BaseController{
             else {
                 //Récup l'id du evenement
 
-                $idEvent = $monModele->getidTypeEvenement($evenement);
+                //$idEvent = $monModele->getidTypeEvenement($evenement);
 
-                //Insertion de l'evenement
-                $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $idEvent);
+                //Insertion de l'evenement (la variable evenement est un entier qui correspond a l'id du tyoe de l'evenement)
+                $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $typeEvenement);
                 return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_MessageCreationEvenement.php').view('v_finFooter.php');
             }
         }
