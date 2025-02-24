@@ -1,0 +1,122 @@
+ERROR - 2025-02-24 17:21:03 --> mysqli_sql_exception: Champ 'description' inconnu dans field list in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `idGesti...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idGesti...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idGesti...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGesti...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-24 17:21:03 --> Champ 'description' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGestion`, `nomEvenement`, `dateEvenement`, `description`, `nbplaceDispo`, `dureeEvenement`, `nbplaceMax`, `statutEvenement`
+FROM `evenements`', [], false)
+ 2 APPPATH\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-24 17:21:38 --> mysqli_sql_exception: Champ 'description' inconnu dans field list in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `idGesti...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idGesti...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idGesti...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGesti...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-24 17:21:38 --> Champ 'description' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGestion`, `nomEvenement`, `dateEvenement`, `description`, `nbplaceDispo`, `dureeEvenement`, `nbplaceMax`, `statutEvenement`
+FROM `evenements`', [], false)
+ 2 APPPATH\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-24 17:21:39 --> mysqli_sql_exception: Champ 'description' inconnu dans field list in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `idGesti...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idGesti...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idGesti...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGesti...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-24 17:21:39 --> Champ 'description' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGestion`, `nomEvenement`, `dateEvenement`, `description`, `nbplaceDispo`, `dureeEvenement`, `nbplaceMax`, `statutEvenement`
+FROM `evenements`', [], false)
+ 2 APPPATH\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-24 17:21:39 --> mysqli_sql_exception: Champ 'description' inconnu dans field list in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `idGesti...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idGesti...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idGesti...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGesti...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-24 17:21:39 --> Champ 'description' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGestion`, `nomEvenement`, `dateEvenement`, `description`, `nbplaceDispo`, `dureeEvenement`, `nbplaceMax`, `statutEvenement`
+FROM `evenements`', [], false)
+ 2 APPPATH\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-24 17:22:42 --> mysqli_sql_exception: Champ 'description' inconnu dans field list in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `idGesti...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idGesti...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idGesti...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGesti...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-24 17:22:42 --> Champ 'description' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGestion`, `nomEvenement`, `dateEvenement`, `description`, `nbplaceDispo`, `dureeEvenement`, `nbplaceMax`, `statutEvenement`
+FROM `evenements`', [], false)
+ 2 APPPATH\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(37): App\Models\Monmodele->recupererEvenements()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-24 17:23:55 --> Undefined array key "description"
+in APPPATH\Controllers\c_Administration.php on line 53.
+ 1 APPPATH\Controllers\c_Administration.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "description"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -19,9 +19,10 @@ $routes->get('administration', 'c_Administration::index');
 $routes->get('sport-mecanique', 'c_SportMecanique::index');
 $routes->get('accueil', 'Accueil::index');
 $routes->get('consulterinscriptionEvenement', 'c_Administration::inscriptionEvenement');
-//Mettre any pour faire passer en para des paramètres
+//Mettre any pour faire passer en para des valeurs
 $routes->get('listeparticipantEvenement/(:any)', 'c_Administration::listeparticipantEvenement/$1');
 $routes->get('consulterpopulariterEvenement', 'c_Administration::lesevenementsPopulaire');
 $routes->get('creerEvenements', 'c_Administration::creerEvenements');
 $routes->post('c_Administration/creerEvenements', 'c_Administration::creerEvenements');
+$routes->get('retour', 'Moncontroleur::index');
 

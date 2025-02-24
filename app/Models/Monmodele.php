@@ -87,7 +87,7 @@
     public function recupererEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
-        $builder->select('idGestion, nomEvenement, dateEvenement, description, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
+        $builder->select('idGestion, nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
         $query = $builder->get();
         //return le résultat sous forme de tableau
         return $query->getResultArray();
@@ -147,7 +147,7 @@
     public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement) {
         $db = \Config\Database::connect();
 
-        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descrptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
+        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
 
         $builder = $db->table('evenements');
 
@@ -155,7 +155,7 @@
         $data = [
             'nomEvenement' => $nom,
             'dateEvenement' => $date,
-            'descrptionEvenement' => $descriptionEvent,
+            'descriptionEvenement' => $descriptionEvent,
             'nbplaceDispo' => $nbPlace,
             'nbplaceMax' => $nbPlace,
             'dureeEvenement' => $duree,

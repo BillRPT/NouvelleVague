@@ -126,4 +126,3 @@
     <center><h1>Bienvenue <?php echo $_SESSION['user']; ?> sur le Panneau Administrateur Maire !</h1></center>
     <div class="link-container" style="text-align: center;">
         <?php echo anchor('consulterinscriptionEvenement', 'Les inscriptions pour chaque événements'); echo anchor ('consulterpopulariterEvenement', 'Les evenements populaire'); ?>
-    </div>

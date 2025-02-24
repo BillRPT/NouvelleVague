@@ -181,4 +181,3 @@
     <center><h1>Bienvenue <?php echo $_SESSION['user']; ?> sur le Panneau Administrateur Secretaire !</h1></center>
     <div class="link-container" style="text-align: center;">
         <?php echo anchor('creerEvenements', 'Créer un nouvel événement');?>
-    </div>

@@ -11,10 +11,10 @@ class c_Administration extends BaseController{
         //Faire un switch pour rediriger l'utilisateur en fonction de son rôle (maire ou secretaire)
         switch ($role) {
             case 'secretaire':
-                return view('v_SecretairePanel.php').view('v_finFooter.php');
+                return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_finFooter.php');
                 break;
             case 'maire':
-                return view('v_MairePanel.php').view('v_finFooter.php');
+                return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_finFooter.php');
                 break;
         }
     }
@@ -29,7 +29,7 @@ class c_Administration extends BaseController{
         $nb = $monModele->nbEvenements();
 
         if ($nb == 0) {
-            return view('v_MairePanel.php').view('v_AucunEvenements.php').view('v_finFooter.php');
+            return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_AucunEvenements.php').view('v_finFooter.php');
         }
         else {
 
@@ -50,7 +50,7 @@ class c_Administration extends BaseController{
                     $unEvent['idGestion'],
                     $unEvent['nomEvenement'],
                     $unEvent['dateEvenement'],
-                    $unEvent['description'],
+                    $unEvent['descriptionEvenement'],
                     $unEvent['nbplaceDispo'],
                     $unEvent['dureeEvenement'],
                     $unEvent['nbplaceMax'],
@@ -62,7 +62,7 @@ class c_Administration extends BaseController{
             //Le générer 
             $data['table'] = $table->generate();
 
-            return view('v_MairePanel.php').view('v_ConsultationEvenement.php', $data).view('v_finFooter.php');
+            return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_ConsultationEvenement.php', $data).view('v_finFooter.php');
         }
     }
 
@@ -75,7 +75,7 @@ class c_Administration extends BaseController{
         $data['lesParticipants'] = $monModele->listedesparticipantEvenements($param);
 
         if (count($data['lesParticipants']) == 0) {
-            return view('v_MairePanel.php').view('v_AucunParticipant.php').view('v_finFooter.php');
+            return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_AucunParticipant.php').view('v_finFooter.php');
         }
         else {
                 //Les entetes du tableau
@@ -100,7 +100,7 @@ class c_Administration extends BaseController{
             $data['table'] = $table->generate();
 
 
-            return view('v_MairePanel.php').view('v_ListeParticipantEvenement.php', $data).view('v_finFooter.php');
+            return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_ListeParticipantEvenement.php', $data).view('v_finFooter.php');
         }
     }
 
@@ -135,7 +135,7 @@ class c_Administration extends BaseController{
         $data['table'] = $table->generate();
 
 
-        return view('v_MairePanel.php').view('v_EvenementPopulaire.php', $data).view('v_finFooter.php');
+        return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_EvenementPopulaire.php', $data).view('v_finFooter.php');
     }
 
     public function creerEvenements() {
@@ -160,7 +160,7 @@ class c_Administration extends BaseController{
             //Vérifier que aucun champ n'est vide
             if (empty($nom) || empty($date) || empty($description) || empty($nombrePlace) || empty($duree)) {
                 //Retourner la vue avec un message d'erreur
-                return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_ChampVide.php').view('v_finFooter.php');
+                return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_ChampVide.php').view('v_finFooter.php');
             }
             else {
                 //Récup l'id du evenement
@@ -169,11 +169,11 @@ class c_Administration extends BaseController{
 
                 //Insertion de l'evenement (la variable evenement est un entier qui correspond a l'id du tyoe de l'evenement)
                 $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $typeEvenement);
-                return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_MessageCreationEvenement.php').view('v_finFooter.php');
+                return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_MessageCreationEvenement.php').view('v_finFooter.php');
             }
         }
         else {
-            return view('v_SecretairePanel.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_finFooter.php');
+            return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_finFooter.php');
         }
     }
 
