@@ -38,7 +38,7 @@
             background-color: #0056b3;
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 1px 20px;
             border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
