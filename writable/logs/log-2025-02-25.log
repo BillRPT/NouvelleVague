@@ -5,3 +5,24 @@ in APPPATH\Controllers\c_Administration.php on line 9.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 19:38:41 --> Undefined variable $table
+in APPPATH\Controllers\c_Administration.php on line 192.
+ 1 APPPATH\Controllers\c_Administration.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $table', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->supprimerEvenement()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 22:48:21 --> Undefined variable $monModele
+in APPPATH\Controllers\c_Administration.php on line 229.
+ 1 APPPATH\Controllers\c_Administration.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $monModele', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 229)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->supressiondeEvenement('6')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-25 22:48:40 --> Undefined variable $data
+in APPPATH\Controllers\c_Administration.php on line 232.
+ 1 APPPATH\Controllers\c_Administration.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 232)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->supressiondeEvenement('6')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

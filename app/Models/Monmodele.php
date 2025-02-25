@@ -166,22 +166,17 @@
         //Insert le payload dans la bdd
         $builder->insert($data);
     }
-    
-    public function getidTypeEvenement($event) {
-        /*$db = \Config\Database::connect();
-    
-        $builder = $db->table('typeevenement');
-        $builder->select('idtypeEvenement');
-        $builder->where('nom', $event);
-        $query = $builder->get();
-        
-        $result = $query->getResult();
-        
-        return $result[0]->idtypeEvenement;*/
-        echo $event;
+
+
+    public function suppressionEvenement($idEvenement) {
+        $db = \Config\Database::connect();
+
+        // Préparer la requête de suppression
+        $builder = $db->table('evenements');
+        $builder->where('idGestion', $idEvenement);
+
+        $builder->delete();
     }
-    
-    
 
 
 }

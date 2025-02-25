@@ -177,4 +177,57 @@ class c_Administration extends BaseController{
         }
     }
 
+    public function supprimerEvenement() {
+
+        $monModele = new \App\Models\Monmodele();
+        //Pour créer un tableau
+        $table = new \CodeIgniter\View\Table();
+
+        $nb = $monModele->nbEvenements();
+
+        if ($nb == 0) {
+            return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_AucunEvenements.php').view('v_finFooter.php');
+        }
+        else {
+            //Appl la fonction 'recupererEvenements' et stock tout ca dans 'lesEvenements'
+            $data['lesEvenements'] = $monModele->recupererEvenements();
+    
+    
+            //Les entetes du tableau
+            $table->setHeading('idGestion', 'nomEvenement', 'dateEvenement', 'description', 'nbplaceDispo', 'dureeEvenement', 'nbplaceMax', 'statutEvenement');
+
+            //Ajouter l'event au tableau
+            foreach ($data['lesEvenements'] as $unEvent) {
+
+                //Créer un lien pour chaque évenements
+                $lien = anchor('supressiondeEvenement/' . $unEvent['idGestion'], 'Supprimer cet événement', ['class' => 'btn btn-primary']);
+
+                //Ajouter les valeurs
+                $table->addRow(
+                    $unEvent['idGestion'],
+                    $unEvent['nomEvenement'],
+                    $unEvent['dateEvenement'],
+                    $unEvent['descriptionEvenement'],
+                    $unEvent['nbplaceDispo'],
+                    $unEvent['dureeEvenement'],
+                    $unEvent['nbplaceMax'],
+                    $unEvent['statutEvenement'],
+                    $lien
+                );
+            }
+
+            //Le générer 
+            $data['table'] = $table->generate();
+
+
+            return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_ConsultationEvenement.php', $data).view('v_finFooter.php');
+        }
+    }
+
+    public function supressiondeEvenement($param = false) {
+        $monModele = new \App\Models\Monmodele();
+        //Appel la méthode dans le modele
+        $monModele->suppressionEvenement($param);
+        return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view("v_SupressionEvenement.php").view('v_finFooter.php');
+    }
 }

@@ -25,4 +25,7 @@ $routes->get('consulterpopulariterEvenement', 'c_Administration::lesevenementsPo
 $routes->get('creerEvenements', 'c_Administration::creerEvenements');
 $routes->post('c_Administration/creerEvenements', 'c_Administration::creerEvenements');
 $routes->get('retour', 'Moncontroleur::index');
+$routes->get('supprimerEvenement', 'c_Administration::supprimerEvenement');
+
+$routes->get('supressiondeEvenement/(:any)', 'c_Administration::supressiondeEvenement/$1');
 
