@@ -1,0 +1,62 @@
+ERROR - 2025-02-26 14:33:44 --> mysqli_sql_exception: Champ 'description' inconnu dans field list in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `idGesti...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idGesti...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idGesti...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGesti...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(193): App\Models\Monmodele->recupererEvenements()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->supprimerEvenement()
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-26 14:33:44 --> Champ 'description' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGestion`, `nomEvenement`, `dateEvenement`, `description`, `nbplaceDispo`, `dureeEvenement`, `nbplaceMax`, `statutEvenement`
+FROM `evenements`', [], false)
+ 2 APPPATH\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(193): App\Models\Monmodele->recupererEvenements()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->supprimerEvenement()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-26 14:39:42 --> Undefined array key "descriptionEvenement"
+in APPPATH\Controllers\c_Administration.php on line 210.
+ 1 APPPATH\Controllers\c_Administration.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descriptionEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->supprimerEvenement()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-26 14:41:43 --> mysqli_sql_exception: Champ 'description' inconnu dans field list in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `idGesti...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idGesti...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idGesti...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGesti...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(193): App\Models\Monmodele->recupererEvenements()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->supprimerEvenement()
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-02-26 14:41:43 --> Champ 'description' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `idGestion`, `nomEvenement`, `dateEvenement`, `description`, `nbplaceDispo`, `dureeEvenement`, `nbplaceMax`, `statutEvenement`
+FROM `evenements`', [], false)
+ 2 APPPATH\Models\Monmodele.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Administration.php(193): App\Models\Monmodele->recupererEvenements()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->supprimerEvenement()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-26 14:45:24 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Administration.php(230): CodeIgniter\Model->__call('suppressionEvenement', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->supressiondeEvenement('3')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
