@@ -87,7 +87,7 @@
     public function recupererEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
-        $builder->select('idGestion, nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
+        $builder->select('idGestion, nomEvenement, dateEvenement, description, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
         $query = $builder->get();
         //return le résultat sous forme de tableau
         return $query->getResultArray();
@@ -144,10 +144,10 @@
     
     
 
-    public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement) {
+    public function ajouterEvenement($nom, $date, $description, $nbPlace, $duree, $idtypeEvenement) {
         $db = \Config\Database::connect();
 
-        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
+        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, description, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :description, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
 
         $builder = $db->table('evenements');
 
@@ -155,7 +155,7 @@
         $data = [
             'nomEvenement' => $nom,
             'dateEvenement' => $date,
-            'descriptionEvenement' => $descriptionEvent,
+            'description' => $description,
             'nbplaceDispo' => $nbPlace,
             'nbplaceMax' => $nbPlace,
             'dureeEvenement' => $duree,
@@ -166,17 +166,68 @@
         //Insert le payload dans la bdd
         $builder->insert($data);
     }
-
-
-    public function suppressionEvenement($idEvenement) {
+    
+    public function getidTypeEvenement($event) {
         $db = \Config\Database::connect();
 
-        // Préparer la requête de suppression
         $builder = $db->table('evenements');
-        $builder->where('idGestion', $idEvenement);
+        $builder->select('idtypeEvenement');
+        $builder->where('idtypeEvenement', $login);
+        $query = $builder->get();
+        $result = $query->getResult();
+        return $result[0]->roleUser;
+    }
+    
+  
+    //  Réservations  Ajouter une réservation
+    public function addReservation($idUser, $idGestion, $nomReservation, $dateReservation, $typeReservation, $nbplaceTotale) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
 
-        $builder->delete();
+        $data = [
+            'idUser' => $idUser,
+            'idGestion' => $idGestion,
+            'nomReservation' => $nomReservation,
+            'dateReservation' => $dateReservation,
+            'typeReservation' => $typeReservation,
+            'nbplaceTotale' => $nbplaceTotale,
+            'statutReservation' => 'En attente'
+        ];
+
+        return $builder->insert($data);
     }
 
+    //  Récupérer toutes les réservations
+    public function getAllReservations() {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        return $builder->select('*')->get()->getResultArray();
+    }
 
+    //  Récupérer les réservations par utilisateur
+    public function getReservationsByUser($idUser) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        return $builder->where('idUser', $idUser)->get()->getResultArray();
+    }
+
+    //  Supprimer une réservation
+    public function deleteReservation($idResa) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        return $builder->delete(['idResa' => $idResa]);
+    }
+
+    public function getUserById($idUser) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('utilisateur');
+        $builder->where('idUser', $idUser);
+        $query = $builder->get();
+        return $query->getRowArray();
+    }
+    
+    
 }
+
+
+
