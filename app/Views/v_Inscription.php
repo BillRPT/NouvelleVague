@@ -39,6 +39,10 @@
                                 <?= form_label('Mot de passe', 'password', ['class' => 'form-label']); ?>
                                 <?= form_password('password', set_value('password'), ['class' => 'form-control', 'id' => 'password', 'required' => '']); ?>
                             </div>
+                            <div class="mb-3">
+                                <?= form_label('Code de Parrainage', 'codeParrainage', ['class' => 'form-label']); ?>
+                                <?= form_input('codeParrainage', set_value('codeParrainage'), ['class' => 'form-control', 'id' => 'codeParrainage', 'required' => '']); ?>
+                            </div>
                             <div class="d-grid gap-2">
                                 <?= form_submit('mysubmit', 'Confirmer', ['class' => 'btn btn-primary btn-lg']); ?>
                             </div>

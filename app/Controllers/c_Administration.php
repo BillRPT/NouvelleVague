@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 class c_Administration extends BaseController{
 
+    /**
+     * Le point d'entrer de l'application
+     */
     public function index() {
         
         $role = $_SESSION['role'];
@@ -19,7 +22,12 @@ class c_Administration extends BaseController{
         }
     }
 
-    //Fonction qui permet de retourner la vue pour voir les inscription au evenements
+    
+    /**
+     * Fonction qui permet de retourner la vue pour voir les inscription au evenements
+     * 
+     * @return une vue
+     */
     public function inscriptionEvenement() {
 
         $monModele = new \App\Models\Monmodele();
@@ -66,6 +74,13 @@ class c_Administration extends BaseController{
         }
     }
 
+    /**
+     * Permet d'obtenir la liste des participants
+     * 
+     * @param bool $param
+     * 
+     * @return une vue
+     */
     public function listeparticipantEvenement($param = false) {
         $monModele = new \App\Models\Monmodele();
 
@@ -105,7 +120,11 @@ class c_Administration extends BaseController{
     }
 
 
-    //Récupérer les événements les plus solicités
+    /**
+     * Récupérer les événements les plus solicités
+     * 
+     * @return une vue
+     */
     public function lesevenementsPopulaire() {
         $monModele = new \App\Models\Monmodele();
 
@@ -138,6 +157,11 @@ class c_Administration extends BaseController{
         return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_EvenementPopulaire.php', $data).view('v_finFooter.php');
     }
 
+    /**
+     * Permet de creer un evenement
+     * 
+     * @return une vue
+     */
     public function creerEvenements() {
 
         $monModele = new \App\Models\Monmodele();
@@ -177,6 +201,11 @@ class c_Administration extends BaseController{
         }
     }
 
+    /**
+     * Permet de rediriger vers la bonne vue
+     * 
+     * @return une vue
+     */
     public function supprimerEvenement() {
 
         $monModele = new \App\Models\Monmodele();
@@ -224,6 +253,13 @@ class c_Administration extends BaseController{
         }
     }
 
+    /**
+     * Permet de supprimer un evenement
+     * 
+     * @param bool $param
+     * 
+     * @return une vue
+     */
     public function supressiondeEvenement($param = false) {
         $monModele = new \App\Models\Monmodele();
         //Appel la méthode dans le modele

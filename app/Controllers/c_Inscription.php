@@ -28,6 +28,7 @@ class c_Inscription extends BaseController{
         $login = $this->request->getPost('login');
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
+        $codeParrainageAmis = $this->request->getPost('codeParrainage');
 
         $fonction = new \Config\Fonction();
 
@@ -35,7 +36,24 @@ class c_Inscription extends BaseController{
             return view('v_Inscription.php').view('v_ChampVide.php');
         }
         else {
-            $nb = $monModele->utilisateurExistant($email, $login);
+            if (!empty($codeParrainageAmis)) {
+                //Vérifier que c'est un ancien habitant
+                $roleUser = $monModele->verificationAncienneter($codeParrainageAmis);
+
+                if ($roleUser == NULL) {
+                    return view('v_Inscription.php').view("v_CodeParrainageInexistant.php");
+                }
+                else {
+                    if ($roleUser == "arrivant") {
+                        return view('v_Inscription.php').view("v_UtilisateurNonAnciens.php");
+                    }
+                    else {
+                        
+                    }
+                }
+            }
+            else {
+                $nb = $monModele->utilisateurExistant($email, $login);
 
             if($this->validate($rules)){
                 if ($nb != 1) {
@@ -50,6 +68,7 @@ class c_Inscription extends BaseController{
             }
             else {
                 return view('v_Inscription.php').view('v_Regle.php');
+            }
             }
         }
 

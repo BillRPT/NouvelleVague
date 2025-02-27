@@ -60,3 +60,36 @@ in SYSTEMPATH\Database\BaseConnection.php on line 884.
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-26 19:55:38 --> syntax error, unexpected token ":"
+in APPPATH\Models\Monmodele.php on line 308.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Monmodele')
+ 3 APPPATH\Controllers\c_Connexion.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Monmodele')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->connexionUtilisateur()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-26 19:56:18 --> Undefined variable $result
+in APPPATH\Models\Monmodele.php on line 312.
+ 1 APPPATH\Models\Monmodele.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 312)
+ 2 APPPATH\Controllers\c_Inscription.php(41): App\Models\Monmodele->verificationAncienneter('fsqfqsfsq')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-26 19:56:38 --> Undefined array key 0
+in APPPATH\Models\Monmodele.php on line 316.
+ 1 APPPATH\Models\Monmodele.php(316): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 316)
+ 2 APPPATH\Controllers\c_Inscription.php(41): App\Models\Monmodele->verificationAncienneter('fsqfqsfsq')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-26 22:08:08 --> Attempt to read property "roleUser" on array
+in APPPATH\Models\Monmodele.php on line 317.
+ 1 APPPATH\Models\Monmodele.php(317): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "roleUser" on array', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 317)
+ 2 APPPATH\Controllers\c_Inscription.php(41): App\Models\Monmodele->verificationAncienneter('GC708747')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

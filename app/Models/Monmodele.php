@@ -4,6 +4,13 @@
     class Monmodele extends Model
 {   
     //Fonction de connexion
+    /**
+     * Fonction de connexion
+     * @param string $login
+     * @param string $mdp
+     * 
+     * @return 0 ou 1
+     */
     public function Connexion($login, $mdp) {
         $db = \Config\Database::connect();
         $builder = $db->table('utilisateur');
@@ -16,13 +23,23 @@
     }
 
     //Fonction d'inscrption qui va insert
+    /**
+     * Fonction d'inscription
+     * @param string $nom
+     * @param string $prenom
+     * @param string $email
+     * @param string $motdePasse
+     * @param string $adresse
+     * @param string $login
+     * @param string $codeParrainage
+     */
     public function Inscription($nom, $prenom, $email, $motdePasse, $adresse, $login, $codeParrainage) {
         $db = \Config\Database::connect();
 
 
-        $sql = "INSERT INTO utilisateur (nomUser, prenomUser, roleUser, emailUser, adresseUser, mdpUser, loginUser, codeParrainage)
+        /*$sql = "INSERT INTO utilisateur (nomUser, prenomUser, roleUser, emailUser, adresseUser, mdpUser, loginUser, codeParrainage)
                 VALUES (:nom, :prenom, 'arrivant', :email, :adresse, :motdePasse, :login, :codeParrainage)
-        ";
+        ";*/
 
         $builder = $db->table('utilisateur');
 
@@ -43,6 +60,13 @@
 
     }
 
+    /**
+     * Fonction qui permet de savoir si l'utilisateur existe déjà grace au mail ou login
+     * @param string $email
+     * @param string $login
+     * 
+     * @return int idUser qui est l'id de l'utilisateur
+     */
     public function utilisateurExistant($email, $login) {
         $db = \Config\Database::connect();
 
@@ -61,6 +85,12 @@
         return $result[0]->idUser;
     }
 
+    /**
+     * Fonction qui permet de obtenir le rôle de l'utilisateur arrivant, maire, secretaire
+     * @param mixed $login
+     * 
+     * @return string le role de l'utilisateur
+     */
     public function getRole($login) {
         $db = \Config\Database::connect();
         $builder = $db->table('utilisateur');
@@ -71,7 +101,10 @@
         return $result[0]->roleUser;
     }
 
-    //Retourne le nb de evenements existant
+    /**
+     * Retourne le nb de evenements existant
+     * @return int un entier qui correspond au nb de evenement
+     */
     public function nbEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
@@ -83,7 +116,11 @@
         return $result[0]->idGestion;
     }
 
-    //Fonction qui va permettre de récupérer tout les évenements et de les mettres dans une ArrayList
+    /**
+     * Fonction qui va permettre de récupérer tout les évenements et de les mettres dans une ArrayList
+     * 
+     * @return array un tableau 
+     */
     public function recupererEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
@@ -93,7 +130,13 @@
         return $query->getResultArray();
     }
 
-    //Faire passer en para le id de l'évenements et récup tous les participants
+    /**
+     * Faire passer en para le id de l'évenements et récup tous les participants
+     * 
+     * @param mixed $idEvenement
+     * 
+     * @return array un tableau ou dedans y'a la liste des participant d'un evenement précis
+     */
     public function listedesparticipantEvenements($idEvenement) {
         $db = \Config\Database::connect();
         $builder = $db->table('utilisateur');
@@ -108,6 +151,11 @@
         return $query->getResultArray();
     }
 
+    /**
+     * Fonction qui permet de connaitre l'evenement populaire
+     * 
+     * @return array un tableau des evenement les plus populaire
+     */
     public function evenementsPopulaire() {
         $db = \Config\Database::connect();
 
@@ -126,6 +174,11 @@
 
     }
 
+    /**
+     * Fonction qui retourn un tableau des types d'evenement existant
+     * 
+     * @return array un tableau
+     */
     public function gettypeEvenement() {
         $db = \Config\Database::connect();
         $builder = $db->table('typeevenement');
@@ -144,10 +197,20 @@
     
     
 
+    /**
+     * Fonction qui permet d'ajouter un evenement
+     * 
+     * @param string $nom
+     * @param string $date
+     * @param string $descriptionEvent
+     * @param int $nbPlace
+     * @param string $duree
+     * @param string $idtypeEvenement
+     */
     public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement) {
         $db = \Config\Database::connect();
 
-        $sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
+        //$sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
 
         $builder = $db->table('evenements');
 
@@ -167,6 +230,7 @@
         $builder->insert($data);
     }
     
+
     public function getidTypeEvenement($event) {
         $db = \Config\Database::connect();
 
@@ -234,6 +298,32 @@
         $builder->where('idGestion', $idEvenement);
 
         $builder->delete();
+    }
+
+    public function verificationAncienneter($codeParrainage) {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('utilisateur');
+
+        $builder->select('roleUser');
+
+        $builder->where('codeParrainage', $codeParrainage);
+
+        $query = $builder->get();
+
+        // Retourne un objet ou null
+        $result = $query->getRow();
+
+        //Si il n'a aucun résultat retourne null
+        return $result ? $result->roleUser : null;
+    }
+
+    public function parrainageUtilisateur() {
+        $db = \Config\Database::connect();
+
+        $sql = "INSERT INTO parrainage (dateParrainage) VALUES (NOW()))";
+
+        $db->query($sql);
     }
     
     
