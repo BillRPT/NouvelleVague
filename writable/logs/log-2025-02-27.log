@@ -1,0 +1,27 @@
+ERROR - 2025-02-27 17:48:30 --> mysqli_sql_exception: Erreur de syntaxe près de ')' à la ligne 1 in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO par...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO par...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO par...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(326): CodeIgniter\Database\BaseConnection->query('INSERT INTO par...')
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Inscription.php(61): App\Models\Monmodele->parrainageUtilisateur()
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-02-27 17:48:31 --> Erreur de syntaxe près de ')' à la ligne 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\Monmodele.php(326): CodeIgniter\Database\BaseConnection->query('INSERT INTO parrainage (dateParrainage) VALUES (NOW()))')
+ 2 APPPATH\Controllers\c_Inscription.php(61): App\Models\Monmodele->parrainageUtilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-27 18:01:25 --> Too few arguments to function App\Models\Monmodele::ProprietaireCode(), 0 passed in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Inscription.php on line 63 and exactly 1 expected
+in APPPATH\Models\Monmodele.php on line 335.
+ 1 APPPATH\Controllers\c_Inscription.php(63): App\Models\Monmodele->ProprietaireCode()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

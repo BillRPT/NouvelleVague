@@ -320,12 +320,48 @@
 
     public function parrainageUtilisateur() {
         $db = \Config\Database::connect();
-
-        $sql = "INSERT INTO parrainage (dateParrainage) VALUES (NOW()))";
-
+    
+        $sql = "INSERT INTO parrainage (dateParrainage) VALUES (NOW())";
+    
         $db->query($sql);
     }
     
+
+
+    /**Fonction qui permet de trouver qui est l'utilisateur d'un code de parrainage
+     * 
+     * @return int idUser
+     */
+    public function ProprietaireCode($codeParrainage) {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('utilisateur');
+
+        $builder->select('idUser');
+
+        $builder->where('codeParrainage', $codeParrainage);
+
+        $query = $builder->get();
+
+        $result = $query->getResult();
+
+        return $result[0]->idUser;
+
+    }
+
+
+    public function insertParrainage($idUser) {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('parrainage_effectuer');
+
+        $data = [
+            'idUser' => $idUser,
+        ];
+
+        //Insert le payload dans la bdd
+        $builder->insert($data);
+    }
     
 }
 

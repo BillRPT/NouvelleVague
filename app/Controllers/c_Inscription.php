@@ -10,18 +10,17 @@ class c_Inscription extends BaseController{
 
     public function inscriptionUtilisateur() {
 
-         //Déclarer le modele ici
+        // Déclarer le modèle ici
         $monModele = new \App\Models\Monmodele();
-
-
-        //Régles a respecter
+    
+        // Règles à respecter
         $rules = [
             'login' => 'required|max_length[30]',
             'password' => 'required|max_length[255]|min_length[10]',
             'email' => 'required|max_length[254]|valid_email',
         ];
-
-        //Récupérer tous les champs pour les faires passer en para lors de l'apl de la fonction
+    
+        // Récupérer tous les champs pour les passer en paramètre lors de l'appel de la fonction
         $nom = $this->request->getPost('nom');
         $prenom = $this->request->getPost('prenom');
         $adresse = $this->request->getPost('adresse');
@@ -29,50 +28,68 @@ class c_Inscription extends BaseController{
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $codeParrainageAmis = $this->request->getPost('codeParrainage');
-
+    
         $fonction = new \Config\Fonction();
-
+    
+        // Vérification des champs vides
         if (empty($nom) || empty($prenom) || empty($adresse) || empty($login) || empty($email) || empty($password)) {
             return view('v_Inscription.php').view('v_ChampVide.php');
         }
-        else {
-            if (!empty($codeParrainageAmis)) {
-                //Vérifier que c'est un ancien habitant
-                $roleUser = $monModele->verificationAncienneter($codeParrainageAmis);
-
-                if ($roleUser == NULL) {
-                    return view('v_Inscription.php').view("v_CodeParrainageInexistant.php");
-                }
-                else {
-                    if ($roleUser == "arrivant") {
-                        return view('v_Inscription.php').view("v_UtilisateurNonAnciens.php");
-                    }
-                    else {
-                        
-                    }
-                }
+    
+        // Cas avec code de parrainage
+        if (!empty($codeParrainageAmis)) {
+            // Vérifier si c'est un ancien habitant
+            $roleUser = $monModele->verificationAncienneter($codeParrainageAmis);
+    
+            if ($roleUser == NULL) {
+                return view('v_Inscription.php').view("v_CodeParrainageInexistant.php");
+            } 
+    
+            if ($roleUser == "arrivant") {
+                return view('v_Inscription.php').view("v_UtilisateurNonAnciens.php");
             }
-            else {
-                $nb = $monModele->utilisateurExistant($email, $login);
-
-            if($this->validate($rules)){
+    
+            // Cas sans code de parrainage
+            $nb = $monModele->utilisateurExistant($email, $login);
+    
+            if ($this->validate($rules)) {
                 if ($nb != 1) {
-                    //Appl la fonction generateCode pour obtenir un code
+                    // Générer le code de parrainage
+                    $codeParrainage = $fonction->generateCode();
+                    $monModele->Inscription($nom, $prenom, $email, md5($password), $adresse, $login, $codeParrainage);
+                    // Enregistrer le fait qu'un ancien habitant a parrainé un utilisateur
+                    $monModele->parrainageUtilisateur();
+                    // Obtenir l'utilisateur du code de parrainage
+                    $idUser = $monModele->ProprietaireCode($codeParrainageAmis);
+                    // Enregistrer dans la table "parrainage_effectuer" pour savoir qui a parrainé qui
+                    $monModele->insertParrainage($idUser);
+                    return view('v_Inscription.php').view('v_SuccesInscription.php');
+                } else {
+                    return view('v_Inscription.php').view('v_erreurDuplication.php');
+                }
+            } else {
+                return view('v_Inscription.php').view('v_Regle.php');
+            }
+    
+        } else {
+            // Cas sans code de parrainage
+            $nb = $monModele->utilisateurExistant($email, $login);
+    
+            if ($this->validate($rules)) {
+                if ($nb != 1) {
+                    // Générer le code de parrainage
                     $codeParrainage = $fonction->generateCode();
                     $monModele->Inscription($nom, $prenom, $email, md5($password), $adresse, $login, $codeParrainage);
                     return view('v_Inscription.php').view('v_SuccesInscription.php');
-                }
-                else {
+                } else {
                     return view('v_Inscription.php').view('v_erreurDuplication.php');
                 }
-            }
-            else {
+            } else {
                 return view('v_Inscription.php').view('v_Regle.php');
             }
-            }
         }
-
     }
+    
 }
 
 ?>
