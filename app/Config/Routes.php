@@ -29,3 +29,7 @@ $routes->get('supprimerEvenement', 'c_Administration::supprimerEvenement');
 
 $routes->get('supressiondeEvenement/(:any)', 'c_Administration::supressiondeEvenement/$1');
 
+$routes->get('modifierEvenement', 'c_Administration::modifierEvenement');
+
+$routes->get('modifierlevenement/(:any)', 'c_Administration::modifierlevenement/$1');
+

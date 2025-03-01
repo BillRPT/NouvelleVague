@@ -144,7 +144,7 @@
         $builder->join('resaevenements', 'utilisateur.idUser = resaevenements.idUser');
         
         $builder->select('nomUser, prenomUser, emailUser, adresseUser, dateReservation, nbplaceTotale, statutReservation');
-        $builder->where('idResa', $idEvenement);
+        $builder->where('idGestion', $idEvenement);
         $query = $builder->get();
         
         // Retourner le résultat sous forme de tableau

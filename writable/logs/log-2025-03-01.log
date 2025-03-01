@@ -1,0 +1,60 @@
+CRITICAL - 2025-03-01 00:31:40 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\c_Administration.php on line 283.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 00:32:13 --> Undefined variable $data
+in APPPATH\Controllers\c_Administration.php on line 45.
+ 1 APPPATH\Controllers\c_Administration.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->inscriptionEvenement()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 01:06:55 --> Undefined variable $data
+in APPPATH\Controllers\c_Administration.php on line 96.
+ 1 APPPATH\Controllers\c_Administration.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 96)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 01:07:03 --> Undefined variable $data
+in APPPATH\Controllers\c_Administration.php on line 96.
+ 1 APPPATH\Controllers\c_Administration.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 96)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 01:07:16 --> Call to undefined method App\Controllers\c_Administration::listedesparticipantEvenements()
+in APPPATH\Controllers\c_Administration.php on line 103.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('4')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 01:08:03 --> Undefined array key "idGestion"
+in APPPATH\Controllers\c_Administration.php on line 62.
+ 1 APPPATH\Controllers\c_Administration.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idGestion"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 62)
+ 2 APPPATH\Controllers\c_Administration.php(103): App\Controllers\c_Administration->genererTableauEvenements([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('4')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 01:08:04 --> Undefined array key "idGestion"
+in APPPATH\Controllers\c_Administration.php on line 62.
+ 1 APPPATH\Controllers\c_Administration.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idGestion"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 62)
+ 2 APPPATH\Controllers\c_Administration.php(103): App\Controllers\c_Administration->genererTableauEvenements([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('4')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 01:08:04 --> Undefined array key "idGestion"
+in APPPATH\Controllers\c_Administration.php on line 62.
+ 1 APPPATH\Controllers\c_Administration.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idGestion"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 62)
+ 2 APPPATH\Controllers\c_Administration.php(103): App\Controllers\c_Administration->genererTableauEvenements([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->listeparticipantEvenement('4')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
