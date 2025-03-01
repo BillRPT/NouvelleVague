@@ -362,6 +362,80 @@
         //Insert le payload dans la bdd
         $builder->insert($data);
     }
+
+    public function recupererunEvenement($idEvenement) {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('evenements');
+
+        $builder->join('typeevenement', 'evenements.idtypeEvenement = typeevenement.idtypeEvenement');
+
+        $builder->select('nomEvenement, typeevenement.nom, dateEvenement, descriptionEvenement, nbplaceMax, dureeEvenement');
+
+        $builder->where('idGestion', $idEvenement);
+
+        $query = $builder->get();
+        //return le résultat sous forme de tableau
+        return $query->getRowArray(); 
+    }
+
+    public function getnbPlaceDispo($idEvent) {
+        $db = \Config\Database::connect();
+
+        $builder = $db->table('evenements');
+
+        $builder->select('nbplaceDispo');
+
+        $builder->where('idGestion', $idEvent);
+
+        $query = $builder->get();
+
+        $result = $query->getResult();
+
+        return $result[0]->nbplaceDispo;
+    }
+
+
+    public function updateunEvenement($idEvenement, $nom, $typeEvenement, $dateEvenement, $descriptionEvenement, $nbplaceMax, $dureeEvenement) {
+        $db = \Config\Database::connect();
+
+        // Récupérer le nombre actuel de places disponibles
+        $nbPlaceDispoActuel = $this->getnbPlaceDispo($idEvenement);
+
+        // Récupérer le nombre actuel de places maximum
+        $query = $db->table('evenements')->select('nbplaceMax')->where('idGestion', $idEvenement)->get();
+        $row = $query->getRow();
+
+        if ($row) {
+            $ancienNbPlaceMax = $row->nbplaceMax;
+    
+            // Ajuster le nombre de places disponibles
+            $nouveauNbPlaceDispo = $nbPlaceDispoActuel + ($nbplaceMax - $ancienNbPlaceMax);
+    
+            // Assurer que le nombre de places disponibles ne dépasse pas le max
+            if ($nouveauNbPlaceDispo > $nbplaceMax) {
+                $nouveauNbPlaceDispo = $nbplaceMax;
+            } elseif ($nouveauNbPlaceDispo < 0) {
+                $nouveauNbPlaceDispo = 0; // Éviter les valeurs négatives
+            }
+        } 
+
+        // Récupérer les données de la requête (exemple avec les données venant d'un formulaire)
+        $data = [
+            'nomEvenement' => $nom,
+            'idtypeEvenement' => $typeEvenement,
+            'dateEvenement' => $dateEvenement,
+            'descriptionEvenement' => $descriptionEvenement,
+            'nbplaceMax' => $nbplaceMax,
+            'nbplaceDispo' => $nouveauNbPlaceDispo, // Mettre à jour le nombre de places disponibles
+            'dureeEvenement' => $dureeEvenement
+        ];
+
+        $builder = $db->table('evenements');  // Nom de la table à mettre à jour
+        
+        $builder->where('idGestion', $idEvenement);
+        $builder->update($data);
+    }
     
 }
 

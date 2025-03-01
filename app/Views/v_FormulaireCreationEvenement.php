@@ -15,7 +15,7 @@
 <?= form_label('Nombre de Place Max : '); ?>
 <?php echo form_input('nbPlace', set_value('nbPlace')); ?> <br /><br />
 <?= form_label('Duree : '); ?>
-<?php echo form_input('duree', set_value('duree')); ?> <br /><br />
+<?php echo form_input(['name' => 'duree', 'type' => 'time', 'value' => set_value('duree')]); ?>
 <?php echo form_submit('mysubmit', 'Valider'); ?>
 <?= form_close(); ?>
 </center>

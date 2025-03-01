@@ -31,5 +31,7 @@ $routes->get('supressiondeEvenement/(:any)', 'c_Administration::supressiondeEven
 
 $routes->get('modifierEvenement', 'c_Administration::modifierEvenement');
 
-$routes->get('modifierlevenement/(:any)', 'c_Administration::modifierlevenement/$1');
+$routes->get('modificationdelevenement/(:any)', 'c_Administration::modificationdelevenement/$1');
+
+$routes->post('modificationdelevenement/(:any)', 'c_Administration::modificationdelevenement/$1');
 

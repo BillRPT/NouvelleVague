@@ -58,3 +58,642 @@ in APPPATH\Controllers\c_Administration.php on line 62.
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
  5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 15:55:40 --> Undefined property: stdClass::$idUser
+in APPPATH\Models\Monmodele.php on line 381.
+ 1 APPPATH\Models\Monmodele.php(381): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idUser', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 381)
+ 2 APPPATH\Controllers\c_Administration.php(325): App\Models\Monmodele->recupererunEvenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 15:56:15 --> Array to string conversion
+in APPPATH\Controllers\c_Administration.php on line 326.
+ 1 APPPATH\Controllers\c_Administration.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 15:57:31 --> syntax error, unexpected token "as", expecting ";"
+in APPPATH\Controllers\c_Administration.php on line 327.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 15:57:33 --> syntax error, unexpected token "as", expecting ";"
+in APPPATH\Controllers\c_Administration.php on line 327.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 15:57:40 --> syntax error, unexpected token "as", expecting ";"
+in APPPATH\Controllers\c_Administration.php on line 327.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 15:58:05 --> Undefined variable $unEvent
+in APPPATH\Controllers\c_Administration.php on line 327.
+ 1 APPPATH\Controllers\c_Administration.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unEvent', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:00:44 --> Undefined variable $data
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:02:22 --> Undefined variable $data
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:02:23 --> Undefined variable $data
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:02:23 --> Undefined variable $data
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:02:27 --> Undefined variable $data
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:02:28 --> Undefined variable $data
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:02:28 --> Undefined variable $data
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:03:37 --> Attempt to read property "nomEvenement" on array
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nomEvenement" on array', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:03:37 --> Attempt to read property "nomEvenement" on array
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nomEvenement" on array', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:03:38 --> Attempt to read property "nomEvenement" on array
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nomEvenement" on array', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:04:13 --> Undefined variable $lestypeEvenements
+in APPPATH\Views\v_ModificationDeEvenement.php on line 10.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lestypeEvenements', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:04:16 --> Undefined variable $lestypeEvenements
+in APPPATH\Views\v_ModificationDeEvenement.php on line 10.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lestypeEvenements', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:04:44 --> Undefined variable $lestypeEvenements
+in APPPATH\Views\v_ModificationDeEvenement.php on line 10.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lestypeEvenements', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 10)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:10:09 --> Attempt to read property "nomEvenement" on array
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nomEvenement" on array', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:10:40 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:10:41 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:13:59 --> Array to string conversion
+in APPPATH\Views\v_ModificationDeEvenement.php on line 2.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:14:00 --> Array to string conversion
+in APPPATH\Views\v_ModificationDeEvenement.php on line 2.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:14:01 --> Array to string conversion
+in APPPATH\Views\v_ModificationDeEvenement.php on line 2.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:14:22 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 2.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:14:23 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 2.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:25:16 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:29:14 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:29:15 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:29:15 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:29:15 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:29:15 --> Undefined array key "nomEvenement"
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nomEvenement"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(331): view('v_ModificationDeEvenement.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 16:47:40 --> Undefined array key "role"
+in APPPATH\Controllers\c_Administration.php on line 12.
+ 1 APPPATH\Controllers\c_Administration.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "role"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 17:14:01 --> Too few arguments to function App\Controllers\c_Administration::modificationdelevenement(), 0 passed in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\c_Administration.php on line 317.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 17:15:08 --> Too few arguments to function App\Controllers\c_Administration::modificationdelevenement(), 0 passed in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\c_Administration.php on line 317.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:22:28 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\c_Administration.php on line 324.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:22:38 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\c_Administration.php on line 324.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:22:39 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\c_Administration.php on line 324.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:22:44 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\c_Administration.php on line 324.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Administration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Administration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Administration')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Administration', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:23:15 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(387): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:30:39 --> Call to undefined function App\Models\getTypeEventByName()
+in APPPATH\Models\Monmodele.php on line 388.
+ 1 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:31:01 --> Call to undefined function App\Models\getTypeEventByName()
+in APPPATH\Models\Monmodele.php on line 403.
+ 1 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:31:41 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:32:02 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:33:07 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:33:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:33:32 --> syntax error, unexpected token "=>"
+in APPPATH\Models\Monmodele.php on line 403.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Monmodele')
+ 3 APPPATH\Controllers\c_Administration.php(319): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Monmodele')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:33:38 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:33:58 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:34:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:34:45 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:34:56 --> Undefined variable $idEvenement
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idEvenement', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(324): view('v_ModificationDeEvenement.php')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:35:05 --> Undefined variable $idEvenement
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idEvenement', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(324): view('v_ModificationDeEvenement.php')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:35:37 --> Undefined variable $idEvenement
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idEvenement', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(324): view('v_ModificationDeEvenement.php')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:36:26 --> Undefined variable $unEvenement
+in APPPATH\Views\v_ModificationDeEvenement.php on line 7.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unEvenement', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(324): view('v_ModificationDeEvenement.php')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 18:37:00 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 19:03:54 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 19:05:56 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(403): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(323): App\Models\Monmodele->updateunEvenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 19:47:45 --> Too few arguments to function App\Models\Monmodele::updateunEvenement(), 1 passed in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php on line 333 and exactly 7 expected
+in APPPATH\Models\Monmodele.php on line 383.
+ 1 APPPATH\Controllers\c_Administration.php(333): App\Models\Monmodele->updateunEvenement('4')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 19:48:59 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(838): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Monmodele.php(388): CodeIgniter\Model->__get('request')
+ 4 APPPATH\Controllers\c_Administration.php(333): App\Models\Monmodele->updateunEvenement('4', 'nice', 1, '2025-04-16', 'coucou', '150', '06:00')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-01 19:49:40 --> Undefined variable $idEvenement
+in APPPATH\Views\v_ModificationDeEvenement.php on line 5.
+ 1 APPPATH\Views\v_ModificationDeEvenement.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idEvenement', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Views\\v_ModificationDeEvenement.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('v_ModificationDeEvenement.php', [], true)
+ 5 APPPATH\Controllers\c_Administration.php(334): view('v_ModificationDeEvenement.php')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-01 19:52:34 --> mysqli_sql_exception: Champ 'idEvenement' inconnu dans where clause in C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `eveneme...', 0)
+#1 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `eveneme...')
+#2 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `eveneme...')
+#3 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `eveneme...', Array, false)
+#4 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(399): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\app\Controllers\c_Administration.php(333): App\Models\Monmodele->updateunEvenement('4', 'salut', 1, '2025-04-16', 'salut', '150', '07:00')
+#6 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+#7 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+#8 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ezK2o\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-01 19:52:34 --> Champ 'idEvenement' inconnu dans where clause
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `evenements` SET `nomEvenement` = :nomEvenement:, `idtypeEvenement` = :idtypeEvenement:, `dateEvenement` = :dateEvenement:, `descriptionEvenement` = :descriptionEvenement:, `nbplaceMax` = :nbplaceMax:, `dureeEvenement` = :dureeEvenement:
+WHERE `idEvenement` = :idEvenement:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(399): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\c_Administration.php(333): App\Models\Monmodele->updateunEvenement('4', 'salut', 1, '2025-04-16', 'salut', '150', '07:00')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->modificationdelevenement('4')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

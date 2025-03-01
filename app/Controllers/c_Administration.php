@@ -290,7 +290,7 @@ class c_Administration extends BaseController{
             foreach ($data['lesEvenements'] as $unEvent) {
 
                 //Créer un lien pour chaque évenements
-                $lien = anchor('modifierlevenement/' . $unEvent['idGestion'], 'Modifier cet événement', ['class' => 'btn btn-primary']);
+                $lien = anchor('modificationdelevenement/' . $unEvent['idGestion'], 'Modifier cet événement', ['class' => 'btn btn-primary']);
 
                 //Ajouter les valeurs
                 $table->addRow(
@@ -316,11 +316,32 @@ class c_Administration extends BaseController{
 
     public function modificationdelevenement($idEvenement) {
 
+        $monModele = new \App\Models\Monmodele();
+
+        //Si c'est une req en post mettre a jour l'evenement
         if ($this->request->is('post')) {
 
+            $nomEvenement = $this->request->getPost('nom');
+            $typeEvenement = $this->request->getPost('evenement');
+            //l'incrementer de 1 pour avoir les bonnes valeurs
+            $typeEvenement = $typeEvenement + 1;
+            $dateEvenement = $this->request->getPost('date'); 
+            $descriptionEvenement = $this->request->getPost('description');
+            $nbplaceMax = $this->request->getPost('nbPlace');
+            $dureeEvenement = $this->request->getPost('duree');
+
+            $monModele->updateunEvenement($idEvenement, $nomEvenement, $typeEvenement, $dateEvenement, $descriptionEvenement, $nbplaceMax, $dureeEvenement);
+            return view("v_SecretairePanel.php").view('v_BouttonRetour.php').view("v_MessageEvenementAJour.php").view('v_finFooter.php');
         }
         else {
-            
+            $data["unEvenement"] = $monModele->recupererunEvenement($idEvenement);
+
+            $data['lestypeEvenements'] = $monModele->gettypeEvenement();
+
+            //Ajouter le id Evenement au tableau
+            $data['idEvenement'] = $idEvenement;
+
+            return view("v_SecretairePanel.php").view('v_BouttonRetour.php').view("v_ModificationDeEvenement.php", $data).view('v_finFooter.php');
         }
 
     }
