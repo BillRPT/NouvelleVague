@@ -300,6 +300,11 @@
         $builder->delete();
     }
 
+    /**
+     * Permet de vérifier si un utilisateur est un ancien habitant qui peux parrainer un nouveau arrivant
+     * 
+     * @return [type]
+     */
     public function verificationAncienneter($codeParrainage) {
         $db = \Config\Database::connect();
 
@@ -318,6 +323,12 @@
         return $result ? $result->roleUser : null;
     }
 
+
+
+    /**
+     * Permet de parrainer un Utilisateur
+     * 
+     */
     public function parrainageUtilisateur() {
         $db = \Config\Database::connect();
     
@@ -379,6 +390,13 @@
         return $query->getRowArray(); 
     }
 
+    /**
+     * Permet de récupérer le nombre de place dispo d'un event
+     * 
+     * @param mixed $idEvent
+     * 
+     * @return int
+     */
     public function getnbPlaceDispo($idEvent) {
         $db = \Config\Database::connect();
 

@@ -8,17 +8,24 @@ class c_Administration extends BaseController{
      * Le point d'entrer de l'application
      */
     public function index() {
-        
-        $role = $_SESSION['role'];
+
+        $session = session();
+
+        if ($this->session->get('user')) {
+            $role = $_SESSION['role'];
         
         //Faire un switch pour rediriger l'utilisateur en fonction de son rôle (maire ou secretaire)
-        switch ($role) {
-            case 'secretaire':
-                return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_finFooter.php');
-                break;
-            case 'maire':
-                return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_finFooter.php');
-                break;
+            switch ($role) {
+                case 'secretaire':
+                    return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_finFooter.php');
+                    break;
+                case 'maire':
+                    return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_finFooter.php');
+                    break;
+            }
+        }
+        else {
+            return view('v_Header.php').view('v_BouttonConnexion.php').view('v_Accueil.php');
         }
     }
 
@@ -268,6 +275,11 @@ class c_Administration extends BaseController{
     }
 
 
+    /**
+     * Permet de modifier un Evenement
+     * 
+     * @return [type]
+     */
     public function modifierEvenement() {
 
         $monModele = new \App\Models\Monmodele();
@@ -314,6 +326,12 @@ class c_Administration extends BaseController{
 
     }
 
+    /**Permet de modifier un evenement
+     * 
+     * @param int $idEvenement
+     * 
+     * @return [type]
+     */
     public function modificationdelevenement($idEvenement) {
 
         $monModele = new \App\Models\Monmodele();
@@ -347,6 +365,10 @@ class c_Administration extends BaseController{
     }
 
     
+    /**
+     * Permet de générer un pdf
+     * @return [type]
+     */
     public function evenementpopulairePdf() {
         $fonction = new \Config\Fonction();
         $monModele = new \App\Models\Monmodele();

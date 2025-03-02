@@ -6,8 +6,10 @@ class c_ImmersionForet extends BaseController
 {
     public function index()
     {
+        $session = session();
 
-        if (isset($_SESSION['user'])) {
+        //Vérfier si l'utilisateur est connecter ou pas
+        if ($this->session->get('user')) {
             return view('v_HeaderImmersionForet').view('v_BouttonDeconnexion').view('v_ImmersionForet');
         }
         else {
