@@ -35,3 +35,5 @@ $routes->get('modificationdelevenement/(:any)', 'c_Administration::modificationd
 
 $routes->post('modificationdelevenement/(:any)', 'c_Administration::modificationdelevenement/$1');
 
+$routes->get('evenementpopulairePdf', 'c_Administration::evenementpopulairePdf');
+

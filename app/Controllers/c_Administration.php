@@ -154,7 +154,7 @@ class c_Administration extends BaseController{
         $data['table'] = $table->generate();
 
 
-        return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_EvenementPopulaire.php', $data).view('v_finFooter.php');
+        return view('v_MairePanel.php').view('v_BouttonRetour.php').view('v_EvenementPopulaire.php', $data).view("v_BouttonPdf.php").view('v_finFooter.php');
     }
 
     /**
@@ -344,6 +344,16 @@ class c_Administration extends BaseController{
             return view("v_SecretairePanel.php").view('v_BouttonRetour.php').view("v_ModificationDeEvenement.php", $data).view('v_finFooter.php');
         }
 
+    }
+
+    
+    public function evenementpopulairePdf() {
+        $fonction = new \Config\Fonction();
+        $monModele = new \App\Models\Monmodele();
+
+        $data['lesEvenements'] = $monModele->evenementsPopulaire();
+
+        return $fonction->generatePdf($data['lesEvenements']);
     }
 
 
