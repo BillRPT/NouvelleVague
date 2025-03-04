@@ -36,4 +36,14 @@ $routes->get('modificationdelevenement/(:any)', 'c_Administration::modificationd
 $routes->post('modificationdelevenement/(:any)', 'c_Administration::modificationdelevenement/$1');
 
 $routes->get('evenementpopulairePdf', 'c_Administration::evenementpopulairePdf');
+$routes->get('accueil', 'Accueil::index');
+// Réservation (calendrier / wizard simplifié)
+$routes->get('calendrier-wizard', 'c_Reservation::calendrierWizard');
+$routes->get('getEventsJson', 'c_Reservation::getEventsJson');
+$routes->post('finaliserReservation', 'c_Reservation::finaliserReservation');
 
+// Réservation simple (accès via Moncontroleur)
+$routes->get('reservation', 'Moncontroleur::reservation');
+$routes->post('reservation/reserve', 'Moncontroleur::reserve');
+
+$routes->get('evenementpopulairePdf', 'c_Administration::evenementpopulairePdf');

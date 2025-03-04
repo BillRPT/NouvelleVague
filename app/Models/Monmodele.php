@@ -455,6 +455,15 @@
         $builder->update($data);
     }
     
+    //Ajouter un log
+    public function addLog($idUser, $action, $details = null) {
+        return $this->insert([
+            'idUser'  => $idUser,
+            'action'  => $action,
+            'details' => $details
+        ]);
+    }
+    
 }
 
 

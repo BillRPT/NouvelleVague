@@ -138,3 +138,10 @@
     <header class="header-container">
       <h1>Bienvenue à GetCet</h1>
       <div class="btn-login-container">
+        <!-- Bouton pour accéder à la page de réservation -->
+        <?= anchor('reservation', 'Réserver un événement', ['class' => 'btn-login']); ?>
+      </div>
+    </header>
+
+  </body>
+</html>

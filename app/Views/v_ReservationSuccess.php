@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Réservation Réussie</title>
+</head>
+<body>
+    <h1>Votre réservation a été enregistrée !</h1>
+    <p>Merci pour votre inscription.</p>
+    <p><?= anchor('Accueil', 'Retour à l\'accueil'); ?></p>
+</body>
+</html>
