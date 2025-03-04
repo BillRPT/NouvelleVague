@@ -329,10 +329,10 @@
      * Permet de parrainer un Utilisateur
      * 
      */
-    public function parrainageUtilisateur() {
+    public function parrainageUtilisateur($nameUser) {
         $db = \Config\Database::connect();
     
-        $sql = "INSERT INTO parrainage (dateParrainage) VALUES (NOW())";
+        $sql = "INSERT INTO parrainage (dateParrainage, filleul) VALUES (NOW(), '$nameUser')";
     
         $db->query($sql);
     }

@@ -33,7 +33,7 @@
             $pdf->SetFont('Arial', 'B', 16);
             
             // Titre du document
-            $pdf->Cell(0, 10, "Liste des événements populaires", 0, 1, 'C');
+            $pdf->Cell(0, 10, "Liste des evenements populaires", 0, 1, 'C');
             $pdf->Ln(10); // Espacement avant de commencer la liste des événements
         
             // Boucle à travers les événements
@@ -43,8 +43,8 @@
                 // Ajouter les informations de chaque événement
                 $pdf->Cell(60, 10, "Nom Evenement : " . $unEvent['nomEvenement'], 0, 1);
                 $pdf->Cell(60, 10, "Date Evenement : " . $unEvent['dateEvenement'], 0, 1);
-                $pdf->Cell(60, 10, "Nb Réservations Totale : " . $unEvent['nb_reservations'], 0, 1);
-                $pdf->Cell(60, 10, "Nb Places Réservées : " . $unEvent['nb_places_reservees'], 0, 1);
+                $pdf->Cell(60, 10, "Nb Reservations Totale : " . $unEvent['nb_reservations'], 0, 1);
+                $pdf->Cell(60, 10, "Nb Places Reservees : " . $unEvent['nb_places_reservees'], 0, 1);
                 $pdf->Cell(60, 10, "Statut Evenement : " . $unEvent['statutEvenement'], 0, 1);
         
                 // Espacement avant la ligne

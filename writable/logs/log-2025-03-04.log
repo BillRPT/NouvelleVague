@@ -156,3 +156,32 @@ in APPPATH\Controllers\c_Reservation.php on line 94.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Reservation))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-04 20:54:01 --> Undefined array key "nbplaceDispo"
+in APPPATH\Controllers\c_Reservation.php on line 94.
+ 1 APPPATH\Controllers\c_Reservation.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nbplaceDispo"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Reservation.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Reservation->finaliserReservation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Reservation))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-04 21:03:21 --> Undefined array key "nbplaceDispo"
+in APPPATH\Controllers\c_Reservation.php on line 94.
+ 1 APPPATH\Controllers\c_Reservation.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nbplaceDispo"', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Reservation.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Reservation->finaliserReservation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Reservation))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-04 21:14:19 --> Undefined variable $idUser
+in APPPATH\Controllers\c_Inscription.php on line 62.
+ 1 APPPATH\Controllers\c_Inscription.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idUser', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Inscription.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-04 21:15:02 --> Undefined property: stdClass::$idUser
+in APPPATH\Models\Monmodele.php on line 390.
+ 1 APPPATH\Models\Monmodele.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idUser', 'C:\\Users\\ezK2o\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php', 390)
+ 2 APPPATH\Controllers\c_Inscription.php(65): App\Models\Monmodele->getName('3')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Inscription->inscriptionUtilisateur()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Inscription))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

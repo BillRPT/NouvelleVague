@@ -57,8 +57,11 @@ class c_Inscription extends BaseController{
                     // Générer le code de parrainage
                     $codeParrainage = $fonction->generateCode();
                     $monModele->Inscription($nom, $prenom, $email, md5($password), $adresse, $login, $codeParrainage);
+
+                    $nomComplet = $nom . ' ' . $prenom;
+
                     // Enregistrer le fait qu'un ancien habitant a parrainé un utilisateur
-                    $monModele->parrainageUtilisateur();
+                    $monModele->parrainageUtilisateur($nomComplet);
                     // Obtenir l'utilisateur du code de parrainage
                     $idUser = $monModele->ProprietaireCode($codeParrainageAmis);
                     // Enregistrer dans la table "parrainage_effectuer" pour savoir qui a parrainé qui
