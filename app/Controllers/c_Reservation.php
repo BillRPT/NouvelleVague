@@ -15,9 +15,7 @@ class c_Reservation extends BaseController
         return view('v_Reservation'); // Charge la vue
     }
 
-    /**
-     * Teste la connexion à la base de données
-     */
+   
     public function testConnexion()
     {
         $db = \Config\Database::connect();
@@ -27,20 +25,6 @@ class c_Reservation extends BaseController
         } else {
             return "Connexion réussie !";
         }
-    }
-
-    /**
-     * Retourne la liste des tables de la base de données (debug)
-     */
-    public function testTables()
-    {
-        $db = \Config\Database::connect();
-        $query = $db->query("SHOW TABLES");
-        $result = $query->getResultArray();
-
-        echo "<pre>";
-        print_r($result);
-        echo "</pre>";
     }
 
     /**
@@ -70,55 +54,65 @@ class c_Reservation extends BaseController
      * Reçoit le formulaire final, vérifie et insère la réservation.
      */
     public function finaliserReservation()
-    {
-        // Récupérer les champs POST
-        $idEvenement = $this->request->getPost('idEvenement');
-        $nbBillets   = (int)$this->request->getPost('nbBillets');
-        $nomComplet  = $this->request->getPost('nomComplet');
-        $email       = $this->request->getPost('email');
-
-        // Appel du modèle
-        $model = new Monmodele();
-        $event = $model->recupererunEvenement($idEvenement);
-
-        if (!$event) {
-            return "Erreur : Événement introuvable.";
-        }
-
-        // Vérifier la date
-        if ($event['dateEvenement'] < date('Y-m-d')) {
-            return "Impossible de réserver un événement déjà passé.";
-        }
-
-        // Vérifier nbplaceDispo
-        $placesDispo = (int)$event['nbplaceDispo'];
-        if ($nbBillets > $placesDispo) {
-            return "Impossible de réserver plus de $placesDispo places.";
-        }
-
-        // Exemple : ID utilisateur si session
-        $idUser = $_SESSION['user'] ?? 0;
-
-        // Insérer la réservation
-        $model->addReservation(
-            $idUser,
-            $idEvenement,
-            $nomComplet,
-            date('Y-m-d H:i:s'),
-            "Standard",
-            $nbBillets
-        );
-
-        // Mettre à jour le nombre de places
-        $nouveauNb = $placesDispo - $nbBillets;
-        $model->updatePlacesDispo($idEvenement, $nouveauNb);
-
-        // Retourne une vue de succès
-        return view('v_ReservationSuccess', [
-            'idEvenement' => $idEvenement,
-            'nomComplet'  => $nomComplet,
-            'email'       => $email,
-            'nbBillets'   => $nbBillets
-        ]);
+{
+   
+    $login = session()->get('user'); 
+    if (!$login) {
+        return "Utilisateur non connecté.";
     }
+
+    
+    $model = new Monmodele();
+    $utilisateur = $model->getUserByLogin($login);
+    if (!$utilisateur) {
+        return "Utilisateur introuvable.";
+    }
+    $idUser = $utilisateur['idUser'];
+
+   
+    $idEvenement = $this->request->getPost('idEvenement');
+    $nbBillets   = (int)$this->request->getPost('nbBillets');
+    $nomComplet  = $this->request->getPost('nomComplet');
+    $email       = $this->request->getPost('email');
+
+    
+    $event = $model->recupererunEvenement($idEvenement);
+    if (!$event) {
+        return "Erreur : Événement introuvable.";
+    }
+  
+    if ($event['dateEvenement'] < date('Y-m-d')) {
+        return "Impossible de réserver un événement déjà passé.";
+    }
+
+  
+    $placesDispo = $model->getnbPlaceDispo($idEvenement);
+    if ($nbBillets > $placesDispo) {
+        return "Impossible de réserver plus de $placesDispo places.";
+    }
+
+    
+    $model->addReservation(
+        $idUser,
+        $idEvenement,
+        $nomComplet,
+        date('Y-m-d H:i:s'),       
+        $event['dateEvenement'],   
+        "Standard",
+        $nbBillets
+    );
+
+    
+    $nouveauNb = $placesDispo - $nbBillets;
+    $model->updatePlacesDispo($idEvenement, $nouveauNb);
+
+ 
+    return view('v_ReservationSuccess', [
+        'idEvenement' => $idEvenement,
+        'nomComplet'  => $nomComplet,
+        'email'       => $email,
+        'nbBillets'   => $nbBillets
+    ]);
+}
+
 }

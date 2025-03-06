@@ -243,51 +243,32 @@
     }
     
   
-    //  Réservations  Ajouter une réservation
-    public function addReservation($idUser, $idGestion, $nomReservation, $dateReservation, $typeReservation, $nbplaceTotale) {
+
+    public function addReservation($idUser, $idGestion, $nomReservation, $dateReservation, $dateEvenement, $typeReservation, $nbplaceTotale)
+    {
         $db = \Config\Database::connect();
         $builder = $db->table('resaevenements');
 
         $data = [
-            'idUser' => $idUser,
-            'idGestion' => $idGestion,
-            'nomReservation' => $nomReservation,
-            'dateReservation' => $dateReservation,
-            'typeReservation' => $typeReservation,
-            'nbplaceTotale' => $nbplaceTotale,
-            'statutReservation' => 'En attente'
+            'idUser'           => $idUser,
+            'idGestion'        => $idGestion,
+            'nomReservation'   => $nomReservation,
+            'dateReservation'  => $dateReservation,  
+            'dateEvenement'    => $dateEvenement,    
+            'typeReservation'  => $typeReservation,
+            'nbplaceTotale'    => $nbplaceTotale,
+            'statutReservation'=> 'En attente'
         ];
 
         return $builder->insert($data);
     }
+
 
     //  Récupérer toutes les réservations
     public function getAllReservations() {
         $db = \Config\Database::connect();
         $builder = $db->table('resaevenements');
         return $builder->select('*')->get()->getResultArray();
-    }
-
-    //  Récupérer les réservations par utilisateur
-    public function getReservationsByUser($idUser) {
-        $db = \Config\Database::connect();
-        $builder = $db->table('resaevenements');
-        return $builder->where('idUser', $idUser)->get()->getResultArray();
-    }
-
-    //  Supprimer une réservation
-    public function deleteReservation($idResa) {
-        $db = \Config\Database::connect();
-        $builder = $db->table('resaevenements');
-        return $builder->delete(['idResa' => $idResa]);
-    }
-
-    public function getUserById($idUser) {
-        $db = \Config\Database::connect();
-        $builder = $db->table('utilisateur');
-        $builder->where('idUser', $idUser);
-        $query = $builder->get();
-        return $query->getRowArray();
     }
 
     public function suppressionEvenement($idEvenement) {
@@ -329,10 +310,10 @@
      * Permet de parrainer un Utilisateur
      * 
      */
-    public function parrainageUtilisateur($nameUser) {
+    public function parrainageUtilisateur() {
         $db = \Config\Database::connect();
     
-        $sql = "INSERT INTO parrainage (dateParrainage, filleul) VALUES (NOW(), '$nameUser')";
+        $sql = "INSERT INTO parrainage (dateParrainage) VALUES (NOW())";
     
         $db->query($sql);
     }
@@ -389,6 +370,17 @@
         //return le résultat sous forme de tableau
         return $query->getRowArray(); 
     }
+
+
+
+    public function updatePlacesDispo($idEvenement, $nbDispo)
+{
+    $db = \Config\Database::connect();
+    $builder = $db->table('evenements');
+    $builder->where('idGestion', $idEvenement);
+    return $builder->update(['nbplaceDispo' => $nbDispo]);
+}
+
 
     /**
      * Permet de récupérer le nombre de place dispo d'un event
@@ -454,6 +446,101 @@
         $builder->where('idGestion', $idEvenement);
         $builder->update($data);
     }
+
+
+    /**
+     * Récupère un utilisateur par son idUser (pour affichage du profil).
+     *
+     * @param int $idUser
+     * @return array|null
+     */
+    public function getUserById($idUser)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('utilisateur');
+        $builder->where('idUser', $idUser);
+        $query = $builder->get();
+
+        // getRowArray() => tableau associatif ou null
+        return $query->getRowArray();
+    }
+
+    /**
+ * Récupère un utilisateur par son login (pour affichage du profil).
+ *
+ * @param string $login
+ * @return array|null
+ */
+public function getUserByLogin($login)
+{
+    $db = \Config\Database::connect();
+    $builder = $db->table('utilisateur');
+    $builder->where('loginUser', $login);
+    $query = $builder->get();
+    return $query->getRowArray();
+}
+
+
+    /**
+     * Met à jour les informations d’un utilisateur.
+     *
+     * @param int   $idUser
+     * @param array $data
+     * @return bool
+     */
+    public function updateUser($idUser, $data)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('utilisateur');
+        $builder->where('idUser', $idUser);
+        return $builder->update($data);
+    }
+
+    // ------------------------------------------------------------------
+    // 3) Gestion des réservations
+    // ------------------------------------------------------------------
+
+    /**
+     * Récupère les réservations d’un utilisateur.
+     *
+     * @param int $idUser
+     * @return array
+     */
+    public function getReservationsByUser($idUser)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        return $builder->where('idUser', $idUser)->get()->getResultArray();
+    }
+
+    /**
+     * Récupère une réservation précise par son idResa.
+     *
+     * @param int $idResa
+     * @return object|null
+     */
+    public function getReservation($idResa)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        $builder->where('idResa', $idResa);
+        $query = $builder->get();
+        return $query->getRow(); // objet ou null
+    }
+
+    /**
+     * Supprime (annule) une réservation.
+     *
+     * @param int $idResa
+     * @return bool
+     */
+    public function deleteReservation($idResa)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        return $builder->delete(['idResa' => $idResa]);
+    }
+
     
     //Ajouter un log
     public function addLog($idUser, $action, $details = null) {

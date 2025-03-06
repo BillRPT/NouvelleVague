@@ -59,15 +59,15 @@
       <tbody>
         <tr>
           <td>Résident</td>s
-          <td>5 €</td>
+          <td>0 €</td>
           <td>
             <input type="number" class="form-control billet-qty" data-price="5" value="0" min="0">
           </td>
           <td class="line-total">0 €</td>
         </tr>
         <tr>
-          <td>Non-résident</td>
-          <td>10 €</td>
+          <td>Accompagnateur</td>
+          <td>5 €</td>
           <td>
             <input type="number" class="form-control billet-qty" data-price="10" value="0" min="0">
           </td>
@@ -206,7 +206,7 @@ const lineTotalCells  = document.querySelectorAll('.line-total');
 const grandTotalCell  = document.getElementById('grand-total');
 const btnStep2Next    = document.getElementById('btn-step2-next');
 
-function recalcBillets() {
+function CalculBillet() {
   let total = 0;
   billetQtyInputs.forEach((input, index) => {
     const price = parseFloat(input.dataset.price);
@@ -223,7 +223,7 @@ function recalcBillets() {
 
 billetQtyInputs.forEach((input, index) => {
   input.addEventListener('input', () => {
-    recalcBillets();
+    CalculBillet();
   });
 });
 

@@ -6,13 +6,11 @@
     <meta name="description" content="Découvrez la ville de GetCet, ses événements, ses lieux incontournables et ses informations pratiques.">
     <title>Ville de GetCet</title>
     <style>
-        /* Mettre la même police pour toute la page */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
         }
-
         .header-container {
             position: relative;
             text-align: center;
@@ -20,11 +18,9 @@
             color: white;
             padding: 20px;
         }
-
         .header-container h1 {
             margin: 0;
         }
-
         .btn-login-container {
             position: absolute;
             top: 51%;
@@ -33,7 +29,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .btn-login {
             background-color: #0056b3;
             color: #fff;
@@ -43,64 +38,47 @@
             cursor: pointer;
             text-decoration: none;
             text-align: center;
+            margin: 5px 0;
         }
-
         .btn-login:hover {
             background-color: #003d82;
         }
-
-
         nav {
             background-color: #007bff;
         }
-
         .navbar-nav {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
-
         .navbar-nav .nav-link {
             padding: 8px 15px;
             color: white;
         }
-
         .navbar-nav .nav-link:hover {
             text-decoration: underline;
         }
-
-
         .custom-row {
             display: flex;
             justify-content: space-around;
             align-items: center;
             gap: 30px;
             margin: 20px 0;
-        } 
-
-        h3 {
-            font-family: 'Arial', sans-serif;
         }
-
-        /* Ajuster la taille et l'espacement des images */
         .custom-row img {
             width: 250px;
             height: 250px;
             object-fit: cover;
         }
-
-        /* Effet de zoom  */
         .zoom img {
             border-radius: 10%;
             transform: scale(1);
             transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
-
         .zoom:hover img {
             transform: scale(1.2);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
-
         .zoom h3 {
             text-align: center;
             margin-top: 10px;
@@ -120,8 +98,6 @@
         .logo img:hover {
             transform: scale(1.1);
         }
-
-        
         footer .social-icons i {
             font-size: 1.5rem;
             margin: 0 10px;
@@ -138,10 +114,25 @@
     <header class="header-container">
       <h1>Bienvenue à GetCet</h1>
       <div class="btn-login-container">
-        <!-- Bouton pour accéder à la page de réservation -->
-        <?= anchor('reservation', 'Réserver un événement', ['class' => 'btn-login']); ?>
+        <!-- Bouton pour réserver un événement (si connecté) -->
+        <?php if (session()->has('user')): ?>
+            <?= anchor('reservation', 'Réserver un événement', ['class' => 'btn-login']); ?>
+        <?php else: ?>
+          <!-- Sinon, on propose de se connecter -->
+          <?= anchor('c onnexion', 'Connectez-vous pour réserver', ['class' => 'btn-login']); ?>
+        <?php endif; ?>
+
+        <!-- Bouton pour accéder au profil (si connecté) -->
+        <?php if (session()->has('user')): ?>
+          <?= anchor('c_Profil', 'Accéder au profil', ['class' => 'btn-login']); ?>
+        <?php else: ?>
+          <?= anchor('connexion', 'Connectez-vous pour votre profil', ['class' => 'btn-login']); ?>
+        <?php endif; ?>
       </div>
     </header>
 
+    
+
   </body>
 </html>
+

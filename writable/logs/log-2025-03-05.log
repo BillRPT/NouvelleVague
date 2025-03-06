@@ -1,0 +1,9 @@
+CRITICAL - 2025-03-05 21:44:07 --> Cannot redeclare App\Models\Monmodele::getUserById()
+in APPPATH\Models\Monmodele.php on line 465.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-05 21:47:10 --> Cannot redeclare App\Models\Monmodele::getReservationsByUser()
+in APPPATH\Models\Monmodele.php on line 493.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-05 21:47:22 --> Cannot redeclare App\Models\Monmodele::deleteReservation()
+in APPPATH\Models\Monmodele.php on line 515.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

@@ -1,0 +1,23 @@
+CRITICAL - 2025-03-06 22:00:14 --> Undefined array key "nbplaceDispo"
+in APPPATH\Controllers\c_Reservation.php on line 94.
+ 1 APPPATH\Controllers\c_Reservation.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nbplaceDispo"', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Reservation.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Reservation->finaliserReservation()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Reservation))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-06 22:46:42 --> syntax error, unexpected variable "$this"
+in APPPATH\Controllers\c_Profil.php on line 16.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Profil')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Profil')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Profil', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-06 22:46:59 --> Undefined variable $utilisateur
+in APPPATH\Controllers\c_Profil.php on line 106.
+ 1 APPPATH\Controllers\c_Profil.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $utilisateur', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 106)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('7')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

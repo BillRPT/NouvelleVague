@@ -47,3 +47,8 @@ $routes->get('reservation', 'Moncontroleur::reservation');
 $routes->post('reservation/reserve', 'Moncontroleur::reserve');
 
 $routes->get('evenementpopulairePdf', 'c_Administration::evenementpopulairePdf');
+
+//routes du profil 
+$routes->get('c_Profil', 'c_Profil::index');
+$routes->post('c_Profil/update', 'c_Profil::update');
+$routes->get('c_Profil/annulerReservation/(:num)', 'c_Profil::annulerReservation/$1');
