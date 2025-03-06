@@ -27,7 +27,7 @@
         <p><strong>Lieu :</strong> Théâtre de GetCet, 12 rue des Lilas</p>
         <p><strong>Heure :</strong> 20h00</p>
         <p><strong>Prix :</strong> 25€ par personne</p>
-        <?= anchor('#', 'Réserver vos places', ['class' => 'btn btn-primary']); ?>
+        <?= anchor('reservation', 'Réserver vos places', ['class' => 'btn btn-primary']); ?>
     </section>
 </main>
 
