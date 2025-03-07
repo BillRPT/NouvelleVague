@@ -281,6 +281,17 @@
         $builder->delete();
     }
 
+    public function mettreajourStatut($idEvenement) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        
+        // Mise à jour du champ statutReservation à 'Annuler'
+        $builder->where('idGestion', $idEvenement);
+        $builder->update(['statutReservation' => 'Annuler : événement supp']);
+    }
+    
+    
+
     /**
      * Permet de vérifier si un utilisateur est un ancien habitant qui peux parrainer un nouveau arrivant
      * 
@@ -549,6 +560,15 @@ public function getUserByLogin($login)
             'action'  => $action,
             'details' => $details
         ]);
+    }
+
+    public function nbpersonneParrainer($idUser) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('parrainage_effectuer');
+        $builder->select('COUNT(idParrainage) as nbpersonneParrainer');
+        $builder->where('idUser', $idUser);
+        $query = $builder->get();
+        return $query->getRowArray();
     }
     
 }

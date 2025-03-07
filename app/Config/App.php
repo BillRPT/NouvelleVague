@@ -18,7 +18,7 @@ class App extends BaseConfig
      */
 
     //Mettre à jour ici tout le temps pour les redirections (le changer quand on est en cours) a la maison : http://nouvellevague/NouvelleVague/public, a l'école : http://172.16.203.212/NouvelleVague/public
-    public string $baseURL = 'http://nouvellevague/public';
+    public string $baseURL = 'http://172.16.203.212/NouvelleVague/public';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

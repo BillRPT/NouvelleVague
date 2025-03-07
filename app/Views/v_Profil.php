@@ -23,6 +23,7 @@
         <p><strong>Prénom :</strong> <?= $utilisateur['prenomUser'] ?></p>
         <p><strong>Adresse :</strong> <?= $utilisateur['adresseUser'] ?></p>
         <p><strong>Code Parrainage :</strong> <?= $utilisateur['codeParrainage'] ?? '' ?></p>
+        <p><strong>Nombre de personnes parrainées :</strong> <?= $nbdepersonneParrainer['nbpersonneParrainer']?></p>
     <?php else: ?>
         <p>Impossible de récupérer vos informations.</p>
     <?php endif; ?>
@@ -39,10 +40,7 @@
         <label for="adresseUser">Adresse :</label>
         <input type="text" name="adresseUser" id="adresseUser" value="<?= $utilisateur['adresseUser'] ?? '' ?>" required><br>
 
-        <!-- Décommentez si vous voulez autoriser la modification du code parrainage :
-        <label for="codeParrainage">Code Parrainage :</label>
-        <input type="text" name="codeParrainage" id="codeParrainage" value="<?= $utilisateur['codeParrainage'] ?? '' ?>">
-        -->
+        <?= $utilisateur['codeParrainage'] ?? '' ?>
 
         <button type="submit">Mettre à jour</button>
     </form>
