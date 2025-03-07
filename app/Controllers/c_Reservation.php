@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Models\Monmodele;
@@ -96,8 +95,7 @@ class c_Reservation extends BaseController
         $idUser,
         $idEvenement,
         $nomComplet,
-        date('Y-m-d H:i:s'),       
-        $event['dateEvenement'],   
+        date('Y-m-d H:i:s'),         
         "Standard",
         $nbBillets
     );
@@ -116,3 +114,4 @@ class c_Reservation extends BaseController
 }
 
 }
+?>

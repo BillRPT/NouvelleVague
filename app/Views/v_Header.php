@@ -119,7 +119,7 @@
             <?= anchor('reservation', 'Réserver un événement', ['class' => 'btn-login']); ?>
         <?php else: ?>
           <!-- Sinon, on propose de se connecter -->
-          <?= anchor('c onnexion', 'Connectez-vous pour réserver', ['class' => 'btn-login']); ?>
+          <?= anchor('connexion', 'Connectez-vous pour réserver', ['class' => 'btn-login']); ?>
         <?php endif; ?>
 
         <!-- Bouton pour accéder au profil (si connecté) -->
