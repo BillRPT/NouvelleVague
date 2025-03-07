@@ -278,6 +278,15 @@
         $builder->update(['statutReservation' => 'Annuler : événement supp']);
     }
 
+    public function nbpersonneParrainer($idUser) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('parrainage_effectuer');
+        $builder->select('COUNT(idParrainage) as nbpersonneParrainer');
+        $builder->where('idUser', $idUser);
+        $query = $builder->get();
+        return $query->getRowArray();
+    }
+
 
     //  Récupérer toutes les réservations
     public function getAllReservations() {
