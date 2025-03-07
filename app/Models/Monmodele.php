@@ -269,6 +269,15 @@
         return $builder->insert($data);
     }
 
+    public function mettreajourStatut($idEvenement) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        
+        // Mise à jour du champ statutReservation à 'Annuler'
+        $builder->where('idGestion', $idEvenement);
+        $builder->update(['statutReservation' => 'Annuler : événement supp']);
+    }
+
 
     //  Récupérer toutes les réservations
     public function getAllReservations() {
