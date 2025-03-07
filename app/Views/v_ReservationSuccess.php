@@ -7,6 +7,8 @@
 <body>
     <h1>Votre réservation a été enregistrée !</h1>
     <p>Merci pour votre inscription.</p>
-    <p><?= anchor('Accueil', 'Retour à l\'accueil'); ?></p>
+    <?php echo anchor('retour', 'Retourner au menu principal');?>
+</div>
+</p>
 </body>
 </html>
