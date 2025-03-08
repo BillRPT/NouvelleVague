@@ -2,7 +2,8 @@
 <center>
 <h3>Créer un événement</h3>
 <?=validation_list_errors() ?>
-<?= form_open('/c_Administration/creerEvenements'); ?>
+<!--On utilise enctype pour permettre de upload des fichier-->
+<?= form_open('/c_Administration/creerEvenements', ['enctype' => 'multipart/form-data']); ?>
 <?= form_label('Nom : '); ?>
 <?php echo form_input('nom', set_value('nom')); ?> <br /><br />
 <?= form_label('Type Evenement : '); ?>
@@ -12,6 +13,8 @@
 <?php echo form_input(['name' => 'date', 'type' => 'date', 'value' => set_value('date')]); ?> <br /> <br />
 <?= form_label('Description : '); ?>
 <?php echo form_input('description', set_value('description')); ?> <br /><br />
+<?= form_label('Image : '); ?>
+<?php echo form_upload('image', set_value('image')); ?> <br /><br />
 <?= form_label('Nombre de Place Max : '); ?>
 <?php echo form_input('nbPlace', set_value('nbPlace')); ?> <br /><br />
 <?= form_label('Duree : '); ?>

@@ -220,7 +220,7 @@
      * @param string $duree
      * @param string $idtypeEvenement
      */
-    public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement) {
+    public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement, $ImageChemin) {
         $db = \Config\Database::connect();
 
         //$sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
@@ -237,6 +237,7 @@
             'dureeEvenement' => $duree,
             'idtypeEvenement' => $idtypeEvenement,
             'statutEvenement' => 'actif',
+            'imageEvenement' => $ImageChemin
         ];
 
         //Insert le payload dans la bdd
