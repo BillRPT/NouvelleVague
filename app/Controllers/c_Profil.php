@@ -124,7 +124,7 @@ class c_Profil extends Controller
         }
     
         // Récupère l'événement associé à la réservation
-        $evenement = $this->model->getEvenementByIdGestion($reservation->idGestion); // Méthode à implémenter pour récupérer l'événement
+        $evenement = $this->model->getEvenementByIdGestion($reservation->idGestion); 
     
         // Vérifie si l'événement existe
         if (!$evenement) {
@@ -138,7 +138,7 @@ class c_Profil extends Controller
     
         // 172800 secondes = 48h
         if ($diff >= 172800) {
-            // OK pour annuler
+          
             $this->model->deleteReservation($idResa);
             return redirect()->to('/c_Profil')
                              ->with('success', 'Réservation annulée avec succès.');

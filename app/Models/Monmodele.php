@@ -3,6 +3,12 @@
     use CodeIgniter\Model;
     class Monmodele extends Model
 {   
+
+    protected $table = 'logs';  // Nom de la table des logs
+    protected $primaryKey = 'idLog';
+    protected $allowedFields = ['idUser', 'action', 'dateLog','details'];  // Champs que l'on peut insérer
+    protected $useTimestamps = true;  // Utilisation de timestamps (dateLog se mettra à jour automatiquement
+
     //Fonction de connexion
     /**
      * Fonction de connexion
@@ -263,7 +269,7 @@
             'dateReservation'  => $dateReservation,     
             'typeReservation'  => $typeReservation,
             'nbplaceTotale'    => $nbplaceTotale,
-            'statutReservation'=> 'En attente'
+            'statutReservation'=> 'Actif'
         ];
 
         return $builder->insert($data);
@@ -489,6 +495,9 @@
         return $query->getRowArray();
     }
 
+
+
+
     /**
  * Récupère un utilisateur par son login (pour affichage du profil).
  *
@@ -548,7 +557,7 @@ public function getUserByLogin($login)
        
         $builder->join('evenements e', 'r.idGestion = e.idGestion');
     
-        // Sélection des colonnes de resaevenements + la date de l'événement (et autres si besoin)
+     
         $builder->select('
             r.*,
             e.nomEvenement AS eventName,
@@ -561,7 +570,7 @@ public function getUserByLogin($login)
         $builder->where('r.idResa', $idResa);
     
         $query = $builder->get();
-        return $query->getRow(); // Renvoie un objet ou null
+        return $query->getRow(); 
     }
 
     public function getEvenementByIdGestion($idGestion)
@@ -590,15 +599,19 @@ public function getUserByLogin($login)
         }
     }
     
+    public function addLog($userId, $action, $details = null) {
+        // Insérer un log de connexion dans la base de données
+        $data = [
+            'idUser'   => $userId,         // Associe l'ID de l'utilisateur au log
+            'action'   => $action,         // L'action effectuée (connexion, déconnexion, etc.)
+            'details'  => $details,        // Détails supplémentaires (optionnel)
+            'dateLog'  => date('Y-m-d'), // Date et heure de l'action
+        ];
     
-    //Ajouter un log
-    public function addLog($idUser, $action, $details = null) {
-        return $this->insert([
-            'idUser'  => $idUser,
-            'action'  => $action,
-            'details' => $details
-        ]);
+        // Effectuer l'insertion dans la table 'log'
+        return $this->db->table('log')->insert($data);
     }
+    
     
 }
 ?>

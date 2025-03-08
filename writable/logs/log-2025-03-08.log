@@ -236,3 +236,513 @@ WHERE `idUser` = :idUser:', [...], false)
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 15:22:16 --> mysqli_sql_exception: La table 'nouvellevague.logs' n'existe pas in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(603): CodeIgniter\Model->insert(Array)
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(46): App\Models\Monmodele->addLog('21', 'connexion')
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Connexion->connexionUtilisateur()
+#10 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+#11 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-03-08 15:22:16 --> La table 'nouvellevague.logs' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `logs` (`idUser`, `action`, `details`, `created_at`, `updated_at`) VALUES (:idUser:, :action:, :details:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\Monmodele.php(603): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\c_Connexion.php(46): App\Models\Monmodele->addLog('21', 'connexion')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->connexionUtilisateur()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 15:50:21 --> syntax error, unexpected token "private"
+in APPPATH\Controllers\c_Connexion.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Connexion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Connexion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Connexion')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Connexion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 15:50:33 --> syntax error, unexpected token "private"
+in APPPATH\Controllers\c_Connexion.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Connexion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Connexion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Connexion')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Connexion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 15:50:36 --> syntax error, unexpected token "private"
+in APPPATH\Controllers\c_Connexion.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Connexion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Connexion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Connexion')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Connexion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 15:51:08 --> syntax error, unexpected token "private"
+in APPPATH\Controllers\c_Connexion.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Connexion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Connexion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Connexion')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Connexion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 15:51:09 --> syntax error, unexpected token "private"
+in APPPATH\Controllers\c_Connexion.php on line 45.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Connexion.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\c_Connexion')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\c_Connexion')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\c_Connexion', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 15:54:43 --> mysqli_sql_exception: Champ 'details' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-03-08 15:54:43 --> Champ 'details' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`idUser`, `action`, `details`, `dateLog`) VALUES (:idUser:, :action:, :details:, :dateLog:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion', 'Déconnexion réussie')
+ 4 APPPATH\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'Déconnexion réussie')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 15:54:43 --> mysqli_sql_exception: Champ 'details' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-03-08 15:54:43 --> Champ 'details' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`idUser`, `action`, `details`, `dateLog`) VALUES (:idUser:, :action:, :details:, :dateLog:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion', 'Déconnexion réussie')
+ 4 APPPATH\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'Déconnexion réussie')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 15:55:23 --> mysqli_sql_exception: Champ 'details' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-03-08 15:55:23 --> Champ 'details' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`idUser`, `action`, `details`, `dateLog`) VALUES (:idUser:, :action:, :details:, :dateLog:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+ 4 APPPATH\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'Déconnexion réussie')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 15:55:24 --> mysqli_sql_exception: Champ 'details' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-03-08 15:55:24 --> Champ 'details' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`idUser`, `action`, `details`, `dateLog`) VALUES (:idUser:, :action:, :details:, :dateLog:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+ 4 APPPATH\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'Déconnexion réussie')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 15:55:24 --> mysqli_sql_exception: Champ 'details' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-03-08 15:55:24 --> Champ 'details' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`idUser`, `action`, `details`, `dateLog`) VALUES (:idUser:, :action:, :details:, :dateLog:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+ 4 APPPATH\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'Déconnexion réussie')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 15:55:27 --> mysqli_sql_exception: Champ 'details' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'D\xC3\xA9connexion r\xC3...')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-03-08 15:55:27 --> Champ 'details' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`idUser`, `action`, `details`, `dateLog`) VALUES (:idUser:, :action:, :details:, :dateLog:)', [...], false)
+ 2 APPPATH\Models\Monmodele.php(613): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\c_Connexion.php(76): App\Models\Monmodele->addLog('21', 'deconnexion')
+ 4 APPPATH\Controllers\c_Connexion.php(60): App\Controllers\c_Connexion->addConnectionLog('Elon123', Object(App\Models\Monmodele), 'deconnexion', 'Déconnexion réussie')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Connexion->deconnexionUtilisateur()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Connexion))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:09:50 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:09:50 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:11:56 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:11:56 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:12:06 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:12:06 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:12:07 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:12:07 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:12:07 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:12:07 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:12:08 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:12:08 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('9')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('9')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:12:11 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:12:11 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:12:20 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:12:20 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:14:09 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:14:09 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:14:15 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:14:15 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 17:15:36 --> mysqli_sql_exception: Champ 'e.nomEvenement' inconnu dans field list in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `r`.*, `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 17:15:36 --> Champ 'e.nomEvenement' inconnu dans field list
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, `e`.`nomEvenement` AS `eventName`, `e`.`dateEvenement` AS `eventDate`, `e`.`nbplaceDispo` AS `eventDispo`, `e`.`dureeEvenement` AS `eventDuree`
+FROM `resaevenements` `r`
+WHERE `r`.`idResa` = :r.idResa:
+AND `r`.`idGestion` = `e`.`idGestion`', [...], false)
+ 2 APPPATH\Models\Monmodele.php(572): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(118): App\Models\Monmodele->getReservation('10')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('10')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 17:22:50 --> syntax error, unexpected token "public"
+in APPPATH\Models\Monmodele.php on line 576.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Monmodele')
+ 3 APPPATH\Controllers\c_Profil.php(18): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Monmodele')
+ 4 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\c_Profil->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 17:22:52 --> syntax error, unexpected token "public"
+in APPPATH\Models\Monmodele.php on line 576.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Models\\Monmodele.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Monmodele')
+ 3 APPPATH\Controllers\c_Profil.php(18): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Monmodele')
+ 4 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\c_Profil->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
