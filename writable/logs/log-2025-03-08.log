@@ -236,3 +236,77 @@ WHERE `idUser` = :idUser:', [...], false)
  5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
  6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:08:33 --> Call to undefined function App\Controllers\chargerImage()
+in APPPATH\Controllers\c_Administration.php on line 227.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:08:50 --> Call to undefined function App\Controllers\chargerImage()
+in APPPATH\Controllers\c_Administration.php on line 199.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:09:01 --> Call to a member function isValid() on string
+in APPPATH\Controllers\c_Administration.php on line 214.
+ 1 APPPATH\Controllers\c_Administration.php(199): App\Controllers\c_Administration->chargerImage('motogp-2023-france-visuel.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:09:25 --> Call to a member function getExtension() on string
+in APPPATH\Controllers\c_Administration.php on line 216.
+ 1 APPPATH\Controllers\c_Administration.php(199): App\Controllers\c_Administration->chargerImage('motogp-2023-france-visuel.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:09:37 --> Call to a member function isValid() on string
+in APPPATH\Controllers\c_Administration.php on line 214.
+ 1 APPPATH\Controllers\c_Administration.php(199): App\Controllers\c_Administration->chargerImage('motogp-2023-france-visuel.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:10:53 --> Call to a member function isValid() on null
+in APPPATH\Controllers\c_Administration.php on line 215.
+ 1 APPPATH\Controllers\c_Administration.php(200): App\Controllers\c_Administration->chargerImage(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:11:45 --> Call to a member function isValid() on null
+in APPPATH\Controllers\c_Administration.php on line 215.
+ 1 APPPATH\Controllers\c_Administration.php(200): App\Controllers\c_Administration->chargerImage(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:12:24 --> Call to a member function isValid() on null
+in APPPATH\Controllers\c_Administration.php on line 215.
+ 1 APPPATH\Controllers\c_Administration.php(200): App\Controllers\c_Administration->chargerImage(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:12:40 --> Call to a member function isValid() on null
+in APPPATH\Controllers\c_Administration.php on line 215.
+ 1 APPPATH\Controllers\c_Administration.php(200): App\Controllers\c_Administration->chargerImage(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:14:21 --> Call to a member function isValid() on null
+in APPPATH\Controllers\c_Administration.php on line 215.
+ 1 APPPATH\Controllers\c_Administration.php(200): App\Controllers\c_Administration->chargerImage(null)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 16:20:00 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::getName()
+in APPPATH\Controllers\c_Administration.php on line 189.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Administration->creerEvenements()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Administration))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

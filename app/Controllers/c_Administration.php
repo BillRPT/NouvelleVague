@@ -186,20 +186,23 @@ class c_Administration extends BaseController{
             $nombrePlace = $this->request->getPost('nbPlace');
             $duree = $this->request->getPost('duree');
             $typeEvenement = $this->request->getPost('evenement');
+            $imageChemin = $this->request->getFile('image');
             //l'incrementer de 1 pour avoir les bonnes valeurs
             $typeEvenement = $typeEvenement + 1;
             //Vérifier que aucun champ n'est vide
-            if (empty($nom) || empty($date) || empty($description) || empty($nombrePlace) || empty($duree)) {
+            if (empty($nom) || empty($date) || empty($description) || empty($nombrePlace) || empty($duree) || empty($imageChemin->getName())) {
                 //Retourner la vue avec un message d'erreur
                 return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_ChampVide.php').view('v_finFooter.php');
             }
             else {
-                //Récup l'id du evenement
 
-                //$idEvent = $monModele->getidTypeEvenement($evenement);
+                //Récupérer l'objet de l'image et non le texte et vérifier que ca retourne true
+                if ($this->chargerImage($this->request->getFile('image')) == false) {
+                    return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_ErreurImage.php').view('v_finFooter.php');
+                }
 
                 //Insertion de l'evenement (la variable evenement est un entier qui correspond a l'id du tyoe de l'evenement)
-                $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $typeEvenement);
+                $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $typeEvenement, "Image/" . $imageChemin->getName());
                 return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_MessageCreationEvenement.php').view('v_finFooter.php');
             }
         }
@@ -207,6 +210,36 @@ class c_Administration extends BaseController{
             return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_finFooter.php');
         }
     }
+
+    private function chargerImage($file) {
+        $rep = true;
+    
+        if (!$file->isValid()) {
+            return false;
+        }
+    
+        // Vérifier l'extension du fichier
+        $extensionsAutorisees = ['jpg', 'jpeg', 'png', 'gif'];
+        if (!in_array($file->getExtension(), $extensionsAutorisees)) {
+            return false;
+        }
+    
+        // Définir le dossier de destination
+        $cheminFichier = 'Image/';
+    
+        // Garder le nom d'origine du fichier
+        $nomFichier = $file->getName();
+        $cheminComplet = $cheminFichier . $nomFichier;
+    
+        // Déplacer le fichier vers le dossier final
+        if (!$file->move($cheminFichier, $nomFichier)) {
+            return false;
+        }
+    
+        return $rep;
+    }  
+  
+    
 
     /**
      * Permet de rediriger vers la bonne vue
