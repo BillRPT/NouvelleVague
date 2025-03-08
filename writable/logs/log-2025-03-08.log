@@ -1,0 +1,238 @@
+CRITICAL - 2025-03-08 12:11:20 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('5')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 12:11:30 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('5')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 12:12:13 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('6')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 12:16:41 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('7')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 12:41:19 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('7')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 12:41:21 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('7')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:19:05 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('7')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:19:09 --> Undefined property: stdClass::$dateEvenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dateEvenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('7')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:34:32 --> Undefined variable $evenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $evenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:35:19 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:35:19 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:36:33 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:36:34 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:36:42 --> Undefined variable $evenement
+in APPPATH\Controllers\c_Profil.php on line 128.
+ 1 APPPATH\Controllers\c_Profil.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $evenement', 'C:\\Users\\issaw\\OneDrive\\Documents\\GitHub\\NouvelleVague\\app\\Controllers\\c_Profil.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:39:19 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:39:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:41:04 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-08 14:41:04 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\c_Profil.php(127): CodeIgniter\Model->__call('getEvenementByIdGestion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->annulerReservation('8')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 14:41:05 --> mysqli_sql_exception: La table 'nouvellevague.evenement' n'existe pas in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 14:41:05 --> La table 'nouvellevague.evenement' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `evenement`
+WHERE `idUser` = :idUser:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 14:41:05 --> mysqli_sql_exception: La table 'nouvellevague.evenement' n'existe pas in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 14:41:05 --> La table 'nouvellevague.evenement' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `evenement`
+WHERE `idUser` = :idUser:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 14:41:10 --> mysqli_sql_exception: La table 'nouvellevague.evenement' n'existe pas in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 14:41:10 --> La table 'nouvellevague.evenement' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `evenement`
+WHERE `idUser` = :idUser:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-03-08 14:41:12 --> mysqli_sql_exception: La table 'nouvellevague.evenement' n'existe pas in C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\app\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+#6 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+#7 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+#8 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\issaw\OneDrive\Documents\GitHub\NouvelleVague\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-03-08 14:41:12 --> La table 'nouvellevague.evenement' n'existe pas
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `evenement`
+WHERE `idUser` = :idUser:', [...], false)
+ 2 APPPATH\Models\Monmodele.php(534): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\c_Profil.php(43): App\Models\Monmodele->getReservationsByUser('21')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\c_Profil->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\c_Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

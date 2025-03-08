@@ -270,7 +270,7 @@
     }
 
     public function mettreajourStatut($idEvenement) {
-        $db = \Config\Database::connect();
+        $db = \Config\Database::connect();  
         $builder = $db->table('resaevenements');
         
         // Mise à jour du champ statutReservation à 'Annuler'
@@ -564,6 +564,13 @@ public function getUserByLogin($login)
         return $query->getRow(); // Renvoie un objet ou null
     }
 
+    public function getEvenementByIdGestion($idGestion)
+{
+    $db = \Config\Database::connect();
+    return $db->table('evenements')->where('idGestion', $idGestion)->get()->getRow();
+}
+
+
     /**
      * Supprime (annule) une réservation.
      *
@@ -574,9 +581,15 @@ public function getUserByLogin($login)
     {
         $db = \Config\Database::connect();
         $builder = $db->table('resaevenements');
-        return $builder->delete(['idResa' => $idResa]);
+        
+        // Essayer de supprimer la réservation
+        if ($builder->delete(['idResa' => $idResa])) {
+            return true;  // Succès
+        } else {
+            return false;  // Échec
+        }
     }
-
+    
     
     //Ajouter un log
     public function addLog($idUser, $action, $details = null) {

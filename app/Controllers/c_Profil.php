@@ -99,46 +99,54 @@ class c_Profil extends Controller
      * @param int $idResa
      */
     public function annulerReservation($idResa)
-{
-    // Vérifie si l'utilisateur est connecté (clé de session = 'user')
-    if (!$this->session->has('user')) {
-        return redirect()->to('/c_Connexion');
+    {
+        // Vérifie si l'utilisateur est connecté (clé de session = 'user')
+        if (!$this->session->has('user')) {
+            return redirect()->to('/c_Connexion');
+        }
+    
+        // Récupère le login de l'utilisateur depuis la session
+        $login = $this->session->get('user');
+    
+        // Récupère l'utilisateur pour obtenir son idUser
+        $utilisateur = $this->model->getUserByLogin($login);
+        if (!$utilisateur) {
+            return redirect()->to('/c_Connexion')->with('error', 'Utilisateur non trouvé.');
+        }
+    
+        // Récupère la réservation
+        $reservation = $this->model->getReservation($idResa);
+    
+        // Vérifie que la réservation existe et appartient à l'utilisateur
+        if (!$reservation || $reservation->idUser != $utilisateur['idUser']) {
+            return redirect()->to('/c_Profil')
+                             ->with('error', 'Accès interdit ou réservation inexistante.');
+        }
+    
+        // Récupère l'événement associé à la réservation
+        $evenement = $this->model->getEvenementByIdGestion($reservation->idGestion); // Méthode à implémenter pour récupérer l'événement
+    
+        // Vérifie si l'événement existe
+        if (!$evenement) {
+            return redirect()->to('/c_Profil')->with('error', 'Événement non trouvé.');
+        }
+    
+        // Vérifie la contrainte des 48h avant l’événement
+        $eventTimestamp = strtotime($evenement->dateEvenement);
+        $now = time();
+        $diff = $eventTimestamp - $now;
+    
+        // 172800 secondes = 48h
+        if ($diff >= 172800) {
+            // OK pour annuler
+            $this->model->deleteReservation($idResa);
+            return redirect()->to('/c_Profil')
+                             ->with('success', 'Réservation annulée avec succès.');
+        } else {
+            return redirect()->to('/c_Profil')
+                             ->with('error', 'Impossible d’annuler moins de 48h avant l’événement.');
+        }
     }
-
-    // Récupère le login de l'utilisateur depuis la session
-    $login = $this->session->get('user');
-
-    // Récupère l'utilisateur pour obtenir son idUser
-    $utilisateur = $this->model->getUserByLogin($login);
-    if (!$utilisateur) {
-        return redirect()->to('/c_Connexion')->with('error', 'Utilisateur non trouvé.');
-    }
-
-    // Récupère la réservation
-    $reservation = $this->model->getReservation($idResa);
-
-    // Vérifie que la réservation existe et appartient à l'utilisateur
-    if (!$reservation || $reservation->idUser != $utilisateur['idUser']) {
-        return redirect()->to('/c_Profil')
-                         ->with('error', 'Accès interdit ou réservation inexistante.');
-    }
-
-    // Vérifie la contrainte des 48h avant l’événement
-    // On suppose que la colonne "dateEvenement" existe dans la table "resaevenements"
-    $eventTimestamp = strtotime($reservation->dateEvenement);
-    $now = time();
-    $diff = $eventTimestamp - $now;
-
-    // 172800 secondes = 48h
-    if ($diff >= 172800) {
-        // OK pour annuler
-        $this->model->deleteReservation($idResa);
-        return redirect()->to('/c_Profil')
-                         ->with('success', 'Réservation annulée avec succès.');
-    } else {
-        return redirect()->to('/c_Profil')
-                         ->with('error', 'Impossible d’annuler moins de 48h avant l’événement.');
-    }
-}
+    
     
 }
