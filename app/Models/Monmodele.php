@@ -178,7 +178,7 @@
 
         $builder->select('nomEvenement, dateEvenement, COUNT(idResa) AS nb_reservations, SUM(nbplaceTotale) AS nb_places_reservees, statutEvenement');
 
-        $builder->where('statutReservation', 'valider');
+        $builder->where('statutReservation', 'Actif');
         $builder->groupBy('evenements.idGestion');
         $builder->orderBy('nb_places_reservees', 'DESC');
 

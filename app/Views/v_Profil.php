@@ -24,6 +24,40 @@
         <p><strong>Adresse :</strong> <?= $utilisateur['adresseUser'] ?></p>
         <p><strong>Code Parrainage :</strong> <?= $utilisateur['codeParrainage'] ?? '' ?></p>
         <p><strong>Nombre de personnes parrainées :</strong> <?= $nbdepersonneParrainer['nbpersonneParrainer']?></p>
+        
+        <?php 
+            if ($nbdepersonneParrainer['nbpersonneParrainer'] >= 3) { 
+        ?>
+            <p style="color:green;">🎁 3 filleuls : Mug personnalisé</p>
+        <?php 
+            } else { 
+        ?>
+            <p style="color:red;">🎁 3 filleuls : Mug personnalisé</p>
+        <?php 
+            } 
+
+            if ($nbdepersonneParrainer['nbpersonneParrainer'] >= 5) { 
+        ?>
+            <p style="color:green;">🎁 5 filleuls : Chambre gratuite</p>
+        <?php 
+            } else { 
+        ?>
+            <p style="color:red;">🎁 5 filleuls : Chambre gratuite</p>
+        <?php 
+            } 
+
+            if ($nbdepersonneParrainer['nbpersonneParrainer'] >= 10) { 
+        ?>
+            <p style="color:green;">🎁 10 filleuls : Un cadeau exclusif</p>
+        <?php 
+            } else { 
+        ?>
+            <p style="color:red;">🎁 10 filleuls : Un cadeau exclusif</p>
+        <?php 
+            } 
+        ?>
+
+
     <?php else: ?>
         <p>Impossible de récupérer vos informations.</p>
     <?php endif; ?>
