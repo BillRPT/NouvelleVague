@@ -271,6 +271,10 @@ class c_Administration extends BaseController{
         $monModele = new \App\Models\Monmodele();
         //Appel la méthode dans le modele
         $monModele->suppressionEvenement($param);
+
+        //Mettre a jour les status
+        $monModele->mettreajourStatut($param);
+
         return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view("v_SupressionEvenement.php").view('v_finFooter.php');
     }
 

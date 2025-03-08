@@ -45,7 +45,7 @@ class c_Inscription extends BaseController{
                 return view('v_Inscription.php').view("v_CodeParrainageInexistant.php");
             } 
     
-            if ($roleUser == "arrivant") {
+            if ($roleUser != "Ancien Habitant") {
                 return view('v_Inscription.php').view("v_UtilisateurNonAnciens.php");
             }
     

@@ -42,10 +42,13 @@ class c_Profil extends Controller
         // Utilise l'ID de l'utilisateur pour récupérer ses réservations
         $reservations = $this->model->getReservationsByUser($utilisateur['idUser']);
 
+        //Récupérer le nombre de personne que j'ai parrainer
+        $nbdepersonneParrainer =  $this->model->nbpersonneParrainer($utilisateur['idUser']);
         
         $data = [
             'utilisateur' => $utilisateur,
-            'reservations' => $reservations
+            'reservations' => $reservations,
+            'nbdepersonneParrainer' => $nbdepersonneParrainer
         ];
 
         // Charge la vue "v_Profil.php"

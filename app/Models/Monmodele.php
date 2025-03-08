@@ -129,26 +129,33 @@
         //return le résultat sous forme de tableau
         return $query->getResultArray();
     }
-
-    /**
-     * Faire passer en para le id de l'évenements et récup tous les participants
-     * 
-     * @param mixed $idEvenement
-     * 
-     * @return array un tableau ou dedans y'a la liste des participant d'un evenement précis
-     */
     public function listedesparticipantEvenements($idEvenement) {
         $db = \Config\Database::connect();
-        $builder = $db->table('utilisateur');
-        
-        $builder->join('resaevenements', 'utilisateur.idUser = resaevenements.idUser');
-        
-        $builder->select('nomUser, prenomUser, emailUser, adresseUser, dateReservation, nbplaceTotale, statutReservation');
+    
+        // Récupérer les utilisateurs participant à l'événement
+        $builder = $db->table('resaevenements');
+        $builder->select('idUser, dateReservation, nbplaceTotale, statutReservation');
         $builder->where('idGestion', $idEvenement);
         $query = $builder->get();
-        
-        // Retourner le résultat sous forme de tableau
-        return $query->getResultArray();
+        $reservations = $query->getResultArray();
+    
+        $participants = [];
+    
+        foreach ($reservations as $reservation) {
+            // Récupérer les infos de l'utilisateur
+            $builder = $db->table('utilisateur');
+            $builder->select('nomUser, prenomUser, emailUser, adresseUser');
+            $builder->where('idUser', $reservation['idUser']);
+            $query = $builder->get();
+            $userInfo = $query->getRowArray();
+    
+            if ($userInfo) {
+                // Fusionner les données utilisateur et réservation
+                $participants[] = array_merge($userInfo, $reservation);
+            }
+        }
+    
+        return $participants;
     }
 
     /**
@@ -244,7 +251,7 @@
     
   
 
-    public function addReservation($idUser, $idGestion, $nomReservation, $dateReservation, $dateEvenement, $typeReservation, $nbplaceTotale)
+    public function addReservation($idUser, $idGestion, $nomReservation, $dateReservation, $typeReservation, $nbplaceTotale)
     {
         $db = \Config\Database::connect();
         $builder = $db->table('resaevenements');
@@ -253,14 +260,31 @@
             'idUser'           => $idUser,
             'idGestion'        => $idGestion,
             'nomReservation'   => $nomReservation,
-            'dateReservation'  => $dateReservation,  
-            'dateEvenement'    => $dateEvenement,    
+            'dateReservation'  => $dateReservation,     
             'typeReservation'  => $typeReservation,
             'nbplaceTotale'    => $nbplaceTotale,
             'statutReservation'=> 'En attente'
         ];
 
         return $builder->insert($data);
+    }
+
+    public function mettreajourStatut($idEvenement) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('resaevenements');
+        
+        // Mise à jour du champ statutReservation à 'Annuler'
+        $builder->where('idGestion', $idEvenement);
+        $builder->update(['statutReservation' => 'Annuler : événement supp']);
+    }
+
+    public function nbpersonneParrainer($idUser) {
+        $db = \Config\Database::connect();
+        $builder = $db->table('parrainage_effectuer');
+        $builder->select('COUNT(idParrainage) as nbpersonneParrainer');
+        $builder->where('idUser', $idUser);
+        $query = $builder->get();
+        return $query->getRowArray();
     }
 
 
@@ -430,7 +454,7 @@
             }
         } 
 
-        // Récupérer les données de la requête (exemple avec les données venant d'un formulaire)
+        // Récupérer les données de la requête 
         $data = [
             'nomEvenement' => $nom,
             'idtypeEvenement' => $typeEvenement,
@@ -496,10 +520,7 @@ public function getUserByLogin($login)
         return $builder->update($data);
     }
 
-    // ------------------------------------------------------------------
-    // 3) Gestion des réservations
-    // ------------------------------------------------------------------
-
+   
     /**
      * Récupère les réservations d’un utilisateur.
      *
@@ -522,10 +543,25 @@ public function getUserByLogin($login)
     public function getReservation($idResa)
     {
         $db = \Config\Database::connect();
-        $builder = $db->table('resaevenements');
-        $builder->where('idResa', $idResa);
+        $builder = $db->table('resaevenements r');
+    
+       
+        $builder->join('evenements e', 'r.idGestion = e.idGestion');
+    
+        // Sélection des colonnes de resaevenements + la date de l'événement (et autres si besoin)
+        $builder->select('
+            r.*,
+            e.nomEvenement AS eventName,
+            e.dateEvenement AS eventDate,
+            e.nbplaceDispo AS eventDispo,
+            e.dureeEvenement AS eventDuree
+        ');
+    
+        // Condition sur l'idResa
+        $builder->where('r.idResa', $idResa);
+    
         $query = $builder->get();
-        return $query->getRow(); // objet ou null
+        return $query->getRow(); // Renvoie un objet ou null
     }
 
     /**
@@ -552,6 +588,4 @@ public function getUserByLogin($login)
     }
     
 }
-
-
-
+?>
