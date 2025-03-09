@@ -4,10 +4,12 @@
     class Monmodele extends Model
 {   
 
-    protected $table = 'logs';  // Nom de la table des logs
+    protected $table = 'logs'; 
     protected $primaryKey = 'idLog';
-    protected $allowedFields = ['idUser', 'action', 'dateLog','details'];  // Champs que l'on peut insérer
-    protected $useTimestamps = true;  // Utilisation de timestamps (dateLog se mettra à jour automatiquement
+    protected $allowedFields = ['idUser', 'action', 'dateLog','details'];  
+    protected $useTimestamps = true;  
+    
+    
 
     //Fonction de connexion
     /**
@@ -178,7 +180,7 @@
 
         $builder->select('nomEvenement, dateEvenement, COUNT(idResa) AS nb_reservations, SUM(nbplaceTotale) AS nb_places_reservees, statutEvenement');
 
-        $builder->where('statutReservation', 'Actif');
+        $builder->where('statutReservation', 'valider');
         $builder->groupBy('evenements.idGestion');
         $builder->orderBy('nb_places_reservees', 'DESC');
 
@@ -401,6 +403,23 @@
         //return le résultat sous forme de tableau
         return $query->getRowArray(); 
     }
+
+    public function getEvenements()
+    { 
+        $builder = $this->db->table('evenements');
+    
+        // recup seulement les évenement actif 
+        $builder->where('statutEvenement', 'actif');
+        
+        // Récupérer les evenement sous tableau 
+        $query = $builder->get();
+    
+        // Retourner les résultats sous  tableau associatif
+        return $query->getResultArray();
+    }
+    
+    
+
 
 
 
