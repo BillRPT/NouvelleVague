@@ -42,9 +42,9 @@
 </head>
 <body>
     <header>
-        <div class="logo text-center py-3">
-            <img src="<?= base_url('Image/logo.png') ?>" alt="Logo GetCet" height="80">
-        </div>
+        <!--<div class="logo text-center py-3">
+            <img src="<?= base_url('Image/logo.png') ?>" alt="Logo GetCet" height="70">
+        </div>-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -133,87 +133,5 @@
             </div>
         </section>
 
-        <section id="evenements" class="container py-5">
-            <h2 class="text-center mb-4">Événements</h2>
-            <?php if (!empty($evenements) && is_array($evenements)): ?>
-                <div class="row">
-                    <?php foreach ($evenements as $evenement): ?>
-                        <div class="col-md-4 mb-4">
-                            <div class="card event-card">
-                                <?php if (!empty($evenement['imageEvenement'])): ?>
-                                    <img src="<?= base_url(esc($evenement['imageEvenement'])) ?>" class="card-img-top event-img" alt="<?= esc($evenement['nomEvenement']) ?>">
-                                <?php else: ?>
-                                    <div class="card-img-top event-img bg-light d-flex justify-content-center align-items-center">
-                                        <p class="text-muted">Pas d'image disponible</p>
-                                    </div>
-                                <?php endif; ?>
-                                <div class="card-body">
-                                    <h3 class="card-title"><?= esc($evenement['nomEvenement']) ?></h3>
-                                    <p class="card-text"><?= esc($evenement['descriptionEvenement']) ?></p>
-                                    <p class="card-text event-date">
-                                        <strong>Date :</strong> 
-                                        <?= date('d/m/Y', strtotime($evenement['dateEvenement'])) ?>
-                                    </p>
-                                    <p class="card-text event-places">
-                                        <strong>Places disponibles :</strong> 
-                                        <?= esc($evenement['nbplaceDispo']) ?> / <?= esc($evenement['nbplaceMax']) ?>
-                                    </p>
-                                    <?php if (isset($evenement['dureeEvenement'])): ?>
-                                        <p class="card-text">
-                                            <strong>Durée :</strong> 
-                                            <?= esc($evenement['dureeEvenement']) ?>
-                                        </p>
-                                    <?php endif; ?>
-                                </div>
-                                <div class="card-footer">
-                                    <a href="#" class="btn btn-primary">Plus d'infos</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php else: ?>
-                <div class="alert alert-info text-center">
-                    <p>Aucun événement trouvé</p>
-                </div>
-            <?php endif; ?>
-        </section>
-    </main>
+        
 
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>À propos</h5>
-                    <p>GetCet est une destination incontournable pour découvrir des paysages magnifiques et profiter d'activités variées au cœur de la nature.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Navigation</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#decouvrir" class="text-white text-decoration-none">Découvrir</a></li>
-                        <li><a href="#activites" class="text-white text-decoration-none">Que faire ?</a></li>
-                        <li><a href="#hebergement" class="text-white text-decoration-none">Où dormir</a></li>
-                        <li><a href="#evenements" class="text-white text-decoration-none">Événements</a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Contact</h5>
-                    <p>
-                        <strong>Adresse :</strong> 12 rue des Lilas, GetCet<br>
-                        <strong>Tél :</strong> 01 23 45 67 89<br>
-                        <strong>Email :</strong> <a href="mailto:info@getcet.com" class="text-white text-decoration-none">info@getcet.com</a>
-                    </p>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; <?= date('Y') ?> GetCet. Tous droits réservés.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

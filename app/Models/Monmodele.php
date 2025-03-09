@@ -132,9 +132,7 @@
     public function recupererEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
-
         $builder->select('idGestion, nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement, imageEvenement, representant');
-
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -181,7 +179,7 @@
 
         $builder->select('nomEvenement, dateEvenement, COUNT(idResa) AS nb_reservations, SUM(nbplaceTotale) AS nb_places_reservees, statutEvenement');
 
-        $builder->where('statutReservation', 'valider');
+        $builder->where('statutReservation', 'Actif');
         $builder->groupBy('evenements.idGestion');
         $builder->orderBy('nb_places_reservees', 'DESC');
 
@@ -397,7 +395,7 @@
 
         $builder->join('typeevenement', 'evenements.idtypeEvenement = typeevenement.idtypeEvenement');
 
-        $builder->select('nomEvenement, typeevenement.nom, dateEvenement, descriptionEvenement, nbplaceMax, dureeEvenement, representant');
+        $builder->select('nomEvenement, typeevenement.nom, dateEvenement, descriptionEvenement, nbplaceMax, dureeEvenement, imageEvenement, representant');
 
         $builder->where('idGestion', $idEvenement);
 
