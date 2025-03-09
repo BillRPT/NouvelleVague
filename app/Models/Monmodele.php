@@ -3,11 +3,7 @@
     use CodeIgniter\Model;
     class Monmodele extends Model
 {   
-
-    protected $table = 'logs'; 
-    protected $primaryKey = 'idLog';
-    protected $allowedFields = ['idUser', 'action', 'dateLog','details'];  
-    protected $useTimestamps = true;  
+ 
     
     
 

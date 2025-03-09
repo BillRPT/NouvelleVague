@@ -135,13 +135,13 @@ function showStep(num) {
   }
 }
 
-// Étape 1 : FullCalendar
+// Étape 1 : Calendrier
 document.addEventListener('DOMContentLoaded', function() {
   let calendarEl = document.getElementById('calendar');
   let calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     locale: 'fr',
-    // URL qui renvoie la liste des événements en JSON
+    // renvoie la liste des événements en JSON
     events: '<?= site_url('getEventsJson') ?>',
 
     // Contrôle côté client : si la date est passée, on empêche la réservation

@@ -38,7 +38,13 @@
                 <!-- En-tête du profil -->
                 <div class="profile-section">
                     <h1 class="mb-4 text-primary"><i class="fas fa-user-circle me-2"></i>Mon Profil</h1>
-
+                        <div class="col-12 mb-3">
+                            <?= anchor(
+                                base_url(), 
+                               '<i class="fas fa-arrow-left me-2"></i>Retour', 
+                                ['class' => 'btn btn-secondary']
+                            ) ?>
+                        </div>
                     <!-- Affichage des messages de succès/erreur -->
                     <?php if (session()->getFlashdata('success')): ?>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
