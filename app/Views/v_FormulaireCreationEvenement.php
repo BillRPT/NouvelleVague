@@ -13,6 +13,8 @@
 <?php echo form_input(['name' => 'date', 'type' => 'date', 'value' => set_value('date')]); ?> <br /> <br />
 <?= form_label('Description : '); ?>
 <?php echo form_input('description', set_value('description')); ?> <br /><br />
+<?= form_label('Représentant : '); ?>
+<?php echo form_input('representant', set_value('representant')); ?> <br /><br />
 <?= form_label('Image : '); ?>
 <?php echo form_upload('image', set_value('image')); ?> <br /><br />
 <?= form_label('Nombre de Place Max : '); ?>

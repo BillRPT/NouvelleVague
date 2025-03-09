@@ -12,6 +12,8 @@
 <?php echo form_input(['name' => 'date', 'type' => 'date', 'value' => set_value('date', $unEvenement['dateEvenement'])]); ?> <br /> <br />
 <?= form_label('Description : '); ?>
 <?php echo form_input('description', set_value('description', $unEvenement['descriptionEvenement'])); ?> <br /><br />
+<?= form_label('Représentant : '); ?>
+<?php echo form_input('representant', set_value('representant', $unEvenement['representant'])); ?> <br /><br />
 <?= form_label('Nombre de Place Max : '); ?>
 <?php echo form_input('nbPlace', set_value('nbPlace', $unEvenement['nbplaceMax'])); ?> <br /><br />
 <?= form_label('Duree : '); ?>

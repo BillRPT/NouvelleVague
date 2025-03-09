@@ -186,6 +186,7 @@ class c_Administration extends BaseController{
             $nombrePlace = $this->request->getPost('nbPlace');
             $duree = $this->request->getPost('duree');
             $typeEvenement = $this->request->getPost('evenement');
+            $representant = $this->request->getPost('representant');
             $imageChemin = $this->request->getFile('image');
             //l'incrementer de 1 pour avoir les bonnes valeurs
             $typeEvenement = $typeEvenement + 1;
@@ -201,7 +202,7 @@ class c_Administration extends BaseController{
                     return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_ErreurImage.php').view('v_finFooter.php');
                 }
 
-                $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $typeEvenement, "Image/" . $imageChemin->getName());
+                $monModele->ajouterEvenement($nom, $date, $description, $nombrePlace, $duree, $typeEvenement, "Image/" . $imageChemin->getName(), $representant);
                 return view('v_SecretairePanel.php').view('v_BouttonRetour.php').view('v_FormulaireCreationEvenement.php', $typeEvent).view('v_MessageCreationEvenement.php').view('v_finFooter.php');
             }
         }
@@ -330,7 +331,7 @@ class c_Administration extends BaseController{
             $data['lesEvenements'] = $monModele->recupererEvenements();
 
             //Les entetes du tableau
-            $table->setHeading('idGestion', 'nomEvenement', 'dateEvenement', 'description', 'nbplaceDispo', 'dureeEvenement', 'nbplaceMax', 'statutEvenement');
+            $table->setHeading('idGestion', 'nomEvenement', 'dateEvenement', 'description', 'nbplaceDispo', 'dureeEvenement', 'nbplaceMax', 'statutEvenement', 'representant');
 
             //Ajouter l'event au tableau
             foreach ($data['lesEvenements'] as $unEvent) {
@@ -348,6 +349,7 @@ class c_Administration extends BaseController{
                     $unEvent['dureeEvenement'],
                     $unEvent['nbplaceMax'],
                     $unEvent['statutEvenement'],
+                    $unEvent['representant'],
                     $lien
                 );
             }
@@ -381,8 +383,9 @@ class c_Administration extends BaseController{
             $descriptionEvenement = $this->request->getPost('description');
             $nbplaceMax = $this->request->getPost('nbPlace');
             $dureeEvenement = $this->request->getPost('duree');
+            $representant = $this->request->getPost('representant');
 
-            $monModele->updateunEvenement($idEvenement, $nomEvenement, $typeEvenement, $dateEvenement, $descriptionEvenement, $nbplaceMax, $dureeEvenement);
+            $monModele->updateunEvenement($idEvenement, $nomEvenement, $typeEvenement, $dateEvenement, $descriptionEvenement, $nbplaceMax, $dureeEvenement, $representant);
             return view("v_SecretairePanel.php").view('v_BouttonRetour.php').view("v_MessageEvenementAJour.php").view('v_finFooter.php');
         }
         else {

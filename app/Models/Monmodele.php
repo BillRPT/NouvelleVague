@@ -132,7 +132,9 @@
     public function recupererEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
-        $builder->select('idGestion, nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement, imageEvenement');
+
+        $builder->select('idGestion, nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement, imageEvenement, representant');
+
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -221,7 +223,7 @@
      * @param string $duree
      * @param string $idtypeEvenement
      */
-    public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement, $ImageChemin) {
+    public function ajouterEvenement($nom, $date, $descriptionEvent, $nbPlace, $duree, $idtypeEvenement, $ImageChemin, $representant) {
         $db = \Config\Database::connect();
 
         //$sql = "INSERT INTO evenements (nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, idtypeEvenement, nbplaceMax) VALUES (:nom, :date, :descriptionEvent, :nbPlace, :duree, :idtypeEvenement, :nbplaceMax)";
@@ -238,7 +240,8 @@
             'dureeEvenement' => $duree,
             'idtypeEvenement' => $idtypeEvenement,
             'statutEvenement' => 'actif',
-            'imageEvenement' => $ImageChemin
+            'imageEvenement' => $ImageChemin,
+            'representant' => $representant
         ];
 
         //Insert le payload dans la bdd
@@ -342,10 +345,10 @@
      * Permet de parrainer un Utilisateur
      * 
      */
-    public function parrainageUtilisateur() {
+    public function parrainageUtilisateur($nameUser) {
         $db = \Config\Database::connect();
     
-        $sql = "INSERT INTO parrainage (dateParrainage) VALUES (NOW())";
+        $sql = "INSERT INTO parrainage (dateParrainage, filleul) VALUES (NOW(), '$nameUser')";
     
         $db->query($sql);
     }
@@ -394,7 +397,7 @@
 
         $builder->join('typeevenement', 'evenements.idtypeEvenement = typeevenement.idtypeEvenement');
 
-        $builder->select('nomEvenement, typeevenement.nom, dateEvenement, descriptionEvenement, nbplaceMax, dureeEvenement');
+        $builder->select('nomEvenement, typeevenement.nom, dateEvenement, descriptionEvenement, nbplaceMax, dureeEvenement, representant');
 
         $builder->where('idGestion', $idEvenement);
 
@@ -440,7 +443,7 @@
     }
 
 
-    public function updateunEvenement($idEvenement, $nom, $typeEvenement, $dateEvenement, $descriptionEvenement, $nbplaceMax, $dureeEvenement) {
+    public function updateunEvenement($idEvenement, $nom, $typeEvenement, $dateEvenement, $descriptionEvenement, $nbplaceMax, $dureeEvenement, $representant) {
         $db = \Config\Database::connect();
 
         // Récupérer le nombre actuel de places disponibles
@@ -472,7 +475,8 @@
             'descriptionEvenement' => $descriptionEvenement,
             'nbplaceMax' => $nbplaceMax,
             'nbplaceDispo' => $nouveauNbPlaceDispo, // Mettre à jour le nombre de places disponibles
-            'dureeEvenement' => $dureeEvenement
+            'dureeEvenement' => $dureeEvenement,
+            'representant' => $representant
         ];
 
         $builder = $db->table('evenements');  // Nom de la table à mettre à jour
