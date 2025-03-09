@@ -37,7 +37,7 @@ $routes->post('modificationdelevenement/(:any)', 'c_Administration::modification
 
 $routes->get('evenementpopulairePdf', 'c_Administration::evenementpopulairePdf');
 $routes->get('accueil', 'Accueil::index');
-// Réservation (calendrier / wizard simplifié)
+// Réservation
 $routes->get('calendrier', 'c_Reservation::calendrier');
 $routes->get('getEventsJson', 'c_Reservation::getEventsJson');
 $routes->post('finaliserReservation', 'c_Reservation::finaliserReservation');
@@ -54,4 +54,4 @@ $routes->post('c_Profil/update', 'c_Profil::update');
 $routes->get('c_Profil/annulerReservation/(:num)', 'c_Profil::annulerReservation/$1');
 
 
-$routes->get('/evenements', 'c_Evenement::index');
+$routes->get('evenements', 'c_Evenement::index');

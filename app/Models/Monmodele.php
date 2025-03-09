@@ -132,9 +132,8 @@
     public function recupererEvenements() {
         $db = \Config\Database::connect();
         $builder = $db->table('evenements');
-        $builder->select('idGestion, nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement');
+        $builder->select('idGestion, nomEvenement, dateEvenement, descriptionEvenement, nbplaceDispo, dureeEvenement, nbplaceMax, statutEvenement, imageEvenement');
         $query = $builder->get();
-        //return le résultat sous forme de tableau
         return $query->getResultArray();
     }
     public function listedesparticipantEvenements($idEvenement) {
@@ -404,22 +403,7 @@
         return $query->getRowArray(); 
     }
 
-    public function getEvenements()
-    { 
-        $builder = $this->db->table('evenements');
     
-        // recup seulement les évenement actif 
-        $builder->where('statutEvenement', 'actif');
-        
-        // Récupérer les evenement sous tableau 
-        $query = $builder->get();
-    
-        // Retourner les résultats sous  tableau associatif
-        return $query->getResultArray();
-    }
-    
-    
-
 
 
 

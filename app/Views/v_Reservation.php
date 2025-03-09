@@ -58,10 +58,10 @@
       </thead>
       <tbody>
         <tr>
-          <td>Résident</td>s
+          <td>Résident</td>
           <td>0 €</td>
           <td>
-            <input type="number" class="form-control billet-qty" data-price="5" value="0" min="0">
+            <input type="number" class="form-control billet-qty" data-price="0" value="0" min="0">
           </td>
           <td class="line-total">0 €</td>
         </tr>
@@ -69,7 +69,7 @@
           <td>Accompagnateur</td>
           <td>5 €</td>
           <td>
-            <input type="number" class="form-control billet-qty" data-price="10" value="0" min="0">
+            <input type="number" class="form-control billet-qty" data-price="5" value="0" min="0">
           </td>
           <td class="line-total">0 €</td>
         </tr>
@@ -88,46 +88,23 @@
     </div>
   </div>
 
-  <!-- Étape 3 : Infos utilisateur -->
+  <!-- Étape 3 : Confirmation (anciennement Étape 4) -->
   <div id="step3" class="step-content">
-    <h2>Étape 3 : Vos informations</h2>
-    <form id="form-infos">
-      <div class="mb-3">
-        <label for="nomComplet" class="form-label">Nom complet</label>
-        <input type="text" class="form-control" id="nomComplet" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Adresse e-mail</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-    </form>
-    <div class="text-end">
-      <button id="btn-step3-back" class="btn btn-secondary">Retour</button>
-      <button id="btn-step3-next" class="btn btn-primary">Continuer</button>
-    </div>
-  </div>
-
-  <!-- Étape 4 : Confirmation -->
-  <div id="step4" class="step-content">
-    <h2>Étape 4 : Confirmation</h2>
+    <h2>Étape 3 : Confirmation</h2>
     <form id="form-final" method="post" action="<?= site_url('finaliserReservation') ?>">
       <!-- Champs cachés pour envoyer les données en POST -->
       <input type="hidden" name="idEvenement" id="input-idEvenement" value="">
-      <input type="hidden" name="nbBillets"   id="input-nbBillets"   value="">
-      <input type="hidden" name="nomComplet" id="input-nomComplet"  value="">
-      <input type="hidden" name="email"      id="input-email"       value="">
+      <input type="hidden" name="nbBillets" id="input-nbBillets" value="">
       
       <p>
         <strong>ID Événement :</strong> <span id="confirm-idEvenement"></span><br>
         <strong>Nom de l'événement :</strong> <span id="confirm-nomEvenement"></span><br>
-        <strong>Total billets :</strong> <span id="confirm-nbBillets"></span><br>
-        <strong>Nom complet :</strong> <span id="confirm-nomComplet"></span><br>
-        <strong>E-mail :</strong> <span id="confirm-email"></span>
+        <strong>Total billets :</strong> <span id="confirm-nbBillets"></span>
       </p>
 
       <div class="text-end">
-        <button id="btn-step4-back" class="btn btn-secondary" type="button">Retour</button>
-        <button id="btn-step4-submit" class="btn btn-success" type="submit">Valider la réservation</button>
+        <button id="btn-step3-back" class="btn btn-secondary" type="button">Retour</button>
+        <button id="btn-step3-submit" class="btn btn-success" type="submit">Valider la réservation</button>
       </div>
     </form>
   </div>
@@ -208,16 +185,18 @@ const btnStep2Next    = document.getElementById('btn-step2-next');
 
 function CalculBillet() {
   let total = 0;
+  let qtyTotal = 0;
   billetQtyInputs.forEach((input, index) => {
     const price = parseFloat(input.dataset.price);
     const qty   = parseInt(input.value) || 0;
     const lineTotal = price * qty;
     lineTotalCells[index].textContent = lineTotal + ' €';
     total += lineTotal;
+    qtyTotal += qty;
   });
   grandTotalCell.textContent = total + ' €';
   // Activer ou non le bouton "Suivant"
-  btnStep2Next.disabled = (total <= 0);
+  btnStep2Next.disabled = (qtyTotal <= 0);
   totalBillets = total;
 }
 
@@ -234,25 +213,10 @@ document.getElementById('btn-step2-back').addEventListener('click', () => {
 
 // Bouton "Suivant" étape 2
 btnStep2Next.addEventListener('click', () => {
+  // Maintenant passe directement à l'étape 3 (confirmation)
   showStep(3);
-});
 
-// Étape 3 : Infos user
-document.getElementById('btn-step3-back').addEventListener('click', () => {
-  showStep(2);
-});
-
-document.getElementById('btn-step3-next').addEventListener('click', () => {
-  const nomComplet = document.getElementById('nomComplet').value.trim();
-  const email      = document.getElementById('email').value.trim();
-
-  if (!nomComplet || !email) {
-    alert('Veuillez renseigner votre nom complet et votre email.');
-    return;
-  }
-  showStep(4);
-
-  // Remplir le récap dans l'étape 4
+  // Remplir le récap dans l'étape 3
   document.getElementById('confirm-idEvenement').textContent = selectedEventId;
   document.getElementById('confirm-nomEvenement').textContent = selectedEventTitle;
 
@@ -262,19 +226,15 @@ document.getElementById('btn-step3-next').addEventListener('click', () => {
     totalQuantite += parseInt(input.value) || 0;
   });
   document.getElementById('confirm-nbBillets').textContent = totalQuantite;
-  document.getElementById('confirm-nomComplet').textContent = nomComplet;
-  document.getElementById('confirm-email').textContent = email;
 
   // Alimentation des champs cachés pour la soumission POST
   document.getElementById('input-idEvenement').value = selectedEventId;
-  document.getElementById('input-nbBillets').value   = totalQuantite;
-  document.getElementById('input-nomComplet').value  = nomComplet;
-  document.getElementById('input-email').value       = email;
+  document.getElementById('input-nbBillets').value = totalQuantite;
 });
 
-// Étape 4 : Confirmation
-document.getElementById('btn-step4-back').addEventListener('click', () => {
-  showStep(3);
+// Étape 3 : Confirmation (était étape 4 avant)
+document.getElementById('btn-step3-back').addEventListener('click', () => {
+  showStep(2);
 });
 </script>
 
